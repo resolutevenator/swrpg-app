@@ -26,6 +26,7 @@ import { RacesComponent } from './races/races.component';
 import { RaceBrowseComponent } from './race-browse/race-browse.component';
 
 import { firebaseConfig } from '../../firebase-config';
+import { HeaderComponent } from './header/header.component';
 
 declare var Hammer: any;
 @Injectable()
@@ -39,7 +40,8 @@ export class HammerConfig extends GestureConfig  {
   declarations: [
     AppComponent,
     RacesComponent,
-    RaceBrowseComponent
+    RaceBrowseComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

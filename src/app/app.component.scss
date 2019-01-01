@@ -1,1 +1,13 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    overflow-x: hidden;
+    background-color: #D7D7D7
+  }
+  
+  .content {
+    flex: 1;
+  }
+  
