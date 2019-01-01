@@ -17,7 +17,15 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { GestureConfig } from '@angular/material';
 
+import { AngularFireModule } from '@angular/fire/';
+import { AngularFireDatabaseModule } from '@angular/fire/database/';
+import { AngularFireAuthModule } from '@angular/fire/auth/';
+
 import 'hammerjs';
+import { RacesComponent } from './races/races.component';
+import { RaceBrowseComponent } from './race-browse/race-browse.component';
+
+import { firebaseConfig } from '../../firebase-config';
 
 declare var Hammer: any;
 @Injectable()
@@ -29,7 +37,9 @@ export class HammerConfig extends GestureConfig  {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RacesComponent,
+    RaceBrowseComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +57,9 @@ export class HammerConfig extends GestureConfig  {
     MatProgressSpinnerModule,
     HttpClientModule,
     NoopAnimationsModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
   ],
   providers: [
     {
