@@ -33,7 +33,7 @@
       ]
     },
     "bothan" : {
-      "name" : "bothan",
+      "name" : "Bothan",
       "brawn" : "1",
       "agility" : "2",
       "intellect" : "2",
@@ -49,7 +49,7 @@
       ]
     },
     "duros" : {
-      "name" : "bothan",
+      "name" : "Duros",
       "brawn" : "1",
       "agility" : "2",
       "intellect" : "3",
