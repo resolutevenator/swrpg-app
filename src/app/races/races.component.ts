@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DatabaseService } from '../database.service';
 
 @Component({
   selector: 'app-races',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RacesComponent implements OnInit {
 
-  constructor() { }
+  public race: string;
+
+  raceData: any;
+
+  constructor(
+    private _route: ActivatedRoute,
+    private db: DatabaseService
+  ) {
+  }
 
   ngOnInit() {
+    this.race = this._route.snapshot.params['raceName'];
+    this.db.getRaceDataObject(this.race).subscribe(data => {
+      this.raceData = data;
+    });
   }
 
 }

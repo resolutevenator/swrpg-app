@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AngularFireDatabase } from '@angular/fire/database/';
+import { DatabaseService } from '../database.service';
 
 @Component({
   selector: 'app-race-browse',
@@ -10,24 +10,20 @@ import { AngularFireDatabase } from '@angular/fire/database/';
 export class RaceBrowseComponent implements OnInit {
   
   races: any;
-  _raceSubscription: any;
 
   constructor(
     private router: Router,
-    private db: AngularFireDatabase
-    ) {
-    this._raceSubscription = db.list('races/').valueChanges().subscribe(data => {
-      this.races = data;
-    }),(err) => {
-      console.log('error: ', err)
-    };
-  }
+    private db: DatabaseService
+    ) { }
 
   navigate(raceName: String) {
     this.router.navigate(['/race', raceName.toLowerCase()])
   }
 
   ngOnInit() {
+    this.db.getRacesList().subscribe(data => {
+      this.races = data;
+    });
   }
 
 }
