@@ -31,6 +31,38 @@
         "Regeneration: Whenever a Trandoshan would recover 1 or more wounds from natural rest or recuperation in a Bacta Tank, they recover 1 additional wound. They do not recover additional wounds when receiving first aid or medical treatment, or when using a stimpack. Trandoshans can regrow lost limbs, but the process usually takes at least a month before the limb is usable.",
         "Claws: When a Trandoshan makes Brawl checks to deal damage to an opponent, they deal +1 damage and have a crit rating of 3."
       ]
+    },
+    "bothan" : {
+      "name" : "bothan",
+      "brawn" : "1",
+      "agility" : "2",
+      "intellect" : "2",
+      "cunning" : "3",
+      "willpower" : "2",
+      "presence" : "2",
+      "woundThreshold" : "10 + Brawn",
+      "strainThreshold" : "2 + Willpower",
+      "startingXP" : "100",
+      "specialAbilities" : [
+        "Begin the game with 1 rank in Streetwise",
+        "Begin the game with 1 rank in the Convincing Demeanor Talent"
+      ]
+    },
+    "duros" : {
+      "name" : "bothan",
+      "brawn" : "1",
+      "agility" : "2",
+      "intellect" : "3",
+      "cunning" : "2",
+      "willpower" : "2",
+      "presence" : "2",
+      "woundThreshold" : "11 + Brawn",
+      "strainThreshold" : "10 + Willpower",
+      "startingXP" : "100",
+      "specialAbilities" : [
+        "Begin the game with 1 rank in Piloting (Space)",
+        "Intuitive Navigation: Duros may add advantage to all Astrogation checks they make."
+      ]
     }
   },
   "career" : {
