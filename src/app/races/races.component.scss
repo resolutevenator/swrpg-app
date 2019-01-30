@@ -1,26 +1,49 @@
 .page-content {
     margin: 20px;
     // flex-direction: row;
-    // justify-content: flex-start;
+    align-items: center;
     // align-items: flex-start; 
 }
 
-mat-card {
-    margin-left: 10px;
-    margin-right: 10px;
+.race-content {
+    margin: auto;
+    max-width: 1300px;
+    min-width: 700px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.characteristics {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.other {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.right mat-card {
+    margin: 10px 10px 0 0;
+    // margin-left: 10px;
+    // margin-right: 10px;
+    text-align: center;
+    height: 60px;
 }
 
 .race-image {
-    width: 250px;
-    height: 400px;
-}
-
-mat-grid {
-    justify-content: flex-start;
-    align-items: flex-start;
+    width: 200px;
+    text-align: center;
 }
 
 img {
-    width: 225px;
+    width: 200px;
     height: auto;
 }

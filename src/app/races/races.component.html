@@ -1,56 +1,66 @@
 <div class="page-content">
   <div class="race-content" *ngIf="raceData != null">
-    <mat-grid-list cols="4" rowHeight="110px">
-
-      <mat-grid-tile class="race-image-container" [colspan]="1" [rowspan]="5">
+    <div class="main">
+      <div class="left">
         <mat-card class="race-image">
           <img src="../../assets/{{race}}.jpg" alt="{{race}}">
+          <mat-divider></mat-divider>
           <mat-card-title>{{raceData.name}}</mat-card-title>
         </mat-card>
-      </mat-grid-tile>
+      </div>
 
-      <mat-grid-tile [colspan]="2">
-        <mat-card>
-          <mat-card-title>Brawn</mat-card-title>
-          <mat-card-content>{{raceData.brawn}}</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-title>Agility</mat-card-title>
-          <mat-card-content>{{raceData.agility}}</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-title>Intellect</mat-card-title>
-          <mat-card-content>{{raceData.intellect}}</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-title>Cunning</mat-card-title>
-          <mat-card-content>{{raceData.cunning}}</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-title>Willpower</mat-card-title>
-          <mat-card-content>{{raceData.willpower}}</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-title>Presence</mat-card-title>
-          <mat-card-content>{{raceData.presence}}</mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
+      <div class="right">
+        <div class="characteristics">
+          <mat-card>
+            <mat-card-title>Brawn</mat-card-title>
+            <hr>
+            <mat-card-content>{{raceData.brawn}}</mat-card-content>
+          </mat-card>
+          <mat-card>
+            <mat-card-title>Agility</mat-card-title>
+            <hr>
+            <mat-card-content>{{raceData.agility}}</mat-card-content>
+          </mat-card>
+          <mat-card>
+            <mat-card-title>Intellect</mat-card-title>
+            <hr>
+            <mat-card-content>{{raceData.intellect}}</mat-card-content>
+          </mat-card>
+          <mat-card>
+            <mat-card-title>Cunning</mat-card-title>
+            <hr>
+            <mat-card-content>{{raceData.cunning}}</mat-card-content>
+          </mat-card>
+          <mat-card>
+            <mat-card-title>Willpower</mat-card-title>
+            <hr>
+            <mat-card-content>{{raceData.willpower}}</mat-card-content>
+          </mat-card>
+          <mat-card>
+            <mat-card-title>Presence</mat-card-title>
+            <hr>
+            <mat-card-content>{{raceData.presence}}</mat-card-content>
+          </mat-card>
+        </div>
 
-      <mat-grid-tile [colspan]="2">
-        <mat-card>
-          <mat-card-title>Wound Threshold</mat-card-title>
-          <mat-card-content>{{raceData.woundThreshold}}</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-title>Strain Threshold</mat-card-title>
-          <mat-card-content>{{raceData.strainThreshold}}</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-title>Starting XP</mat-card-title>
-          <mat-card-content>{{raceData.startingXP}}</mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
-
+        <div class="other">
+          <mat-card>
+            <mat-card-title>Wound Threshold</mat-card-title>
+            <hr>
+            <mat-card-content>{{raceData.woundThreshold}}</mat-card-content>
+          </mat-card>
+          <mat-card>
+            <mat-card-title>Strain Threshold</mat-card-title>
+            <hr>
+            <mat-card-content>{{raceData.strainThreshold}}</mat-card-content>
+          </mat-card>
+          <mat-card>
+            <mat-card-title>Starting XP</mat-card-title>
+            <hr>
+            <mat-card-content>{{raceData.startingXP}}</mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
