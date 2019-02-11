@@ -8,7 +8,7 @@ import { DatabaseService } from '../database.service';
   styleUrls: ['./race-browse.component.scss']
 })
 export class RaceBrowseComponent implements OnInit {
-  
+
   races: any;
 
   constructor(
@@ -17,7 +17,7 @@ export class RaceBrowseComponent implements OnInit {
     ) { }
 
   navigate(raceName: String) {
-    this.router.navigate(['/race', raceName.toLowerCase()])
+    this.router.navigate(['/race', raceName]);
   }
 
   ngOnInit() {
