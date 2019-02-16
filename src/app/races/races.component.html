@@ -61,6 +61,13 @@
           </mat-card>
         </div>
       </div>
+
+      
+    </div>
+    <div class="sub">
+      <mat-card *ngFor="let ability of raceData.specialAbilities" class="ability">
+        <mat-card-content>{{ability}}</mat-card-content>
+      </mat-card>
     </div>
   </div>
 </div>

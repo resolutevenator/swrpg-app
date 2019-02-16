@@ -7,14 +7,18 @@
 
 .race-content {
     margin: auto;
-    max-width: 1300px;
-    min-width: 700px;
+    max-width: 500px;
+    // min-width: 700px;
 }
 
 .main {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+}
+
+.sub {
+    margin-top: 20px;
 }
 
 .characteristics {
@@ -32,8 +36,6 @@
 
 .right mat-card {
     margin: 10px 10px 0 0;
-    // margin-left: 10px;
-    // margin-right: 10px;
     text-align: center;
     height: 60px;
 }
@@ -41,6 +43,10 @@
 .race-image {
     width: 200px;
     text-align: center;
+}
+
+.ability {
+    margin-top: 5px;
 }
 
 img {
