@@ -7,34 +7,37 @@
 
 .race-content {
     margin: auto;
-    max-width: 500px;
+    max-width: 1000px;
     // min-width: 700px;
 }
 
 .main {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    // align-items: center;
 }
 
 .sub {
     margin-top: 20px;
 }
 
-.characteristics {
+.right {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.right-content {
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.other {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.right-content mat-card-title, mat-card-content {
+    font-size: 18px;    
 }
 
-.right mat-card {
+.right-content mat-card {
     margin: 10px 10px 0 0;
     text-align: center;
     height: 60px;
