@@ -25,7 +25,7 @@ import 'hammerjs';
 import { RacesComponent } from './races/races.component';
 import { RaceBrowseComponent } from './race-browse/race-browse.component';
 
-import { firebaseConfig } from '../../firebase-config';
+import { environment } from '../environments/environment';
 import { HeaderComponent } from './header/header.component';
 
 declare var Hammer: any;
@@ -59,7 +59,7 @@ export class HammerConfig extends GestureConfig  {
     MatProgressSpinnerModule,
     HttpClientModule,
     NoopAnimationsModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
   ],
