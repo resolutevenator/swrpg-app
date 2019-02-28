@@ -843,122 +843,137 @@
       ]
     }
   },
-  "career": {
-    "bountyHunter": {
-      "assassin": {
-        "line1": [
-          "grit",
-          "lethalBlows",
-          "stalker",
-          "dodge"
+  "specs": {
+    "assassin": {
+      "name": "Assassin",
+      "career": "Bounty Hunter",
+      "career skills": [
+        "guns lmao"
+      ],
+      "line1": [
+        "grit",
+        "lethalBlows",
+        "stalker",
+        "dodge"
+      ],
+      "line2": [
+        "preciseAim",
+        "jumpUp",
+        "quickStrike",
+        "quickDraw"
+      ],
+      "line3": [
+        "targetedBlow",
+        "stalker",
+        "lethalBlows",
+        "anatomyLessons"
+      ],
+      "line4": [
+        "stalker",
+        "sniperShot",
+        "dodge",
+        "lethalBlows"
+      ],
+      "line5": [
+        "preciseAim",
+        "deadlyAccuracy",
+        "dedication",
+        "masterOfShadows"
+      ],
+      "line1Connections": {
+        "1": [
+          "down"
         ],
-        "line2": [
-          "preciseAim",
-          "jumpUp",
-          "quickStrike",
-          "quickDraw"
+        "2": [
+          "down"
         ],
-        "line3": [
-          "targetedBlow",
-          "stalker",
-          "lethalBlows",
-          "anatomyLessons"
+        "3": [
+          "down"
         ],
-        "line4": [
-          "stalker",
-          "sniperShot",
-          "dodge",
-          "lethalBlows"
-        ],
-        "line5": [
-          "preciseAim",
-          "deadlyAccuracy",
-          "dedication",
-          "masterOfShadows"
-        ],
-        "line1Connections": {
-          "1": [
-            "down"
-          ],
-          "2": [
-            "down"
-          ],
-          "3": [
-            "down"
-          ],
-          "4": [
-            "down"
-          ]
-        },
-        "line2Connections": {
-          "1": [
-            "down",
-            "right"
-          ],
-          "2": [
-            "down",
-            "left",
-            "right"
-          ],
-          "3": [
-            "down",
-            "left",
-            "right"
-          ],
-          "4": [
-            "down",
-            "left"
-          ]
-        },
-        "line3Connections": {
-          "1": [
-            "down"
-          ],
-          "2": [
-            "down",
-            "right"
-          ],
-          "3": [
-            "down",
-            "left"
-          ],
-          "4": [
-            "down"
-          ]
-        },
-        "line4Connections": {
-          "1": [
-            "down",
-            "right"
-          ],
-          "2": [
-            "down",
-            "left"
-          ],
-          "3": [
-            "down"
-          ],
-          "4": [
-            "down"
-          ]
-        },
-        "line5Connections": {
-          "1": [
-            "down"
-          ],
-          "2": [
-            "down"
-          ],
-          "3": [
-            "down"
-          ],
-          "4": [
-            "down"
-          ]
-        }
+        "4": [
+          "down"
+        ]
       },
-      "gadgeteer": {},
-      "survivalist": {}
+      "line2Connections": {
+        "1": [
+          "down",
+          "right"
+        ],
+        "2": [
+          "down",
+          "left",
+          "right"
+        ],
+        "3": [
+          "down",
+          "left",
+          "right"
+        ],
+        "4": [
+          "down",
+          "left"
+        ]
+      },
+      "line3Connections": {
+        "1": [
+          "down"
+        ],
+        "2": [
+          "down",
+          "right"
+        ],
+        "3": [
+          "down",
+          "left"
+        ],
+        "4": [
+          "down"
+        ]
+      },
+      "line4Connections": {
+        "1": [
+          "down",
+          "right"
+        ],
+        "2": [
+          "down",
+          "left"
+        ],
+        "3": [
+          "down"
+        ],
+        "4": [
+          "down"
+        ]
+      },
+      "line5Connections": {
+        "1": [
+          "down"
+        ],
+        "2": [
+          "down"
+        ],
+        "3": [
+          "down"
+        ],
+        "4": [
+          "down"
+        ]
+      }
+    },
+    "gadgeteer": {
+      "name": "Gadgeteer",
+      "career": "Bounty Hunter",
+      "career skills": [
+        "guns lmao"
+      ]
+    },
+    "survivalist": {
+      "name": "Survivalist",
+      "career": "Bounty Hunter",
+      "career skills": [
+        "guns lmao"
+      ]
     }
   },
   "talents": {
