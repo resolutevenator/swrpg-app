@@ -17,4 +17,8 @@ export class DatabaseService {
   public getRaceDataObject(raceName: string) {
     return this.db.object('races/' + raceName).valueChanges();
   }
+
+  public getList(path: string) {
+    return this.db.list(path).valueChanges();
+  }
 }
