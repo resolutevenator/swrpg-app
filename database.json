@@ -850,6 +850,34 @@
       "career skills": [
         "guns lmao"
       ],
+      "talents": [
+        [
+          "grit",
+          "lethalBlows",
+          "stalker",
+          "dodge"
+        ],[
+          "preciseAim",
+          "jumpUp",
+          "quickStrike",
+          "quickDraw"
+        ],[
+          "targetedBlow",
+          "stalker",
+          "lethalBlows",
+          "anatomyLessons"
+        ],[
+          "stalker",
+          "sniperShot",
+          "dodge",
+          "lethalBlows"
+        ],[
+          "preciseAim",
+          "deadlyAccuracy",
+          "dedication",
+          "masterOfShadows"
+        ]
+      ],
       "line1": [
         "grit",
         "lethalBlows",
@@ -879,6 +907,40 @@
         "deadlyAccuracy",
         "dedication",
         "masterOfShadows"
+      ],
+      "horizontalConnections": [
+        [
+          false, false, false
+        ], 
+        [
+          true, true, true
+        ], 
+        [
+          false, true, false
+        ],
+        [
+          true, false, false
+        ],
+        [
+          false, false, false
+        ]
+      ],
+      "verticalConnections": [
+        [
+          true, true, true, true
+        ], 
+        [
+          true, true, true, true
+        ], 
+        [
+          true, true, true, true
+        ],
+        [
+          true, true, true, true
+        ],
+        [
+          false, false, false
+        ]
       ],
       "line1Connections": {
         "1": [

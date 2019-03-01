@@ -10,8 +10,8 @@ export class DatabaseService {
     private db: AngularFireDatabase
   ) { }
 
-  public getRacesList() {
-    return this.db.list('races/').valueChanges();
+  public getSpecDataObject(specName: string) {
+    return this.db.object('specs/' + specName).valueChanges();
   }
 
   public getRaceDataObject(raceName: string) {

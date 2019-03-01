@@ -23,13 +23,13 @@ import { AngularFireAuthModule } from '@angular/fire/auth/';
 
 import 'hammerjs';
 import { RacesComponent } from './races/races.component';
-import { RaceBrowseComponent } from './race-browse/race-browse.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BrowseComponent } from './browse/browse.component';
 
 import { environment } from '../environments/environment';
+import { SpecComponent } from './spec/spec.component';
 
 declare var Hammer: any;
 @Injectable()
@@ -43,11 +43,11 @@ export class HammerConfig extends GestureConfig  {
   declarations: [
     AppComponent,
     RacesComponent,
-    RaceBrowseComponent,
     HeaderComponent,
     HomeComponent,
     NotFoundComponent,
-    BrowseComponent
+    BrowseComponent,
+    SpecComponent
   ],
   imports: [
     BrowserModule,

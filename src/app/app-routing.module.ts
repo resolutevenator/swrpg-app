@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component'
 import { RacesComponent } from './races/races.component';
 import { BrowseComponent } from './browse/browse.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { SpecComponent } from './spec/spec.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'races/:raceName',
     component: RacesComponent,
+  },
+  {
+    path: 'specs/:specName',
+    component: SpecComponent
   },
   {
     path: '**',
