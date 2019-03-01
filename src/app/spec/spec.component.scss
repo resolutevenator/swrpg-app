@@ -15,7 +15,6 @@
 .horizontal-connection {
     width: 20px;
     height: 5px;
-    background-color: black;
 }
 
 .vertical-connectors {
@@ -24,7 +23,7 @@
 }
 
 .black {
-    background-color: blue;
+    background-color: black;
 }
 
 .transparent {
@@ -34,14 +33,11 @@
 .vertical-connection {    
     width: 5px;
     height: 20px;
-    background-color: black;
 }
 
 .line mat-card {
-    // margin-left: 10px;
-    // margin-right: 10px;
-    // margin-bottom: 20px;
     width: 135px;
+    border-style: solid;
 }
 
 .line mat-card-title {
