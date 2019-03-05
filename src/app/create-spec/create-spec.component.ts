@@ -18,6 +18,9 @@ export class CreateSpecComponent implements OnInit {
   talentRanked = false;
   talentKey = '';
 
+  panelOpenState = false;
+  panel1OpenState = false;
+
   talents: any;
 
   skills = [
