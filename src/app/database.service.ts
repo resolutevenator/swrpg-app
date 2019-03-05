@@ -21,4 +21,12 @@ export class DatabaseService {
   public getList(path: string) {
     return this.db.list(path).valueChanges();
   }
+
+  public pushTalent(talent: Object, key: string) {
+    this.db.object('talents/' + key).update(talent);
+  }
+
+  public pushSpec(spec: Object, key: string) {
+    this.db.object('specs/' + key).update(spec)
+  }
 }

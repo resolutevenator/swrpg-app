@@ -5,6 +5,7 @@ import { RacesComponent } from './races/races.component';
 import { BrowseComponent } from './browse/browse.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SpecComponent } from './spec/spec.component';
+import { CreateSpecComponent } from './create-spec/create-spec.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'browse/specs',
     component: BrowseComponent,
+  },
+  {
+    path: 'specs/new',
+    component: CreateSpecComponent
   },
   {
     path: 'races/:raceName',

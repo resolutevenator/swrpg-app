@@ -1,1049 +1,901 @@
 {
-  "races": {
-    "human": {
-      "name": "Human",
-      "brawn": "2",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "2",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "110",
-      "specialAbilities": [
-        "Humans begin the game with 1 rank in 2 different non-career skills of your choice"
-      ]
+  "races" : {
+    "aqualish" : {
+      "agility" : "2",
+      "brawn" : "3",
+      "cunning" : "2",
+      "intellect" : "1",
+      "name" : "Aqualish",
+      "presence" : "2",
+      "specialAbilities" : [ "All Aqualish are capable of breathing underwater.", "Aqualish begin the game with 1 rank in Brawl.", "A player choosing to play an Aqualish character must choose one of the following sub-species: ", "Aquala: Aquala begin the game with 1 rank in Resilience. Furthermore, Aquala may remove 1 setback die imposed due to any cold or wet conditions from all skill checks.", "Ualaq: Ualaq begin the game with 1 rank in Survival or 1 rank in Perception. Furthermore, Ualaq may remove 1 setback die imposed due to dark conditions, but suffer 1 setback die to all Perception checks in brightly lit environments.", "Quara: Quara begin the game with 1 rank in Athletics or 1 rank in Coercion. Furthermore, Quara may remove 1 setback die when attempting to track anything through a natural environment." ],
+      "startingXP" : "90",
+      "strainThreshold" : "8 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "11 + Brawn"
     },
-    "trandoshan": {
-      "name": "Trandoshan",
-      "brawn": "3",
-      "agility": "1",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "2",
-      "woundThreshold": "12 + Brawn",
-      "strainThreshold": "9 + Willpower",
-      "startingXP": "90",
-      "specialAbilities": [
-        "Trandoshans begin the game with 1 rank in Perception",
-        "Regeneration: Whenever a Trandoshan would recover 1 or more wounds from natural rest or recuperation in a Bacta Tank, they recover 1 additional wound. They do not recover additional wounds when receiving first aid or medical treatment, or when using a stimpack. Trandoshans can regrow lost limbs, but the process usually takes at least a month before the limb is usable.",
-        "Claws: When a Trandoshan makes Brawl checks to deal damage to an opponent, they deal +1 damage and have a crit rating of 3."
-      ]
+    "arcona" : {
+      "agility" : "2",
+      "brawn" : "1",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Arcona",
+      "presence" : "2",
+      "specialAbilities" : [ "Arcona begin the game with 1 rank in Vigilance.", "When making skill checks, Arcona may remove 1 setback die imposed due to arid or hot environmental conditions.", "Arcona add advantage to any Charm or Negotiation checks they make." ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "3",
+      "woundThreshold" : "10 + Brawn"
     },
-    "bothan": {
-      "name": "Bothan",
-      "brawn": "1",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "3",
-      "willpower": "2",
-      "presence": "2",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "11 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Bothans begin the game with 1 rank in Streetwise.",
-        "Bothans begin the game with 1 rank in the Convincing Demeanor talent"
-      ]
+    "bith" : {
+      "agility" : "2",
+      "brawn" : "1",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Bith",
+      "presence" : "3",
+      "specialAbilities" : [ "Bith begin the game with 1 rank in Perception.", "Bith add 1 boost die whenever they make a hearing-based Perception check. When Bith suffer strain due to loud noises, they suffer twice the normal amount of strain. Wearing ear protection negates both effects of this ability." ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "10 + Brawn"
     },
-    "duros": {
-      "name": "Duros",
-      "brawn": "1",
-      "agility": "2",
-      "intellect": "3",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "2",
-      "woundThreshold": "11 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Duros begin the game with one rank in Piloting (Space).",
-        "Duros may add advantage to all Astrogation checks they make."
-      ]
+    "bothan" : {
+      "agility" : "2",
+      "brawn" : "1",
+      "cunning" : "3",
+      "intellect" : "2",
+      "name" : "Bothan",
+      "presence" : "2",
+      "specialAbilities" : [ "Bothans begin the game with 1 rank in Streetwise.", "Bothans begin the game with 1 rank in the Convincing Demeanor talent" ],
+      "startingXP" : "100",
+      "strainThreshold" : "11 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "10 + Brawn"
     },
-    "droid": {
-      "name": "Droid",
-      "brawn": "1",
-      "agility": "1",
-      "intellect": "1",
-      "cunning": "1",
-      "willpower": "1",
-      "presence": "1",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "175",
-      "specialAbilities": [
-        "Droids do not need to eat, sleep, or breathe, and are unaffected by toxins and poisons.",
-        "Droids have a cybernetic implant cap of 6 instead of their Brawn rating.",
-        "Droid Player Characters may train one rank each in six of the eight career skills (instead of the usual four). After selecting a specialization, a droid PC may train one rank each in three of the four specialization skills (instead of the usual two).",
-        "Since droids are inorganic, they do not gain the benefits of recovering with a bacta tank, a stimpack, or Medicine skill checks. Droids do recover naturally by resting, as their systems attempt self-repairs. If self-repair is not ade-quately effective, a droid needs to be tended to with a Mechanics check, using the same difficul-ties and results as Medicine checks for organic beings. Emergency repair patches can be used to repair damage, just like stimpacks can be used on organic beings. See page 232 for more on droid repairs and healing.",
-        "Droids begin the game with 1 rank in the Enduring talent.",
-        "Droids cannot become Force-sensitive nor acquire a Force rating by any means. Droids cannot use Force powers and also cannot be affected by mind-altering Force powers."
-      ]
+    "caamasi" : {
+      "agility" : "2",
+      "brawn" : "2",
+      "cunning" : "1",
+      "intellect" : "2",
+      "name" : "Caamasi",
+      "presence" : "2",
+      "specialAbilities" : [ "Caamasi begin the game with 1 rank in either Charm or Discipline.", "Memnis: Once per game session, a Caamasi may form a new memnis that encompasses one scene or encounter. At any time, a Caamasi may perfectly recall any memnis that he has formed or witnessed, or share it with another Caamasi or a Force-sensitive character." ],
+      "startingXP" : "100",
+      "strainThreshold" : "11 + Willpower",
+      "willpower" : "3",
+      "woundThreshold" : "10 + Brawn"
     },
-    "gran": {
-      "name": "Gran",
-      "brawn": "2",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "1",
-      "willpower": "2",
-      "presence": "3",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "9 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Gran begin the game with 1 rank in Charm or Negotiation.",
-        "When making ranged combat or Perception checks, Gran remove up to 2 Setback Die imposed due to environmental conditions or concealment."
-      ]
+    "cerean" : {
+      "agility" : "1",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "3",
+      "name" : "Cerean",
+      "presence" : "2",
+      "specialAbilities" : [ "Cereans begin the game with 1 rank in Vigilance.", "Cereans treat all Knowledge skills as career skills." ],
+      "startingXP" : "90",
+      "strainThreshold" : "13 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "10 + Brawn"
     },
-    "ithorian": {
-      "name": "Ithorian",
-      "brawn": "2",
-      "agility": "1",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "3",
-      "presence": "2",
-      "woundThreshold": "9 + Brawn",
-      "strainThreshold": "12 + Willpower",
-      "startingXP": "90",
-      "specialAbilities": [
-        "Ithorians begin the game with 1 rank in Survival.",
-        "Roar: (Resilience; Damage 6; Critical 4; Range [Short]; Blast 3, Con-cussive 1, Slow-Firing 2, Stun Damage). Each time the Ithorian uses this ability, he suffers 3 strain."
-      ]
+    "chadrafan" : {
+      "agility" : "3",
+      "brawn" : "1",
+      "cunning" : "2",
+      "intellect" : "3",
+      "name" : "Chadra-Fan",
+      "presence" : "2",
+      "specialAbilities" : [ "Chadra-Fan are smaller than average and count as silhouette 0.", "Chadra-Fan begin the game with 1 rank in Mechanics.", "Chadra-Fan remove up to 2 setback die from their Perception checks." ],
+      "startingXP" : "90",
+      "strainThreshold" : "11 + Willpower",
+      "willpower" : "1",
+      "woundThreshold" : "9 + Brawn"
     },
-    "monCalamari": {
-      "name": "Mon Calamari",
-      "brawn": "2",
-      "agility": "2",
-      "intellect": "3",
-      "cunning": "1",
-      "willpower": "2",
-      "presence": "2",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Mon Calamari begin the game with 1 rank in Knowledge (Education).",
-        "Mon Calamari can breathe under-water without penalty and never suffer movement penalties for traveling through water."
-      ]
+    "chagrian" : {
+      "agility" : "1",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Chagrian",
+      "presence" : "2",
+      "specialAbilities" : [ "Chagrians begin the game with 1 rank in Resilience.", "Chagrians start with 1 rank in the Knowledge Specialization talent.", "Chagrians can breathe underwater without penalty and never suffer movement penalties for traveling through water." ],
+      "startingXP" : "90",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "3",
+      "woundThreshold" : "11 + Brawn"
     },
-    "sullustan": {
-      "name": "Sullustan",
-      "brawn": "2",
-      "agility": "3",
-      "intellect": "2",
-      "cunning": "1",
-      "willpower": "2",
-      "presence": "2",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Sullustans begin the game with 1 rank in Astrogation.",
-        "Sullustans begin the game with 1 rank in the Skilled Jockey talent."
-      ]
+    "chevin" : {
+      "agility" : "1",
+      "brawn" : "3",
+      "cunning" : "3",
+      "intellect" : "2",
+      "name" : "Chevin",
+      "presence" : "1",
+      "specialAbilities" : [ "Chevin begin the game with 1 rank in Negotiation.", "Chevin add 1 boost die to all Perception checks involving the sense of smell.", "A Chevin's hide is thick and tough enough to absorb some damage, so they start the game with one rank in the Durable talent." ],
+      "startingXP" : "80",
+      "strainThreshold" : "11 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "11 + Brawn"
     },
-    "gand": {
-      "name": "Gand",
-      "brawn": "2",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "3",
-      "presence": "1",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Gands begin the game with 1 rank in Discipline.",
-        "Subspecies: In Character creation, choose one of the following sub species of Gand.",
-        "Lungs: These Gands breate an ammonia gas mixture. They begin the game with an ammonia respirator, and treat oxygen as a dangerous atmosphere with Rating 8. They gain an additional 10 starting XP.",
-        "No Lungs: These Those Gand do not respire, and gain all necessary metabolic substances through food. They are immune to suffocation (But not vacuums.)"
-      ]
+    "chiss" : {
+      "agility" : "2",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "3",
+      "name" : "Chiss",
+      "presence" : "1",
+      "specialAbilities" : [ "Chiss begin the game with 1 rank in Cool.", "Chiss have adapted to be able to see in both the infrared and normal visual spectra. This enables Chiss characters to remove up to 1 setback die added to checks by lighting conditions." ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "10 + Brawn"
     },
-    "rodian": {
-      "name": "Rodian",
-      "brawn": "2",
-      "agility": "3",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "1",
-      "presence": "2",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Rodians begin the game with 1 rank in Survival.",
-        "Rodians begin the game with 1 rank in the Expert Tracker talent."
-      ]
+    "dressellian" : {
+      "agility" : "2",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Dressellian",
+      "presence" : "1",
+      "specialAbilities" : [ "Dressellians begin the game with 1 rank in Survival.", "Dressellians upgrade the difficulty of any checks involving advanced technology. This counts as any technology not available on the Dressellian's home planet, though individual pieces of technology they become familiar with over an extended period of time can become exempt from this at the GM's discretion. Dressellians can spend 10 XP at character creation to remove this penalty permanently." ],
+      "startingXP" : "110",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "3",
+      "woundThreshold" : "11 + Brawn"
     },
-    "twilek": {
-      "name": "Twi'lek",
-      "brawn": "1",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "3",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "11 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Twi'leks begin the game with 1 rank in either Charm or Deception.",
-        "Twi'leks may remove 1 setback imposed due to arid or hot environmental conditions from all skill checks."
-      ]
+    "droid" : {
+      "agility" : "1",
+      "brawn" : "1",
+      "cunning" : "1",
+      "intellect" : "1",
+      "name" : "Droid",
+      "presence" : "1",
+      "specialAbilities" : [ "Droids do not need to eat, sleep, or breathe, and are unaffected by toxins and poisons.", "Droids have a cybernetic implant cap of 6 instead of their Brawn rating.", "Droid Player Characters may train one rank each in six of the eight career skills (instead of the usual four). After selecting a specialization, a droid PC may train one rank each in three of the four specialization skills (instead of the usual two).", "Since droids are inorganic, they do not gain the benefits of recovering with a bacta tank, a stimpack, or Medicine skill checks. Droids do recover naturally by resting, as their systems attempt self-repairs. If self-repair is not ade-quately effective, a droid needs to be tended to with a Mechanics check, using the same difficul-ties and results as Medicine checks for organic beings. Emergency repair patches can be used to repair damage, just like stimpacks can be used on organic beings. See page 232 for more on droid repairs and healing.", "Droids begin the game with 1 rank in the Enduring talent.", "Droids cannot become Force-sensitive nor acquire a Force rating by any means. Droids cannot use Force powers and also cannot be affected by mind-altering Force powers." ],
+      "startingXP" : "175",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "1",
+      "woundThreshold" : "10 + Brawn"
     },
-    "wookiee": {
-      "name": "Wookiee",
-      "brawn": "3",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "1",
-      "presence": "2",
-      "woundThreshold": "14 + Brawn",
-      "strainThreshold": "8 + Willpower",
-      "startingXP": "90",
-      "specialAbilities": [
-        "Wookiees begin the game with 1 rank in Brawl.",
-        "Wookies deal an extra 1 damage on all Brawl and Melee attacks while not at full wounds. If they suffer from a Critical Injury, they deal an extra 2 damage instead."
-      ]
+    "duros" : {
+      "agility" : "2",
+      "brawn" : "1",
+      "cunning" : "2",
+      "intellect" : "3",
+      "name" : "Duros",
+      "presence" : "2",
+      "specialAbilities" : [ "Duros begin the game with one rank in Piloting (Space).", "Duros may add advantage to all Astrogation checks they make." ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "11 + Brawn"
     },
-    "cerean": {
-      "name": "Cerean",
-      "brawn": "2",
-      "agility": "1",
-      "intellect": "3",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "2",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "13 + Willpower",
-      "startingXP": "90",
-      "specialAbilities": [
-        "Cereans begin the game with 1 rank in Vigilance.",
-        "Cereans treat all Knowledge skills as career skills."
-      ]
+    "elom" : {
+      "agility" : "2",
+      "brawn" : "3",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Elom",
+      "presence" : "1",
+      "specialAbilities" : [ "Eloms begin the game with 1 rank in Resilience.", "Before using a maneuver to move, an Elom may spend a maneuver to dig, allowing the Elom to use that move maneuver to travel through loose soil or similar terrain. At the Game Master's discretion, this excavation can result in a low, narrow tunnel that others can use." ],
+      "startingXP" : "100",
+      "strainThreshold" : "9 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "10 + Brawn"
     },
-    "keldor": {
-      "name": "Kel'Dor",
-      "brawn": "1",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "3",
-      "presence": "2",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Kel'Dors begin the game with 1 rank in Knowledge (Education).",
-        "Kel'Dors may remove up to 2 Setback die imposed due to darkness from all skill checks.",
-        "Kel'Dors begin the game with an antitox breath mask",
-        "Kel'Dors treat oxygen as a dangerous atmosphere with Rating 8.",
-        "Kel'Dors may survive in vacuum for up to five minutes before suffering its effects."
-      ]
+    "elomin" : {
+      "agility" : "2",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "3",
+      "name" : "Elomin",
+      "presence" : "2",
+      "specialAbilities" : [ "Elomin begin the game with 1 rank in Charm", "Elomin begin the game with 1 rank in Knowledge (Education)." ],
+      "startingXP" : "105",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "1",
+      "woundThreshold" : "9 + Brawn"
     },
-    "mirialan": {
-      "name": "Mirialan",
-      "brawn": "2",
-      "agility": "3",
-      "intellect": "2",
-      "cunning": "1",
-      "willpower": "2",
-      "presence": "2",
-      "woundThreshold": "11 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Mirialans begin the game with 1 rank in Discipline",
-        "Mirialans begin the game with 1 rank in Cool"
-      ]
+    "falleen" : {
+      "agility" : "2",
+      "brawn" : "1",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Falleen",
+      "presence" : "3",
+      "specialAbilities" : [ "Falleen begin the game with 1 rank in Charm.", "By emitting pheromones and altering their skin colour, Falleen can affect emotional states of other sentients. Once per check as an incidental, a Falleen may suffer 2 strain to upgrade the ability of a Charm, Deception or Negotiation check against a living sentient being within short range once. This ability has no effect on targets wearing breath masks or without respiratory systems." ],
+      "startingXP" : "90",
+      "strainThreshold" : "12 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "10 + Brawn"
     },
-    "nautolan": {
-      "name": "Nautolan",
-      "brawn": "3",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "1",
-      "presence": "2",
-      "woundThreshold": "11 + Brawn",
-      "strainThreshold": "9 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Nautolans begin the game with 1 rank in Athletics.",
-        "Nautolans may breathe underwa­ter without penalty and never suffer movement penalties for traveling through water."
-      ]
+    "gand" : {
+      "agility" : "2",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Gand",
+      "presence" : "1",
+      "specialAbilities" : [ "Gands begin the game with 1 rank in Discipline.", "Subspecies: In Character creation, choose one of the following sub species of Gand.", "Lungs: These Gands breate an ammonia gas mixture. They begin the game with an ammonia respirator, and treat oxygen as a dangerous atmosphere with Rating 8. They gain an additional 10 starting XP.", "No Lungs: These Those Gand do not respire, and gain all necessary metabolic substances through food. They are immune to suffocation (But not vacuums.)" ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "3",
+      "woundThreshold" : "10 + Brawn"
     },
-    "togruta": {
-      "name": "Togruta",
-      "brawn": "1",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "3",
-      "willpower": "2",
-      "presence": "2",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Togrutas begin the game with 1 rank in Perception.",
-        "Togrutas grant 2 boost die when performaning assist maneuvers, instead of 1."
-      ]
+    "gank" : {
+      "agility" : "2",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Gank",
+      "presence" : "1",
+      "specialAbilities" : [ "Ganks begin the game with 1 rank in Coercion or Vigilance.", "All Ganks are cyborgs and each one often possesses several different cybernetic implants. A Gank begins play with up to two cybernetics (such as those on page 173 of the Edge of the Empire Core Rulebook or on page 106 of this book) that cost a total of up to 5,000 credits. If a character takes on additional obligation for credits at character creation, he may apply these extra funds to the 5,000 credit budget to purchase cybernetics. Ganks have a cybernetic implant cap of 3 plus Brawn rating." ],
+      "startingXP" : "110",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "10 + Brawn"
     },
-    "zabrak": {
-      "name": "Zabrak",
-      "brawn": "2",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "3",
-      "presence": "1",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Zabrak begin the game with 1 rank in Survival.",
-        "Zabrak add 1 advantage to all Coercion checks they make."
-      ]
+    "gossam" : {
+      "agility" : "2",
+      "brawn" : "1",
+      "cunning" : "3",
+      "intellect" : "2",
+      "name" : "Gossam",
+      "presence" : "2",
+      "specialAbilities" : [ "Gossams begin the game with 1 rank in Deception.", "Gossams are smaller than average and count as silhouette 0." ],
+      "startingXP" : "100",
+      "strainThreshold" : "11 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "9 + Brawn"
     },
-    "caamasi": {
-      "name": "Caamasi",
-      "brawn": "2",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "1",
-      "willpower": "3",
-      "presence": "2",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "11 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Caamasi begin the game with 1 rank in either Charm or Discipline.",
-        "Memnis: Once per game session, a Caamasi may form a new memnis that encompasses one scene or encounter. At any time, a Caamasi may perfectly recall any memnis that he has formed or witnessed, or share it with another Caamasi or a Force-sensitive character."
-      ]
+    "gotal" : {
+      "agility" : "2",
+      "brawn" : "2",
+      "cunning" : "3",
+      "intellect" : "2",
+      "name" : "Gotal",
+      "presence" : "1",
+      "specialAbilities" : [ "Gotals begin the game with 1 rank in Perception.", "The head cones of a Gotal are finely tuned sensory organs used to detect almost the entirety of the electromagnetic spectrum. Once per encounter as a maneuver, a Gotal may sense the presence and current emotional states of all living things within short range of himself." ],
+      "startingXP" : "100",
+      "strainThreshold" : "8 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "9 + Brawn"
     },
-    "neimoidian": {
-      "name": "Neimoidian",
-      "brawn": "1",
-      "agility": "2",
-      "intellect": "3",
-      "cunning": "3",
-      "willpower": "1",
-      "presence": "2",
-      "woundThreshold": "11 + Brawn",
-      "strainThreshold": "9 + Willpower",
-      "startingXP": "90",
-      "specialAbilities": [
-        "Neimoidians begin the game with 1 rank in either Deception or Negotiation."
-      ]
+    "gran" : {
+      "agility" : "2",
+      "brawn" : "2",
+      "cunning" : "1",
+      "intellect" : "2",
+      "name" : "Gran",
+      "presence" : "3",
+      "specialAbilities" : [ "Gran begin the game with 1 rank in Charm or Negotiation.", "When making ranged combat or Perception checks, Gran remove up to 2 Setback Die imposed due to environmental conditions or concealment." ],
+      "startingXP" : "100",
+      "strainThreshold" : "9 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "10 + Brawn"
     },
-    "gossam": {
-      "name": "Gossam",
-      "brawn": "1",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "3",
-      "willpower": "2",
-      "presence": "2",
-      "woundThreshold": "9 + Brawn",
-      "strainThreshold": "11 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Gossams begin the game with 1 rank in Deception.",
-        "Gossams are smaller than average and count as silhouette 0."
-      ]
+    "human" : {
+      "agility" : "2",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Human",
+      "presence" : "2",
+      "specialAbilities" : [ "Humans begin the game with 1 rank in 2 different non-career skills of your choice" ],
+      "startingXP" : "110",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "10 + Brawn"
     },
-    "elom": {
-      "name": "Elom",
-      "brawn": "3",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "1",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "9 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Eloms begin the game with 1 rank in Resilience.",
-        "Before using a maneuver to move, an Elom may spend a maneuver to dig, allowing the Elom to use that move maneuver to travel through loose soil or similar terrain. At the Game Master's discretion, this excavation can result in a low, narrow tunnel that others can use."
-      ]
+    "hutt" : {
+      "agility" : "1",
+      "brawn" : "3",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Hutts",
+      "presence" : "2",
+      "specialAbilities" : [ "Hutts begin the game with 1 rank in the Enduring and Nobody's Fool talents.", "Hutts begin the game with 1 rank in Coercion or Discipline.", "A Hutt can never spend more than one maneuver moving per turn." ],
+      "startingXP" : "70",
+      "strainThreshold" : "11 + Willpower",
+      "willpower" : "3",
+      "woundThreshold" : "13 + Brawn"
     },
-    "elomin": {
-      "name": "Elomin",
-      "brawn": "2",
-      "agility": "2",
-      "intellect": "3",
-      "cunning": "2",
-      "willpower": "1",
-      "presence": "2",
-      "woundThreshold": "9 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "105",
-      "specialAbilities": [
-        "Elomin begin the game with 1 rank in Charm",
-        "Elomin begin the game with 1 rank in Knowledge (Education)."
-      ]
+    "ishiTib" : {
+      "agility" : "2",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "3",
+      "name" : "Ishi Tib",
+      "presence" : "2",
+      "specialAbilities" : [ "Ishi Tib begin the game with 1 rank in Discipline.", "Ishi Tib can breathe underwater without penalty and never suffer movement penalties for traveling through water.", "If an Ishi Tib has not been doused in salt water in the last 24 hours the character's wound threshold is reduced by 2. The condition remains in effect until the Ishi Tib is doused in salt water." ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "1",
+      "woundThreshold" : "12 + Brawn"
     },
-    "kyuzo": {
-      "name": "Kyuzo",
-      "brawn": "2",
-      "agility": "3",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "1",
-      "woundThreshold": "11 + Brawn",
-      "strainThreshold": "11 + Willpower",
-      "startingXP": "90",
-      "specialAbilities": [
-        "Kyuzo begin the game with 1 rank in Coordination.",
-        "Kyuzo are adapted for Phatrong's relatively high gravity, and can make impressive bounding leaps on most other worlds. Once per round as a maneuver, a Kyuzo may suffer 3 strain to leap horizontally or vertically to any location within medium range."
-      ]
+    "ithorian" : {
+      "agility" : "1",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Ithorian",
+      "presence" : "2",
+      "specialAbilities" : [ "Ithorians begin the game with 1 rank in Survival.", "Roar: (Resilience; Damage 6; Critical 4; Range [Short]; Blast 3, Con-cussive 1, Slow-Firing 2, Stun Damage). Each time the Ithorian uses this ability, he suffers 3 strain." ],
+      "startingXP" : "90",
+      "strainThreshold" : "12 + Willpower",
+      "willpower" : "3",
+      "woundThreshold" : "9 + Brawn"
     },
-    "shistavanen": {
-      "name": "Shistavanen",
-      "brawn": "2",
-      "agility": "3",
-      "intellect": "3",
-      "cunning": "2",
-      "willpower": "1",
-      "presence": "1",
-      "woundThreshold": "12 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "80",
-      "specialAbilities": [
-        "Shistavanens begin the game with 1 rank in either Brawl or Survival.",
-        "When making a check for initiative, a Shistavanen may make a Survival check instead of a Discipline or Cool check."
-      ]
+    "kaminoan" : {
+      "agility" : "2",
+      "brawn" : "1",
+      "cunning" : "2",
+      "intellect" : "3",
+      "name" : "Kaminoan",
+      "presence" : "2",
+      "specialAbilities" : [ "Kaminoans begin the game with 1 rank in Medicine.", "Kaminoans begin the game with 1 rank in the Researcher talent.", "Kaminoans add 1 setback to all Charm checks they make. Other characters add 1 setback to all social skill checks they make when targeting Kaminoans." ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "9 + Brawn"
     },
-    "bith": {
-      "name": "Bith",
-      "brawn": "1",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "3",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Bith begin the game with 1 rank in Perception.",
-        "Bith add 1 boost die whenever they make a hearing-based Perception check. When Bith suffer strain due to loud noises, they suffer twice the normal amount of strain. Wearing ear protection negates both effects of this ability."
-      ]
+    "keldor" : {
+      "agility" : "2",
+      "brawn" : "1",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Kel'Dor",
+      "presence" : "2",
+      "specialAbilities" : [ "Kel'Dors begin the game with 1 rank in Knowledge (Education).", "Kel'Dors may remove up to 2 Setback die imposed due to darkness from all skill checks.", "Kel'Dors begin the game with an antitox breath mask", "Kel'Dors treat oxygen as a dangerous atmosphere with Rating 8.", "Kel'Dors may survive in vacuum for up to five minutes before suffering its effects." ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "3",
+      "woundThreshold" : "10 + Brawn"
     },
-    "kaminoan": {
-      "name": "Kaminoan",
-      "brawn": "1",
-      "agility": "2",
-      "intellect": "3",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "2",
-      "woundThreshold": "9 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Kaminoans begin the game with 1 rank in Medicine.",
-        "Kaminoans begin the game with 1 rank in the Researcher talent.",
-        "Kaminoans add 1 setback to all Charm checks they make. Other characters add 1 setback to all social skill checks they make when targeting Kaminoans."
-      ]
+    "klatooinian" : {
+      "agility" : "3",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Klatooinian",
+      "presence" : "2",
+      "specialAbilities" : [ "Klatooinians begin the game with 1 rank in Brawl or Ranged (Heavy) or Ranged (Light).", "Klatooinians begin the game with 1 additional rank of one non-career skill of his choice." ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "1",
+      "woundThreshold" : "10 + Brawn"
     },
-    "skakoan": {
-      "name": "Skakoan",
-      "brawn": "2",
-      "agility": "2",
-      "intellect": "3",
-      "cunning": "1",
-      "willpower": "2",
-      "presence": "2",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "8 + Willpower",
-      "startingXP": "80",
-      "specialAbilities": [
-        "Skakoans begin the game with 1 rank in Knowledge (Education).",
-        "Skakoans begin the game with 1 rank in Mechanics."
-      ]
+    "kyuzo" : {
+      "agility" : "3",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Kyuzo",
+      "presence" : "1",
+      "specialAbilities" : [ "Kyuzo begin the game with 1 rank in Coordination.", "Kyuzo are adapted for Phatrong's relatively high gravity, and can make impressive bounding leaps on most other worlds. Once per round as a maneuver, a Kyuzo may suffer 3 strain to leap horizontally or vertically to any location within medium range." ],
+      "startingXP" : "90",
+      "strainThreshold" : "11 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "11 + Brawn"
     },
-    "chagrian": {
-      "name": "Chagrian",
-      "brawn": "2",
-      "agility": "1",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "3",
-      "presence": "2",
-      "woundThreshold": "11 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "90",
-      "specialAbilities": [
-        "Chagrians begin the game with 1 rank in Resilience.",
-        "Chagrians start with 1 rank in the Knowledge Specialization talent.",
-        "Chagrians can breathe underwater without penalty and never suffer movement penalties for traveling through water."
-      ]
+    "lannik" : {
+      "agility" : "1",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "3",
+      "name" : "Lannik",
+      "presence" : "2",
+      "specialAbilities" : [ "Lanniks begin the game with 1 rank in Streetwise.", "A Lannik removes up to 1 setback die caused by Critical Injuries, fear or the disoriented condition from all checks." ],
+      "startingXP" : "95",
+      "strainThreshold" : "12 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "8 + Brawn"
     },
-    "ishiTib": {
-      "name": "Ishi Tib",
-      "brawn": "2",
-      "agility": "2",
-      "intellect": "3",
-      "cunning": "2",
-      "willpower": "1",
-      "presence": "2",
-      "woundThreshold": "12 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Ishi Tib begin the game with 1 rank in Discipline.",
-        "Ishi Tib can breathe underwater without penalty and never suffer movement penalties for traveling through water.",
-        "If an Ishi Tib has not been doused in salt water in the last 24 hours the character's wound threshold is reduced by 2. The condition remains in effect until the Ishi Tib is doused in salt water."
-      ]
+    "mirialan" : {
+      "agility" : "3",
+      "brawn" : "2",
+      "cunning" : "1",
+      "intellect" : "2",
+      "name" : "Mirialan",
+      "presence" : "2",
+      "specialAbilities" : [ "Mirialans begin the game with 1 rank in Discipline", "Mirialans begin the game with 1 rank in Cool" ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "11 + Brawn"
     },
-    "lannik": {
-      "name": "Lannik",
-      "brawn": "2",
-      "agility": "1",
-      "intellect": "3",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "2",
-      "woundThreshold": "8 + Brawn",
-      "strainThreshold": "12 + Willpower",
-      "startingXP": "95",
-      "specialAbilities": [
-        "Lanniks begin the game with 1 rank in Streetwise.",
-        "A Lannik removes up to 1 setback die caused by Critical Injuries, fear or the disoriented condition from all checks."
-      ]
+    "monCalamari" : {
+      "agility" : "2",
+      "brawn" : "2",
+      "cunning" : "1",
+      "intellect" : "3",
+      "name" : "Mon Calamari",
+      "presence" : "2",
+      "specialAbilities" : [ "Mon Calamari begin the game with 1 rank in Knowledge (Education).", "Mon Calamari can breathe under-water without penalty and never suffer movement penalties for traveling through water." ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "10 + Brawn"
     },
-    "chadrafan": {
-      "name": "Chadra-Fan",
-      "brawn": "1",
-      "agility": "3",
-      "intellect": "3",
-      "cunning": "2",
-      "willpower": "1",
-      "presence": "2",
-      "woundThreshold": "9 + Brawn",
-      "strainThreshold": "11 + Willpower",
-      "startingXP": "90",
-      "specialAbilities": [
-        "Chadra-Fan are smaller than average and count as silhouette 0.",
-        "Chadra-Fan begin the game with 1 rank in Mechanics.",
-        "Chadra-Fan remove up to 2 setback die from their Perception checks."
-      ]
+    "nautolan" : {
+      "agility" : "2",
+      "brawn" : "3",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Nautolan",
+      "presence" : "2",
+      "specialAbilities" : [ "Nautolans begin the game with 1 rank in Athletics.", "Nautolans may breathe underwa­ter without penalty and never suffer movement penalties for traveling through water." ],
+      "startingXP" : "100",
+      "strainThreshold" : "9 + Willpower",
+      "willpower" : "1",
+      "woundThreshold" : "11 + Brawn"
     },
-    "dressellian": {
-      "name": "Dressellian",
-      "brawn": "2",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "3",
-      "presence": "1",
-      "woundThreshold": "11 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "110",
-      "specialAbilities": [
-        "Dressellians begin the game with 1 rank in Survival.",
-        "Dressellians upgrade the difficulty of any checks involving advanced technology. This counts as any technology not available on the Dressellian's home planet, though individual pieces of technology they become familiar with over an extended period of time can become exempt from this at the GM's discretion. Dressellians can spend 10 XP at character creation to remove this penalty permanently."
-      ]
+    "neimoidian" : {
+      "agility" : "2",
+      "brawn" : "1",
+      "cunning" : "3",
+      "intellect" : "3",
+      "name" : "Neimoidian",
+      "presence" : "2",
+      "specialAbilities" : [ "Neimoidians begin the game with 1 rank in either Deception or Negotiation." ],
+      "startingXP" : "90",
+      "strainThreshold" : "9 + Willpower",
+      "willpower" : "1",
+      "woundThreshold" : "11 + Brawn"
     },
-    "xexto": {
-      "name": "Xexto",
-      "brawn": "1",
-      "agility": "3",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "1",
-      "presence": "2",
-      "woundThreshold": "9 + Brawn",
-      "strainThreshold": "9 + Willpower",
-      "startingXP": "85",
-      "specialAbilities": [
-        "Xexto begin the game with 1 rank in the Confidence talent.",
-        "Xexto have six limbs: two legs and four arms. As a result, they gain an additional free maneuver per turn, though they still may not perform more than two maneuvers per turn."
-      ]
+    "nikto" : {
+      "agility" : "2",
+      "brawn" : "3",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Nikto",
+      "presence" : "1",
+      "specialAbilities" : [ "Each Nikto subspecies has its own special abilities, listed here.", "Kajain'sa'Niktos: (Red) Red Niktos begin the game with 1 rank in Resilience. When making skill checks, Red Niktos may remove 1 setback die imposed due to arid or hot environmental conditions.", "Kadas'sa'Niktos: (Green) Green Niktos begin the game with 1 rank in Coordination. They also gain 1 boost die to all Athletics checks made to climb trees and other surfaces their claws can pierce. When a Green Nikto makes Brawl checks to deal damage to an opponent, he deals +1 damage and has a Critical Rating of 3.", "Esral'sa'Niktos: (Mountain) Mountain Niktos begin the game with 1 rank in Survival. They also gain the Natural Outdoorsman talent (once per game session, a Mountain Nikto may reroll any one Resilience or Survival check.", "Gluss'Sa'Niktos: (Pale) Pale Niktos begin the game with 1 rank in Athletics. A Pale Nikto suffers no movement penalties for traveling through water and can hold their breath for a number of rounds equal to twice their Brawn rating before beginning to drown.", "M'Shento'Su'Niktos (Southern) Southern Niktos begin the game with 1 rank in Perception. Southern Niktos may add 1 boost die to all Perception and Vigilance checks to detect sounds." ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "11 + Brawn"
     },
-    "polisMassan": {
-      "name": "Polis Massan",
-      "brawn": "1",
-      "agility": "2",
-      "intellect": "3",
-      "cunning": "2",
-      "willpower": "3",
-      "presence": "1",
-      "woundThreshold": "8 + Brawn",
-      "strainThreshold": "11 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Polis Massans begin the game with 1 rank in Medicine.",
-        "The vast majority of Polis Massans are born without vocal chords, though a small subset does possess them. Referred to as ‘‘speakers’’ by their people, these rare individuals can physically speak languages, though their voices are soft and strangely resonant. When creating a Polis Massan character, a player may spend 10 starting XP to specify that the character possesses vocal chords.",
-        "Polis Massans can communicate with other beings at short range using a simple form of telepathy. This communication is akin to a broadcast, and anyone within short range ‘‘hears’’ the Polis Massans speech. Polis Massans can only 'whisper' privately to beings they are engaged with."
-      ]
+    "polisMassan" : {
+      "agility" : "2",
+      "brawn" : "1",
+      "cunning" : "2",
+      "intellect" : "3",
+      "name" : "Polis Massan",
+      "presence" : "1",
+      "specialAbilities" : [ "Polis Massans begin the game with 1 rank in Medicine.", "The vast majority of Polis Massans are born without vocal chords, though a small subset does possess them. Referred to as ‘‘speakers’’ by their people, these rare individuals can physically speak languages, though their voices are soft and strangely resonant. When creating a Polis Massan character, a player may spend 10 starting XP to specify that the character possesses vocal chords.", "Polis Massans can communicate with other beings at short range using a simple form of telepathy. This communication is akin to a broadcast, and anyone within short range ‘‘hears’’ the Polis Massans speech. Polis Massans can only 'whisper' privately to beings they are engaged with." ],
+      "startingXP" : "100",
+      "strainThreshold" : "11 + Willpower",
+      "willpower" : "3",
+      "woundThreshold" : "8 + Brawn"
     },
-    "quarren": {
-      "name": "Quarren",
-      "brawn": "2",
-      "agility": "2",
-      "intellect": "1",
-      "cunning": "2",
-      "willpower": "3",
-      "presence": "1",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "8 + Willpower",
-      "startingXP": "95",
-      "specialAbilities": [
-        "Quarren begin the game with 1 rank in Negotiation.",
-        "Quarren can breathe underwater without penalty and never suffer movement penalties for traveling through water.",
-        "Quarren can spit ink from a specialized sac within their gills that disperses in water, creating a brief murk used to confuse foes or escape predators. This ability can be used on land as well, though it is considerably less effective because it must be sprayed directly on the target. Once per encounter, as an out-of-turn incidental, a Quarren may suffer 2 strain to add 1 setback die to a combat check made by a character within short range (underwater, it adds 3 setback die to the combat check instead)."
-      ]
+    "quarren" : {
+      "agility" : "2",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "1",
+      "name" : "Quarren",
+      "presence" : "1",
+      "specialAbilities" : [ "Quarren begin the game with 1 rank in Negotiation.", "Quarren can breathe underwater without penalty and never suffer movement penalties for traveling through water.", "Quarren can spit ink from a specialized sac within their gills that disperses in water, creating a brief murk used to confuse foes or escape predators. This ability can be used on land as well, though it is considerably less effective because it must be sprayed directly on the target. Once per encounter, as an out-of-turn incidental, a Quarren may suffer 2 strain to add 1 setback die to a combat check made by a character within short range (underwater, it adds 3 setback die to the combat check instead)." ],
+      "startingXP" : "95",
+      "strainThreshold" : "8 + Willpower",
+      "willpower" : "3",
+      "woundThreshold" : "10 + Brawn"
     },
-    "verpine": {
-      "name": "Verpine",
-      "brawn": "2",
-      "agility": "3",
-      "intellect": "3",
-      "cunning": "1",
-      "willpower": "2",
-      "presence": "1",
-      "woundThreshold": "9 + Brawn",
-      "strainThreshold": "12 + Willpower",
-      "startingXP": "80",
-      "specialAbilities": [
-        "Verpine begin the game with 1 rank in Mechanics.",
-        "The compound eyes of a Verpine are capable of seeing tiny, even microscopic, details. When closely examining an object, Verpine characters add 1 boost die to their Perception checks.",
-        "Verpine can produce and hear radio waves, which allows them to silently communicate with other Verpine and specially tuned comlinks within a 100-kilometer range."
-      ]
+    "rodian" : {
+      "agility" : "3",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Rodian",
+      "presence" : "2",
+      "specialAbilities" : [ "Rodians begin the game with 1 rank in Survival.", "Rodians begin the game with 1 rank in the Expert Tracker talent." ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "1",
+      "woundThreshold" : "10 + Brawn"
     },
-    "aqualish": {
-      "name": "Aqualish",
-      "brawn": "3",
-      "agility": "2",
-      "intellect": "1",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "2",
-      "woundThreshold": "11 + Brawn",
-      "strainThreshold": "8 + Willpower",
-      "startingXP": "90",
-      "specialAbilities": [
-        "All Aqualish are capable of breathing underwater.",
-        "Aqualish begin the game with 1 rank in Brawl.",
-        "A player choosing to play an Aqualish character must choose one of the following sub-species: ",
-        "Aquala: Aquala begin the game with 1 rank in Resilience. Furthermore, Aquala may remove 1 setback die imposed due to any cold or wet conditions from all skill checks.",
-        "Ualaq: Ualaq begin the game with 1 rank in Survival or 1 rank in Perception. Furthermore, Ualaq may remove 1 setback die imposed due to dark conditions, but suffer 1 setback die to all Perception checks in brightly lit environments.",
-        "Quara: Quara begin the game with 1 rank in Athletics or 1 rank in Coercion. Furthermore, Quara may remove 1 setback die when attempting to track anything through a natural environment."
-      ]
+    "sakiyan" : {
+      "agility" : "2",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "3",
+      "name" : "Sakiyan",
+      "presence" : "2",
+      "specialAbilities" : [ "Sakiyans begin the game with 1 rank in Perception or Vigilance.", "Sakiyans begin the game with 1 rank in the Expert Tracker talent." ],
+      "startingXP" : "80",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "8 + Brawn"
     },
-    "klatooinian": {
-      "name": "Klatooinian",
-      "brawn": "2",
-      "agility": "3",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "1",
-      "presence": "2",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Klatooinians begin the game with 1 rank in Brawl or Ranged (Heavy) or Ranged (Light).",
-        "Klatooinians begin the game with 1 additional rank of one non-career skill of his choice."
-      ]
+    "shistavanen" : {
+      "agility" : "3",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "3",
+      "name" : "Shistavanen",
+      "presence" : "1",
+      "specialAbilities" : [ "Shistavanens begin the game with 1 rank in either Brawl or Survival.", "When making a check for initiative, a Shistavanen may make a Survival check instead of a Discipline or Cool check." ],
+      "startingXP" : "80",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "1",
+      "woundThreshold" : "12 + Brawn"
     },
-    "weequay": {
-      "name": "Weequay",
-      "brawn": "3",
-      "agility": "2",
-      "intellect": "1",
-      "cunning": "3",
-      "willpower": "2",
-      "presence": "1",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "9 + Willpower",
-      "startingXP": "90",
-      "specialAbilities": [
-        "Weequays begin the game with 1 rank in Resilience or Athletics.",
-        "A Weequay can communicate with other Weequays using pheromones. This is completely non-verbal, and undetectable to any other species nearby. Weequays can only communicate like this if they are within short range of each other."
-      ]
+    "skakoan" : {
+      "agility" : "2",
+      "brawn" : "2",
+      "cunning" : "1",
+      "intellect" : "3",
+      "name" : "Skakoan",
+      "presence" : "2",
+      "specialAbilities" : [ "Skakoans begin the game with 1 rank in Knowledge (Education).", "Skakoans begin the game with 1 rank in Mechanics." ],
+      "startingXP" : "80",
+      "strainThreshold" : "8 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "10 + Brawn"
     },
-    "chiss": {
-      "name": "Chiss",
-      "brawn": "2",
-      "agility": "2",
-      "intellect": "3",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "1",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Chiss begin the game with 1 rank in Cool.",
-        "Chiss have adapted to be able to see in both the infrared and normal visual spectra. This enables Chiss characters to remove up to 1 setback die added to checks by lighting conditions."
-      ]
+    "sullustan" : {
+      "agility" : "3",
+      "brawn" : "2",
+      "cunning" : "1",
+      "intellect" : "2",
+      "name" : "Sullustan",
+      "presence" : "2",
+      "specialAbilities" : [ "Sullustans begin the game with 1 rank in Astrogation.", "Sullustans begin the game with 1 rank in the Skilled Jockey talent." ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "10 + Brawn"
     },
-    "toydarian": {
-      "name": "Toydarian",
-      "brawn": "1",
-      "agility": "1",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "3",
-      "presence": "3",
-      "woundThreshold": "9 + Brawn",
-      "strainThreshold": "12 + Willpower",
-      "startingXP": "90",
-      "specialAbilities": [
-        "Toydarians are smaller than average and count as silhouette 0.",
-        "Toydarians have wings that allow them to hover slightly off of the ground. When hovering, Toydarians do not have to spend additional maneuvers when navigating difficult terrain. Otherwise, their wings allow them no extra capabilities beyond those of a normal, walking character."
-      ]
+    "togruta" : {
+      "agility" : "2",
+      "brawn" : "1",
+      "cunning" : "3",
+      "intellect" : "2",
+      "name" : "Togruta",
+      "presence" : "2",
+      "specialAbilities" : [ "Togrutas begin the game with 1 rank in Perception.", "Togrutas grant 2 boost die when performaning assist maneuvers, instead of 1." ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "10 + Brawn"
     },
-    "arcona": {
-      "name": "Arcona",
-      "brawn": "1",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "3",
-      "presence": "2",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Arcona begin the game with 1 rank in Vigilance.",
-        "When making skill checks, Arcona may remove 1 setback die imposed due to arid or hot environmental conditions.",
-        "Arcona add advantage to any Charm or Negotiation checks they make."
-      ]
+    "toydarian" : {
+      "agility" : "1",
+      "brawn" : "1",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Toydarian",
+      "presence" : "3",
+      "specialAbilities" : [ "Toydarians are smaller than average and count as silhouette 0.", "Toydarians have wings that allow them to hover slightly off of the ground. When hovering, Toydarians do not have to spend additional maneuvers when navigating difficult terrain. Otherwise, their wings allow them no extra capabilities beyond those of a normal, walking character." ],
+      "startingXP" : "90",
+      "strainThreshold" : "12 + Willpower",
+      "willpower" : "3",
+      "woundThreshold" : "9 + Brawn"
     },
-    "chevin": {
-      "name": "Chevin",
-      "brawn": "3",
-      "agility": "1",
-      "intellect": "2",
-      "cunning": "3",
-      "willpower": "2",
-      "presence": "1",
-      "woundThreshold": "11 + Brawn",
-      "strainThreshold": "11 + Willpower",
-      "startingXP": "80",
-      "specialAbilities": [
-        "Chevin begin the game with 1 rank in Negotiation.",
-        "Chevin add 1 boost die to all Perception checks involving the sense of smell.",
-        "A Chevin's hide is thick and tough enough to absorb some damage, so they start the game with one rank in the Durable talent."
-      ]
+    "trandoshan" : {
+      "agility" : "1",
+      "brawn" : "3",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Trandoshan",
+      "presence" : "2",
+      "specialAbilities" : [ "Trandoshans begin the game with 1 rank in Perception", "Regeneration: Whenever a Trandoshan would recover 1 or more wounds from natural rest or recuperation in a Bacta Tank, they recover 1 additional wound. They do not recover additional wounds when receiving first aid or medical treatment, or when using a stimpack. Trandoshans can regrow lost limbs, but the process usually takes at least a month before the limb is usable.", "Claws: When a Trandoshan makes Brawl checks to deal damage to an opponent, they deal +1 damage and have a crit rating of 3." ],
+      "startingXP" : "90",
+      "strainThreshold" : "9 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "12 + Brawn"
     },
-    "falleen": {
-      "name": "Falleen",
-      "brawn": "1",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "3",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "12 + Willpower",
-      "startingXP": "90",
-      "specialAbilities": [
-        "Falleen begin the game with 1 rank in Charm.",
-        "By emitting pheromones and altering their skin colour, Falleen can affect emotional states of other sentients. Once per check as an incidental, a Falleen may suffer 2 strain to upgrade the ability of a Charm, Deception or Negotiation check against a living sentient being within short range once. This ability has no effect on targets wearing breath masks or without respiratory systems."
-      ]
+    "twilek" : {
+      "agility" : "2",
+      "brawn" : "1",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Twi'lek",
+      "presence" : "3",
+      "specialAbilities" : [ "Twi'leks begin the game with 1 rank in either Charm or Deception.", "Twi'leks may remove 1 setback imposed due to arid or hot environmental conditions from all skill checks." ],
+      "startingXP" : "100",
+      "strainThreshold" : "11 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "10 + Brawn"
     },
-    "gotal": {
-      "name": "Gotal",
-      "brawn": "2",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "3",
-      "willpower": "2",
-      "presence": "1",
-      "woundThreshold": "9 + Brawn",
-      "strainThreshold": "8 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Gotals begin the game with 1 rank in Perception.",
-        "The head cones of a Gotal are finely tuned sensory organs used to detect almost the entirety of the electromagnetic spectrum. Once per encounter as a maneuver, a Gotal may sense the presence and current emotional states of all living things within short range of himself."
-      ]
+    "verpine" : {
+      "agility" : "3",
+      "brawn" : "2",
+      "cunning" : "1",
+      "intellect" : "3",
+      "name" : "Verpine",
+      "presence" : "1",
+      "specialAbilities" : [ "Verpine begin the game with 1 rank in Mechanics.", "The compound eyes of a Verpine are capable of seeing tiny, even microscopic, details. When closely examining an object, Verpine characters add 1 boost die to their Perception checks.", "Verpine can produce and hear radio waves, which allows them to silently communicate with other Verpine and specially tuned comlinks within a 100-kilometer range." ],
+      "startingXP" : "80",
+      "strainThreshold" : "12 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "9 + Brawn"
     },
-    "hutt": {
-      "name": "Hutts",
-      "brawn": "3",
-      "agility": "1",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "3",
-      "presence": "2",
-      "woundThreshold": "13 + Brawn",
-      "strainThreshold": "11 + Willpower",
-      "startingXP": "70",
-      "specialAbilities": [
-        "Hutts begin the game with 1 rank in the Enduring and Nobody's Fool talents.",
-        "Hutts begin the game with 1 rank in Coercion or Discipline.",
-        "A Hutt can never spend more than one maneuver moving per turn."
-      ]
+    "weequay" : {
+      "agility" : "2",
+      "brawn" : "3",
+      "cunning" : "3",
+      "intellect" : "1",
+      "name" : "Weequay",
+      "presence" : "1",
+      "specialAbilities" : [ "Weequays begin the game with 1 rank in Resilience or Athletics.", "A Weequay can communicate with other Weequays using pheromones. This is completely non-verbal, and undetectable to any other species nearby. Weequays can only communicate like this if they are within short range of each other." ],
+      "startingXP" : "90",
+      "strainThreshold" : "9 + Willpower",
+      "willpower" : "2",
+      "woundThreshold" : "10 + Brawn"
     },
-    "gank": {
-      "name": "Gank",
-      "brawn": "2",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "1",
-      "woundThreshold": "10 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "110",
-      "specialAbilities": [
-        "Ganks begin the game with 1 rank in Coercion or Vigilance.",
-        "All Ganks are cyborgs and each one often possesses several different cybernetic implants. A Gank begins play with up to two cybernetics (such as those on page 173 of the Edge of the Empire Core Rulebook or on page 106 of this book) that cost a total of up to 5,000 credits. If a character takes on additional obligation for credits at character creation, he may apply these extra funds to the 5,000 credit budget to purchase cybernetics. Ganks have a cybernetic implant cap of 3 plus Brawn rating."
-      ]
+    "wookiee" : {
+      "agility" : "2",
+      "brawn" : "3",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Wookiee",
+      "presence" : "2",
+      "specialAbilities" : [ "Wookiees begin the game with 1 rank in Brawl.", "Wookies deal an extra 1 damage on all Brawl and Melee attacks while not at full wounds. If they suffer from a Critical Injury, they deal an extra 2 damage instead." ],
+      "startingXP" : "90",
+      "strainThreshold" : "8 + Willpower",
+      "willpower" : "1",
+      "woundThreshold" : "14 + Brawn"
     },
-    "nikto": {
-      "name": "Nikto",
-      "brawn": "3",
-      "agility": "2",
-      "intellect": "2",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "1",
-      "woundThreshold": "11 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "100",
-      "specialAbilities": [
-        "Each Nikto subspecies has its own special abilities, listed here.",
-        "Kajain'sa'Niktos: (Red) Red Niktos begin the game with 1 rank in Resilience. When making skill checks, Red Niktos may remove 1 setback die imposed due to arid or hot environmental conditions.",
-        "Kadas'sa'Niktos: (Green) Green Niktos begin the game with 1 rank in Coordination. They also gain 1 boost die to all Athletics checks made to climb trees and other surfaces their claws can pierce. When a Green Nikto makes Brawl checks to deal damage to an opponent, he deals +1 damage and has a Critical Rating of 3.",
-        "Esral'sa'Niktos: (Mountain) Mountain Niktos begin the game with 1 rank in Survival. They also gain the Natural Outdoorsman talent (once per game session, a Mountain Nikto may reroll any one Resilience or Survival check.",
-        "Gluss'Sa'Niktos: (Pale) Pale Niktos begin the game with 1 rank in Athletics. A Pale Nikto suffers no movement penalties for traveling through water and can hold their breath for a number of rounds equal to twice their Brawn rating before beginning to drown.",
-        "M'Shento'Su'Niktos (Southern) Southern Niktos begin the game with 1 rank in Perception. Southern Niktos may add 1 boost die to all Perception and Vigilance checks to detect sounds."
-      ]
+    "xexto" : {
+      "agility" : "3",
+      "brawn" : "1",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Xexto",
+      "presence" : "2",
+      "specialAbilities" : [ "Xexto begin the game with 1 rank in the Confidence talent.", "Xexto have six limbs: two legs and four arms. As a result, they gain an additional free maneuver per turn, though they still may not perform more than two maneuvers per turn." ],
+      "startingXP" : "85",
+      "strainThreshold" : "9 + Willpower",
+      "willpower" : "1",
+      "woundThreshold" : "9 + Brawn"
     },
-    "sakiyan": {
-      "name": "Sakiyan",
-      "brawn": "2",
-      "agility": "2",
-      "intellect": "3",
-      "cunning": "2",
-      "willpower": "2",
-      "presence": "2",
-      "woundThreshold": "8 + Brawn",
-      "strainThreshold": "10 + Willpower",
-      "startingXP": "80",
-      "specialAbilities": [
-        "Sakiyans begin the game with 1 rank in Perception or Vigilance.",
-        "Sakiyans begin the game with 1 rank in the Expert Tracker talent."
-      ]
+    "zabrak" : {
+      "agility" : "2",
+      "brawn" : "2",
+      "cunning" : "2",
+      "intellect" : "2",
+      "name" : "Zabrak",
+      "presence" : "1",
+      "specialAbilities" : [ "Zabrak begin the game with 1 rank in Survival.", "Zabrak add 1 advantage to all Coercion checks they make." ],
+      "startingXP" : "100",
+      "strainThreshold" : "10 + Willpower",
+      "willpower" : "3",
+      "woundThreshold" : "10 + Brawn"
     }
   },
-  "specs": {
-    "assassin": {
-      "name": "Assassin",
-      "career": "Bounty Hunter",
-      "career skills": [
-        "guns lmao"
-      ],
-      "talents": [
-        [
-          "grit",
-          "lethalBlows",
-          "stalker",
-          "dodge"
-        ],[
-          "preciseAim",
-          "jumpUp",
-          "quickStrike",
-          "quickDraw"
-        ],[
-          "targetedBlow",
-          "stalker",
-          "lethalBlows",
-          "anatomyLessons"
-        ],[
-          "stalker",
-          "sniperShot",
-          "dodge",
-          "lethalBlows"
-        ],[
-          "preciseAim",
-          "deadlyAccuracy",
-          "dedication",
-          "masterOfShadows"
-        ]
-      ],
-      "line1": [
-        "grit",
-        "lethalBlows",
-        "stalker",
-        "dodge"
-      ],
-      "line2": [
-        "preciseAim",
-        "jumpUp",
-        "quickStrike",
-        "quickDraw"
-      ],
-      "line3": [
-        "targetedBlow",
-        "stalker",
-        "lethalBlows",
-        "anatomyLessons"
-      ],
-      "line4": [
-        "stalker",
-        "sniperShot",
-        "dodge",
-        "lethalBlows"
-      ],
-      "line5": [
-        "preciseAim",
-        "deadlyAccuracy",
-        "dedication",
-        "masterOfShadows"
-      ],
-      "horizontalConnections": [
-        [
-          false, false, false
-        ], 
-        [
-          true, true, true
-        ], 
-        [
-          false, true, false
-        ],
-        [
-          true, false, false
-        ],
-        [
-          false, false, false
-        ]
-      ],
-      "verticalConnections": [
-        [
-          true, true, true, true
-        ], 
-        [
-          true, true, true, true
-        ], 
-        [
-          true, true, true, true
-        ],
-        [
-          true, true, true, true
-        ],
-        [
-          false, false, false
-        ]
-      ],
-      "line1Connections": {
-        "1": [
-          "down"
-        ],
-        "2": [
-          "down"
-        ],
-        "3": [
-          "down"
-        ],
-        "4": [
-          "down"
-        ]
-      },
-      "line2Connections": {
-        "1": [
-          "down",
-          "right"
-        ],
-        "2": [
-          "down",
-          "left",
-          "right"
-        ],
-        "3": [
-          "down",
-          "left",
-          "right"
-        ],
-        "4": [
-          "down",
-          "left"
-        ]
-      },
-      "line3Connections": {
-        "1": [
-          "down"
-        ],
-        "2": [
-          "down",
-          "right"
-        ],
-        "3": [
-          "down",
-          "left"
-        ],
-        "4": [
-          "down"
-        ]
-      },
-      "line4Connections": {
-        "1": [
-          "down",
-          "right"
-        ],
-        "2": [
-          "down",
-          "left"
-        ],
-        "3": [
-          "down"
-        ],
-        "4": [
-          "down"
-        ]
-      },
-      "line5Connections": {
-        "1": [
-          "down"
-        ],
-        "2": [
-          "down"
-        ],
-        "3": [
-          "down"
-        ],
-        "4": [
-          "down"
-        ]
-      }
+  "specs" : {
+    "assassin" : {
+      "bonusCareerSkills" : [ "Melee", "Ranged (Heavy)", "Skulduggery", "Stealth" ],
+      "book" : "EotE Core",
+      "career" : "Bounty Hunter",
+      "careerSkills" : [ "Athletics", "Brawl", "Perception", "Piloting (Planetary)", "Piloting (Space)", "Ranged (Heavy)", "Streetwise", "Vigilance" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, true, true ], [ false, true, false ], [ true, false, false ], [ false, false, false ] ],
+      "name" : "Assassin",
+      "talents" : [ [ "grit", "lethalBlows", "stalker", "dodge" ], [ "preciseAim", "jumpUp", "quickStrike", "quickDraw" ], [ "targetedBlow", "stalker", "lethalBlows", "anatomyLessons" ], [ "stalker", "sniperShot", "dodge", "lethalBlows" ], [ "preciseAim", "deadlyAccuracy", "dedication", "masterOfShadows" ] ],
+      "verticalConnections" : [ [ true, true, true, true ], [ true, true, true, true ], [ true, true, true, true ], [ true, true, true, true ], [ false, false, false ] ]
     },
-    "gadgeteer": {
-      "name": "Gadgeteer",
-      "career": "Bounty Hunter",
-      "career skills": [
-        "guns lmao"
-      ]
-    },
-    "survivalist": {
-      "name": "Survivalist",
-      "career": "Bounty Hunter",
-      "career skills": [
-        "guns lmao"
-      ]
+    "gadgeteer" : {
+      "bonusCareerSkills" : [ "Brawl", "Coercion", "Mechanics", "Ranged (Light)" ],
+      "book" : "EotE Core",
+      "career" : "Bounty Hunter",
+      "careerSkills" : [ "Athletics", "Brawl", "Perception", "Piloting (Planetary)", "Piloting (Space)", "Ranged (Heavy)", "Streetwise", "Vigilance" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, true, false ], [ true, true, false ], [ true, true, false ], [ true, true, false ] ],
+      "name" : "Gadgeteer",
+      "talents" : [ [ "brace", "toughened", "intimidating", "defensiveStance" ], [ "spareClip", "juryRigged", "pointBlank", "disorient" ], [ "toughened", "armorMaster", "naturalEnforcer", "stunningBlow" ], [ "juryRigged", "tinkerer", "deadlyAccuracy", "improvedStunningBlow" ], [ "intimidating", "dedication", "improvedArmorMaster", "cripplingBlow" ] ],
+      "verticalConnections" : [ [ false, true, false, true ], [ false, true, false, true ], [ false, true, false, true ], [ false, true, false, true ], [ false, false, false, false ] ]
     }
   },
-  "talents": {
-    "adversary": {
-      "activation": "passive",
-      "ranked": "yes",
-      "trees": "npc",
-      "description": "Upgrade the difficulty of any combat check targeting this character once per rank of Adversary"
+  "talents" : {
+    "adversary" : {
+      "description" : "Upgrade the difficulty of any combat check targeting this character once per rank of Adversary",
+      "key" : "adversary",
+      "name" : "Adversary",
+      "passive" : true,
+      "ranked" : true
+    },
+    "anatomyLessons" : {
+      "description" : "After making a successful attack, you may spend 1 Destiny Point to add damage equal to Intellect to one hit",
+      "key" : "anatomyLessons",
+      "name" : "Anatomy Lessons",
+      "passive" : false,
+      "ranked" : false
+    },
+    "armorMaster" : {
+      "description" : "When wearing armor, increase your total soak value by 1",
+      "key" : "armorMaster",
+      "name" : "Armor Master",
+      "passive" : true,
+      "ranked" : false
+    },
+    "brace" : {
+      "description" : "As a maneuver, you may brace yourself. On your next action, you remove 1 setback die per rank of Brace. This can only remove a setback die added due to environmental circumstances ",
+      "key" : "brace",
+      "name" : "Brace",
+      "passive" : false,
+      "ranked" : true
+    },
+    "cripplingBlow" : {
+      "description" : "Increase the difficulty of the next combat check by 1. If that check deals damage, the target suffers 1 strain whenever they move for the remainder of the encounter",
+      "key" : "cripplingBlow",
+      "name" : "Crippling Blow",
+      "passive" : false,
+      "ranked" : false
+    },
+    "deadlyAccuracy" : {
+      "description" : "Each time a rank of Deadly Accuracy is quired, pick one combat skill. You may add damage to one hit of a successful attack equal to ranks in the chosen skills",
+      "key" : "deadlyAccuracy",
+      "name" : "Deadly Accuracy",
+      "passive" : true,
+      "ranked" : true
+    },
+    "dedication" : {
+      "description" : "When a rank in Dedication is aquired, gain +1 to a single characteristic. This cannot bring the characteristic above 6",
+      "key" : "dedication",
+      "name" : "Dedication",
+      "passive" : true,
+      "ranked" : true
+    },
+    "defensiveStance" : {
+      "description" : "Once per round, you may perform a Defensive Stance maneuver and suffer a number of strain up to your ranks in Defensive Stance to upgrade the difficulty of all incoming melee attacks by and equal amount",
+      "key" : "defensiveStance",
+      "name" : "Defensive Stance",
+      "passive" : false,
+      "ranked" : true
+    },
+    "disorient" : {
+      "description" : "After a successful attack, you may spend 2 Advantage to disorient the target for a number of rounds equal to your ranks in Disorient",
+      "key" : "disorient",
+      "name" : "Disorient",
+      "passive" : true,
+      "ranked" : true
+    },
+    "dodge" : {
+      "description" : "When targeted by a combat check, you may perform a Dodge incidental to suffer a number of strain no greater than your ranks in Dodge, then upgrade the difficulty of the check by that number",
+      "key" : "dodge",
+      "name" : "Dodge",
+      "passive" : true,
+      "ranked" : true
+    },
+    "grit" : {
+      "description" : "Gain +1 Strain Threshold",
+      "key" : "grit",
+      "name" : "Grit",
+      "passive" : true,
+      "ranked" : true
+    },
+    "improvedArmorMaster" : {
+      "description" : "When wearing armor with a soak value of 2 or higher, increase defense by 1",
+      "key" : "improvedArmorMaster",
+      "name" : "Improved Armor Master",
+      "passive" : true,
+      "ranked" : false
+    },
+    "improvedStunningBlow" : {
+      "description" : "When dealing strain damage with Melee or Brawl checks, you may spend 1 Triumph to stagger the target for 1 round. You can do this multiple times.",
+      "key" : "improvedStunningBlow",
+      "name" : "Improved Stunning Blow",
+      "passive" : false,
+      "ranked" : false
+    },
+    "intimidating" : {
+      "description" : "You may suffer a number of strain up to your ranks in Intimidating to downgrade the difficulty of Coercion Checks, or upgrade the difficulty when targeted by Coercion checks by that amount.",
+      "key" : "intimidating",
+      "name" : "Intimidating",
+      "passive" : false,
+      "ranked" : true
+    },
+    "jumpUp" : {
+      "description" : "When targeted by a combat check, you may perform a Dodge incidental to suffer a number of strain no greater than your ranks in Dodge, then upgrade the difficulty of the check by that number",
+      "key" : "jumpUp",
+      "name" : "Jump Up",
+      "passive" : true,
+      "ranked" : false
+    },
+    "juryRigged" : {
+      "description" : "Choose 1 weapon, armor, or other item, and give it a permanent improvement while it remains in use. See EotE Core Page 138 for improvement details",
+      "key" : "juryRigged",
+      "name" : "Jury Rigged",
+      "passive" : true,
+      "ranked" : false
+    },
+    "lethalBlows" : {
+      "description" : "Add +10 per rank of Lethal Blows to any Critical Injury results inflicted on opponents",
+      "key" : "lethalBlows",
+      "name" : "Lethal Blows",
+      "passive" : true,
+      "ranked" : true
+    },
+    "masterOfShadows" : {
+      "description" : "Once per round, you may suffer 2 strain to decrease the difficulty of the next Stealth or Skulduggery check by 1",
+      "key" : "masterOfShadows",
+      "name" : "Master Of Shadows",
+      "passive" : false,
+      "ranked" : false
+    },
+    "naturalEnforcer" : {
+      "description" : "Once per session, you may re-roll any 1 Coercion or Streetwise check",
+      "key" : "naturalEnforcer",
+      "name" : "Natural Enforcer",
+      "passive" : false,
+      "ranked" : false
+    },
+    "pointBlank" : {
+      "description" : "Add 1 damage per rank of Point Blank to damage of one successful attack while using Ranged (Heavy) or Ranged (Light) skills at close or engaged range",
+      "key" : "pointBlank",
+      "name" : "Point Blank",
+      "passive" : true,
+      "ranked" : true
+    },
+    "preciseAim" : {
+      "description" : "Add 1 boost die per rank of Stalker to all Stealth and Coordination checks",
+      "key" : "preciseAim",
+      "name" : "Precise Aim",
+      "passive" : true,
+      "ranked" : true
+    },
+    "quickDraw" : {
+      "description" : "Once per round, you can draw or holster a weapon or accessible item as an incidental",
+      "key" : "quickDraw",
+      "name" : "Quick Draw",
+      "passive" : false,
+      "ranked" : false
+    },
+    "quickStrike" : {
+      "description" : "Add 1 boost die per rank of Quick Strike to combat checks against targets that have not acted yet this encounter",
+      "key" : "quickStrike",
+      "name" : "Quick Strike",
+      "passive" : true,
+      "ranked" : true
+    },
+    "sniperShot" : {
+      "description" : "Once per round, you can draw or holster a weapon or accessible item as an incidental",
+      "key" : "sniperShot",
+      "name" : "Sniper Shot",
+      "passive" : false,
+      "ranked" : false
+    },
+    "spareClip" : {
+      "description" : "You cannot run out of ammo on a Despair. Items with the Limited Ammo Quality run out as normal. ",
+      "key" : "spareClip",
+      "name" : "Spare Clip",
+      "passive" : true,
+      "ranked" : false
+    },
+    "stalker" : {
+      "description" : "Add 1 boost die per rank of Stalker to all Stealth and Coordination checks",
+      "key" : "stalker",
+      "name" : "Stalker",
+      "passive" : true,
+      "ranked" : true
+    },
+    "stunningBlow" : {
+      "description" : "When making Melee checks, you may inflict damage as strain, rather than wounds. This does not ignore soak",
+      "key" : "stunningBlow",
+      "name" : "Stunning Blow",
+      "passive" : false,
+      "ranked" : false
+    },
+    "targetedBlow" : {
+      "description" : "After making a successful attack, you may spend 1 Destiny Point to add damage equal to Agility to one hit",
+      "key" : "targetedBlow",
+      "name" : "Targeted Blow",
+      "passive" : false,
+      "ranked" : false
+    },
+    "tinkerer" : {
+      "description" : "You may add 1 additional hardpoint to your items per rank in Tinkerer",
+      "key" : "tinkerer",
+      "name" : "Tinkerer",
+      "passive" : true,
+      "ranked" : true
+    },
+    "toughened" : {
+      "description" : "Gain +2 Wound Threshold",
+      "key" : "toughened",
+      "name" : "Toughened",
+      "passive" : true,
+      "ranked" : true
     }
   }
 }

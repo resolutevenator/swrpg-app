@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { Injectable, NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatInputModule } from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatExpansionModule} from '@angular/material/expansion';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
@@ -30,6 +34,7 @@ import { BrowseComponent } from './browse/browse.component';
 
 import { environment } from '../environments/environment';
 import { SpecComponent } from './spec/spec.component';
+import { CreateSpecComponent } from './create-spec/create-spec.component';
 
 declare var Hammer: any;
 @Injectable()
@@ -47,7 +52,8 @@ export class HammerConfig extends GestureConfig  {
     HomeComponent,
     NotFoundComponent,
     BrowseComponent,
-    SpecComponent
+    SpecComponent,
+    CreateSpecComponent
   ],
   imports: [
     BrowserModule,
@@ -62,11 +68,15 @@ export class HammerConfig extends GestureConfig  {
     MatGridListModule,
     MatIconModule,
     MatProgressSpinnerModule,
+    MatInputModule,
+    MatExpansionModule,
+    MatSelectModule,
     HttpClientModule,
     NoopAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+    FormsModule,
   ],
   providers: [
     {
