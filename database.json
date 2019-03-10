@@ -665,6 +665,26 @@
     }
   },
   "specs" : {
+    "agitator" : {
+      "bonusCareerSkills" : [ "Coercion", "Deception", "Knowledge (Underworld)", "Streetwise" ],
+      "book" : "AoR Core",
+      "career" : "Diplomat",
+      "careerSkills" : [ "Charm", "Deception", "Knowledge (Core)", "Knowledge (Lore)", "Knowledge (Outer Rim)", "Knowledge (Xenology)", "Leadership", "Negotiation" ],
+      "horizontalConnections" : [ [ false, false, false ], [ false, false, false ], [ true, true, true ], [ true, false, true ], [ false, false, false ] ],
+      "name" : "Agitator",
+      "talents" : [ [ "plausibleDeniability", "nobodysFool", "grit", "intimidating" ], [ "streetSmarts", "streetSmarts", "convincingDemeanor", "intimidating" ], [ "convincingDemeanor", "plausibleDeniability", "scathingTirade", "grit" ], [ "naturalEnforcer", "nobodysFool", "improvedScathingTirade", "intimidating" ], [ "intimidating", "dedication", "supremeScathingTirade", "inciteRebellion" ] ],
+      "verticalConnections" : [ [ false, true, true, false ], [ true, true, true, true ], [ false, true, true, false ], [ true, true, true, true ], [ false, false, false, false ] ]
+    },
+    "ambassador" : {
+      "bonusCareerSkills" : [ "Charm", "Discipline", "Knowledge (Core)", "Negotiation" ],
+      "book" : "AoR Core",
+      "career" : "Diplomat",
+      "careerSkills" : [ "Charm", "Deception", "Knowledge (Core)", "Knowledge (Lore)", "Knowledge (Outer Rim)", "Knowledge (Xenology)", "Leadership", "Negotiation" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, false, false ], [ true, true, true ], [ false, true, false ], [ false, true, true ] ],
+      "name" : "Ambassador",
+      "talents" : [ [ "indistinguishable", "killWithKindness", "nobodysFool", "confidence" ], [ "indistinguishable", "grit", "grit", "dodge" ], [ "killWithKindness", "inspiringRhetoric", "steelyNerves", "confidence" ], [ "improvedInspiringRhetoric", "intensePresence", "worksLikeACharm", "dodge" ], [ "supremeInspiringRhetoric", "naturalCharmer", "dedication", "sixthSense" ] ],
+      "verticalConnections" : [ [ false, true, true, true ], [ false, true, true, true ], [ true, true, false, true ], [ true, true, false, true ], [ false, false, false, false ] ]
+    },
     "assassin" : {
       "bonusCareerSkills" : [ "Melee", "Ranged (Heavy)", "Skulduggery", "Stealth" ],
       "book" : "EotE Core",
@@ -675,6 +695,56 @@
       "talents" : [ [ "grit", "lethalBlows", "stalker", "dodge" ], [ "preciseAim", "jumpUp", "quickStrike", "quickDraw" ], [ "targetedBlow", "stalker", "lethalBlows", "anatomyLessons" ], [ "stalker", "sniperShot", "dodge", "lethalBlows" ], [ "preciseAim", "deadlyAccuracy", "dedication", "masterOfShadows" ] ],
       "verticalConnections" : [ [ true, true, true, true ], [ true, true, true, true ], [ true, true, true, true ], [ true, true, true, true ], [ false, false, false ] ]
     },
+    "bodyguard" : {
+      "bonusCareerSkills" : [ "Gunnery", "Perception", "Piloting (Planetary)", "Ranged (Heavy)" ],
+      "book" : "EotE Core",
+      "career" : "Hired Gun",
+      "careerSkills" : [ "Athletics", "Brawl", "Discipline", "Melee", "Piloting (Planetary)", "Ranged (Light)", "Resiliance", "Vigilance" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, true, true ], [ false, true, false ], [ false, true, true ], [ true, true, false ] ],
+      "name" : "Bodyguard",
+      "talents" : [ [ "toughened", "barrage", "durable", "grit" ], [ "bodyGuard", "hardHeaded", "barrage", "brace" ], [ "bodyGuard", "sideStep", "defensiveStance", "brace" ], [ "enduring", "sideStep", "defensiveStance", "hardHeaded" ], [ "dedication", "barrage", "toughened", "improvedHardHeaded" ] ],
+      "verticalConnections" : [ [ false, true, true, false ], [ true, true, true, true ], [ true, true, true, false ], [ false, true, true, true ], [ false, false, false, false ] ]
+    },
+    "commodore" : {
+      "bonusCareerSkills" : [ "Astrogation", "Computers", "Knowledge (Education)", "Knowledge (Outer Rim)" ],
+      "book" : "AoR Core",
+      "career" : "Commander",
+      "careerSkills" : [ "Coercion", "Cool", "Discipline", "Knowledge (Warfare)", "Leadership", "Perception", "Ranged (Light)", "Vigilance" ],
+      "horizontalConnections" : [ [ false, false, false ], [ false, false, false ], [ false, false, false ], [ false, false, false ], [ true, true, true ] ],
+      "name" : "Commodore",
+      "talents" : [ [ "solidRepairs", "command", "rapidReaction", "galaxyMapper" ], [ "knownSchematic", "commandingPresence", "grit", "familiarSuns" ], [ "solidRepairs", "command", "rapidReaction", "galaxyMapper" ], [ "holdTogether", "commandingPresence", "grit", "masterStarhopper" ], [ "solidRepairs", "fireControl", "dedication", "galaxyMapper" ] ],
+      "verticalConnections" : [ [ true, true, true, true ], [ true, true, true, true ], [ true, true, true, true ], [ true, true, true, true ], [ false, false, false, false ] ]
+    },
+    "doctor" : {
+      "bonusCareerSkills" : [ "Cool", "Knowledge (Education)", "Medicine", "Resiliance" ],
+      "book" : "EotE Core",
+      "career" : "Colonist",
+      "careerSkills" : [ "Charm", "Deception", "Knowledge (Core)", "Knowledge (Education)", "Knowledge (Lore)", "Leadership", "Negotiation", "Streetwise" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, true, true ], [ true, true, false ], [ false, false, false ], [ true, true, false ] ],
+      "name" : "Doctor",
+      "talents" : [ [ "surgeon", "bactaSpecialist", "grit", "resolve" ], [ "stimApplication", "grit", "surgeon", "resolve" ], [ "surgeon", "grit", "bactaSpecialist", "pressurePoint" ], [ "improvedStimApplication", "naturalDoctor", "toughened", "anatomyLessons" ], [ "supremeStimApplication", "masterDoctor", "dedication", "dodge" ] ],
+      "verticalConnections" : [ [ true, false, true, false ], [ true, false, true, true ], [ true, true, true, true ], [ true, true, true, true ], [ false, false, false, false ] ]
+    },
+    "driver" : {
+      "bonusCareerSkills" : [ "Cool", "Gunnery", "Mechanics", "Piloting (Planetary)" ],
+      "book" : "AoR Core",
+      "career" : "Ace",
+      "careerSkills" : [ "Astrogation", "Cool", "Gunnery", "Mechanics", "Perception", "Piloting (Planetary)", "Piloting (Space)", "Ranged (Light)" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, true, true ], [ false, false, true ], [ true, true, false ], [ true, true, true ] ],
+      "name" : "Driver",
+      "talents" : [ [ "fullThrottle", "allTerrainDriver", "fineTuning", "gearhead" ], [ "grit", "skilledJockey", "rapidReaction", "grit" ], [ "improvedFullThrottle", "trickyTarget", "fineTuning", "toughened" ], [ "defensiveDriving", "skilledJockey", "naturalDriver", "gearhead" ], [ "supremeFullThrottle", "fullStop", "masterDriver", "dedication" ] ],
+      "verticalConnections" : [ [ true, false, false, true ], [ true, true, false, true ], [ true, false, false, true ], [ true, false, false, true ], [ false, false, false, false ] ]
+    },
+    "fringer" : {
+      "bonusCareerSkills" : [ "Astrogation", "Coordination", "Negotiation", "Streetwise" ],
+      "book" : "EotE Core",
+      "career" : "Explorer",
+      "careerSkills" : [ "Astrogation", "Cool", "Knowledge (Lore)", "Knowledge (Outer Rim)", "Knowledge (Xenology)", "Perception", "Piloting (Planetary)", "Survival" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, false, true ], [ true, false, false ], [ true, true, false ], [ true, false, true ] ],
+      "name" : "Fringer",
+      "talents" : [ [ "galaxyMapper", "streetSmarts", "rapidRecovery", "streetSmarts" ], [ "skilledJockey", "galaxyMapper", "grit", "toughened" ], [ "masterStarhopper", "defensiveDriving", "rapidRecovery", "durable" ], [ "rapidRecovery", "jumpUp", "grit", "knockdown" ], [ "dedication", "toughened", "dodge", "dodge" ] ],
+      "verticalConnections" : [ [ true, false, true, true ], [ true, true, true, true ], [ false, false, true, true ], [ true, true, false, true ], [ false, false, false, false ] ]
+    },
     "gadgeteer" : {
       "bonusCareerSkills" : [ "Brawl", "Coercion", "Mechanics", "Ranged (Light)" ],
       "book" : "EotE Core",
@@ -684,6 +754,206 @@
       "name" : "Gadgeteer",
       "talents" : [ [ "brace", "toughened", "intimidating", "defensiveStance" ], [ "spareClip", "juryRigged", "pointBlank", "disorient" ], [ "toughened", "armorMaster", "naturalEnforcer", "stunningBlow" ], [ "juryRigged", "tinkerer", "deadlyAccuracy", "improvedStunningBlow" ], [ "intimidating", "dedication", "improvedArmorMaster", "cripplingBlow" ] ],
       "verticalConnections" : [ [ false, true, false, true ], [ false, true, false, true ], [ false, true, false, true ], [ false, true, false, true ], [ false, false, false, false ] ]
+    },
+    "gunner" : {
+      "bonusCareerSkills" : [ "Discipline", "Gunnery", "Ranged (Heavy)", "Resiliance" ],
+      "book" : "AoR Core",
+      "career" : "Ace",
+      "careerSkills" : [ "Astrogation", "Cool", "Gunnery", "Mechanics", "Perception", "Piloting (Planetary)", "Piloting (Space)", "Ranged (Light)" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, true, false ], [ true, false, false ], [ true, true, false ], [ true, true, true ] ],
+      "name" : "Gunner",
+      "talents" : [ [ "durable", "grit", "overwhelmDefenses", "debilitatingShot" ], [ "toughened", "brace", "spareClip", "trueAim" ], [ "durable", "enduring", "juryRigged", "overwhelmDefenses" ], [ "toughened", "enduring", "brace", "exhaustPort" ], [ "heroicFortitude", "juryRigged", "dedication", "trueAim" ] ],
+      "verticalConnections" : [ [ true, false, true, true ], [ false, true, true, true ], [ true, false, true, true ], [ true, true, false, true ], [ false, false, false, false ] ]
+    },
+    "marauder" : {
+      "bonusCareerSkills" : [ "Coercion", "Melee", "Resiliance", "Survival" ],
+      "book" : "EotE Core",
+      "career" : "Hired Gun",
+      "careerSkills" : [ "Athletics", "Brawl", "Discipline", "Melee", "Piloting (Planetary)", "Ranged (Light)", "Resiliance", "Vigilance" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, true, true ], [ true, true, true ], [ true, true, true ], [ true, true, true ] ],
+      "name" : "Marauder",
+      "talents" : [ [ "toughened", "frenziedAttack", "feralStrength", "lethalBlows" ], [ "feralStrength", "toughened", "heroicFortitude", "knockdown" ], [ "enduring", "lethalBlows", "toughened", "frenziedAttack" ], [ "toughened", "feralStrength", "naturalBrawler", "lethalBlows" ], [ "frenziedAttack", "enduring", "defensiveStance", "dedication" ] ],
+      "verticalConnections" : [ [ true, true, true, true ], [ false, true, true, false ], [ true, false, false, true ], [ false, true, true, false ], [ false, false, false, false ] ]
+    },
+    "mechanic" : {
+      "bonusCareerSkills" : [ "Brawl", "Mechanics", "Piloting (Space)", "Skulduggery" ],
+      "book" : "AoR Core",
+      "career" : "Engineer",
+      "careerSkills" : [ "Athletics", "Computers", "Knowledge (Education)", "Mechanics", "Perception", "Piloting (Space)", "Ranged (Light)", "Vigilance" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, true, true ], [ true, true, true ], [ true, true, false ], [ false, false, false ] ],
+      "name" : "Mechanic",
+      "talents" : [ [ "gearhead", "toughened", "fineTuning", "solidRepairs" ], [ "redundantSystems", "solidRepairs", "gearhead", "grit" ], [ "solidRepairs", "enduring", "badMotivator", "toughened" ], [ "contraption", "solidRepairs", "fineTuning", "hardHeaded" ], [ "naturalTinkerer", "holdTogether", "dedication", "improvedHardHeaded" ] ],
+      "verticalConnections" : [ [ true, true, true, true ], [ true, true, true, true ], [ true, true, true, true ], [ true, true, true, true ], [ false, false, false, false ] ]
+    },
+    "mercenarysoldier" : {
+      "bonusCareerSkills" : [ "Discipline", "Gunnery", "Leadership", "Ranged (Heavy)" ],
+      "book" : "EotE Core",
+      "career" : "Hired Gun",
+      "careerSkills" : [ "Athletics", "Brawl", "Discipline", "Melee", "Piloting (Planetary)", "Ranged (Light)", "Resiliance", "Vigilance" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, false, true ], [ true, true, true ], [ false, false, true ], [ true, true, true ] ],
+      "name" : "Mercenary Soldier",
+      "talents" : [ [ "command", "secondWind", "pointBlank", "sideStep" ], [ "secondWind", "confidence", "strongArm", "pointBlank" ], [ "fieldCommander", "command", "naturalMarksman", "sniperShot" ], [ "improvedFieldCommander", "grit", "toughened", "lethalBlows" ], [ "deadlyAccuracy", "trueAim", "dedication", "trueAim" ] ],
+      "verticalConnections" : [ [ true, true, true, true ], [ false, true, true, false ], [ true, true, true, true ], [ false, true, false, true ], [ false, false, false, false ] ]
+    },
+    "outlawtech" : {
+      "bonusCareerSkills" : [ "Knowledge (Education)", "Knowledge (Underworld)", "Mechanics", "Streetwise" ],
+      "book" : "EotE Core",
+      "career" : "Technician",
+      "careerSkills" : [ "Astrogation", "Computers", "Coordination", "Discipline", "Knowledge (Outer Rim)", "Mechanics", "Perception", "Piloting (Planetary)" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, true, true ], [ true, true, true ], [ true, true, false ], [ true, false, true ] ],
+      "name" : "Outlaw Tech",
+      "talents" : [ [ "tinkerer", "utinni", "speaksBinary", "tinkerer" ], [ "solidRepairs", "grit", "utinni", "toughened" ], [ "utilityBelt", "sideStep", "brace", "defensiveStance" ], [ "juryRigged", "speaksBinary", "inventor", "juryRigged" ], [ "inventor", "dedication", "knownSchematic", "brace" ] ],
+      "verticalConnections" : [ [ true, true, true, true ], [ true, true, true, true ], [ true, true, true, true ], [ true, false, true, true ], [ false, false, false, false ] ]
+    },
+    "pilot" : {
+      "bonusCareerSkills" : [ "Astrogation", "Gunnery", "Piloting (Planetary)", "Piloting (Space)" ],
+      "book" : "EotE Core",
+      "career" : "Smuggler",
+      "careerSkills" : [ "Coordination", "Deception", "Knowledge (Underworld)", "Perception", "Piloting (Space)", "Skulduggery" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, false, true ], [ false, false, true ], [ true, false, false ], [ true, true, true ] ],
+      "name" : "Pilot",
+      "talents" : [ [ "fullThrottle", "skilledJockey", "galaxyMapper", "letsRide" ], [ "skilledJockey", "deadToRights", "galaxyMapper", "rapidRecovery" ], [ "improvedFullThrottle", "improvedDeadToRights", "grit", "naturalPilot" ], [ "grit", "supremeFullThrottle", "trickyTarget", "defensiveDriving" ], [ "masterPilot", "dedication", "toughened", "brilliantEvasion" ] ],
+      "verticalConnections" : [ [ true, true, true, true ], [ true, true, true, true ], [ true, false, true, true ], [ true, false, true, true ], [ false, false, false, false ] ]
+    },
+    "pilot2" : {
+      "bonusCareerSkills" : [ "Astrogation", "Gunnery", "Piloting (Planetary)", "Piloting (Space)" ],
+      "book" : "AoR Core",
+      "career" : "Ace",
+      "careerSkills" : [ "Astrogation", "Cool", "Gunnery", "Mechanics", "Perception", "Piloting (Planetary)", "Piloting (Space)", "Ranged (Light)" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, false, true ], [ false, false, true ], [ true, false, false ], [ true, true, true ] ],
+      "name" : "Pilot",
+      "talents" : [ [ "fullThrottle", "skilledJockey", "galaxyMapper", "letsRide" ], [ "skilledJockey", "deadToRights", "galaxyMapper", "rapidRecovery" ], [ "improvedFullThrottle", "improvedDeadToRights", "grit", "naturalPilot" ], [ "grit", "supremeFullThrottle", "trickyTarget", "defensiveDriving" ], [ "masterPilot", "dedication", "toughened", "brilliantEvasion" ] ],
+      "verticalConnections" : [ [ true, true, true, true ], [ true, true, true, true ], [ true, false, true, true ], [ true, false, true, true ], [ false, false, false, false ] ]
+    },
+    "politico" : {
+      "bonusCareerSkills" : [ "Charm", "Coercion", "Deception", "Knowledge (Core)" ],
+      "book" : "EotE Core",
+      "career" : "Colonist",
+      "careerSkills" : [ "Charm", "Deception", "Knowledge (Core)", "Knowledge (Education)", "Knowledge (Lore)", "Leadership", "Negotiation", "Streetwise" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, false, true ], [ true, false, true ], [ false, false, false ], [ true, true, true ] ],
+      "name" : "Politico",
+      "talents" : [ [ "killWithKindness", "grit", "plausibleDeniability", "toughened" ], [ "inspiringRhetoric", "killWithKindness", "scathingTirade", "plausibleDeniability" ], [ "dodge", "improvedInspiringRhetoric", "improvedScathingTirade", "wellRounded" ], [ "grit", "supremeInspiringRhetoric", "supremeScathingTirade", "nobodysFool" ], [ "steelyNerves", "dedication", "naturalCharmer", "intensePresence" ] ],
+      "verticalConnections" : [ [ true, true, true, true ], [ true, false, false, true ], [ true, true, true, true ], [ true, false, false, true ], [ false, false, false, false ] ]
+    },
+    "quartermaster" : {
+      "bonusCareerSkills" : [ "Computers", "Negotiation", "Skulduggery", "Vigilance" ],
+      "book" : "AoR Core",
+      "career" : "Diplomat",
+      "careerSkills" : [ "Charm", "Deception", "Knowledge (Core)", "Knowledge (Lore)", "Knowledge (Outer Rim)", "Knowledge (Xenology)", "Leadership", "Negotiation" ],
+      "horizontalConnections" : [ [ false, false, false ], [ false, true, false ], [ true, true, false ], [ true, true, false ], [ true, false, true ] ],
+      "name" : "Quartermaster",
+      "talents" : [ [ "knowSomebody", "smoothTalker", "wheelAndDeal", "grit" ], [ "smoothTalker", "greasedPalms", "masterMerchant", "toughened" ], [ "grit", "wheelAndDeal", "greasedPalms", "grit" ], [ "knowSomebody", "soundInvestments", "soundInvestments", "intenseFocus" ], [ "dedication", "naturalNegotiator", "superiorReflexes", "toughened" ] ],
+      "verticalConnections" : [ [ true, false, false, true ], [ true, true, true, true ], [ true, true, true, true ], [ true, false, false, true ], [ false, false, false, false ] ]
+    },
+    "saboteur" : {
+      "bonusCareerSkills" : [ "Coordination", "Mechanics", "Skulduggery", "Stealth" ],
+      "book" : "AoR Core",
+      "career" : "Engineer",
+      "careerSkills" : [ "Athletics", "Computers", "Knowledge (Education)", "Mechanics", "Perception", "Piloting (Space)", "Ranged (Light)", "Vigilance" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, true, true ], [ true, false, true ], [ false, true, false ], [ true, false, false ] ],
+      "name" : "Saboteur",
+      "talents" : [ [ "resolve", "secondWind", "grit", "rapidRecovery" ], [ "grit", "powerfulBlast", "toughened", "secondWind" ], [ "timeToGo", "rapidRecovery", "resolve", "hardHeaded" ], [ "improvedTimeToGo", "powerfulBlast", "selectiveDetonation", "toughened" ], [ "dedication", "masterGrenadier", "selectiveDetonation", "improvedHardHeaded" ] ],
+      "verticalConnections" : [ [ true, false, false, true ], [ false, true, true, false ], [ true, true, false, true ], [ false, true, true, true ], [ false, false, false, false ] ]
+    },
+    "scholar" : {
+      "bonusCareerSkills" : [ "Knowledge (Outer Rim)", "Knowledge (Underworld)", "Knowledge (Xenology)", "Perception" ],
+      "book" : "EotE Core",
+      "career" : "Colonist",
+      "careerSkills" : [ "Charm", "Deception", "Knowledge (Core)", "Knowledge (Education)", "Knowledge (Lore)", "Leadership", "Negotiation", "Streetwise" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, false, true ], [ true, false, true ], [ true, false, true ], [ true, true, true ] ],
+      "name" : "Scholar",
+      "talents" : [ [ "respectedScholar", "speaksBinary", "grit", "brace" ], [ "researcher", "respectedScholar", "resolve", "researcher" ], [ "codebreaker", "knowledgeSpecialization", "naturalScholar", "wellRounded" ], [ "knowledgeSpecialization", "intenseFocus", "confidence", "resolve" ], [ "strokeOfGenius", "mentalFortress", "dedication", "toughened" ] ],
+      "verticalConnections" : [ [ true, true, true, true ], [ true, false, false, true ], [ false, true, true, false ], [ true, false, false, true ], [ false, false, false, false ] ]
+    },
+    "scientist" : {
+      "bonusCareerSkills" : [ "Computers", "Knowledge (Education)", "Knowledge (Lore)", "Medicine" ],
+      "book" : "AoR Core",
+      "career" : "Engineer",
+      "careerSkills" : [ "Athletics", "Computers", "Knowledge (Education)", "Mechanics", "Perception", "Piloting (Space)", "Ranged (Light)", "Vigilance" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, false, true ], [ true, false, true ], [ true, false, true ], [ true, true, true ] ],
+      "name" : "Scientist",
+      "talents" : [ [ "knowledgeSpecialization", "respectedScholar", "researcher", "speaksBinary" ], [ "researcher", "knowledgeSpecialization", "hiddenStorage", "tinkerer" ], [ "respectedScholar", "mentalFortress", "speaksBinary", "inventor" ], [ "naturalScholar", "strokeOfGenius", "inventor", "tinkerer" ], [ "intenseFocus", "carefulPlanning", "dedication", "utilityBelt" ] ],
+      "verticalConnections" : [ [ true, false, false, true ], [ true, false, false, true ], [ true, false, false, true ], [ true, false, false, true ], [ false, false, false, false ] ]
+    },
+    "scoundrel" : {
+      "bonusCareerSkills" : [ "Charm", "Cool", "Deception", "Ranged (Light)" ],
+      "book" : "EotE Core",
+      "career" : "Smuggler",
+      "careerSkills" : [ "Coordination", "Deception", "Knowledge (Underworld)", "Perception", "Piloting (Space)", "Skulduggery" ],
+      "horizontalConnections" : [ [ false, false, false ], [ false, true, false ], [ false, true, false ], [ false, true, false ], [ true, true, true ] ],
+      "name" : "Scoundrel",
+      "talents" : [ [ "blackMarketContacts", "convincingDemeanor", "quickDraw", "rapidReaction" ], [ "convincingDemeanor", "blackMarketContacts", "convincingDemeanor", "quickStrike" ], [ "hiddenStorage", "toughened", "blackMarketContacts", "sideStep" ], [ "toughened", "rapidReaction", "hiddenStorage", "sideStep" ], [ "dedication", "naturalCharmer", "softSpot", "quickStrike" ] ],
+      "verticalConnections" : [ [ true, false, false, true ], [ true, true, true, true ], [ true, true, true, true ], [ true, true, true, true ], [ false, false, false, false ] ]
+    },
+    "scout" : {
+      "bonusCareerSkills" : [ "Athletics", "Medicine", "Piloting (Planetary)", "Survival" ],
+      "book" : "EotE Core",
+      "career" : "Explorer",
+      "careerSkills" : [ "Astrogation", "Cool", "Knowledge (Lore)", "Knowledge (Outer Rim)", "Knowledge (Xenology)", "Perception", "Piloting (Planetary)", "Survival" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, true, true ], [ false, false, false ], [ false, false, false ], [ true, true, false ] ],
+      "name" : "Scout",
+      "talents" : [ [ "rapidRecovery", "stalker", "grit", "shortcut" ], [ "forager", "quickStrike", "letsRide", "disorient" ], [ "rapidRecovery", "naturalHunter", "familiarSuns", "shortcut" ], [ "grit", "heightenedAwareness", "toughened", "quickStrike" ], [ "utilityBelt", "dedication", "stalker", "disorient" ] ],
+      "verticalConnections" : [ [ true, true, true, true ], [ true, true, true, true ], [ true, true, true, true ], [ true, true, false, true ], [ false, false, false, false ] ]
+    },
+    "slicer" : {
+      "bonusCareerSkills" : [ "Computers", "Knowledge (Education)", "Knowledge (Underworld)", "Stealth" ],
+      "book" : "EotE Core",
+      "career" : "Technician",
+      "careerSkills" : [ "Astrogation", "Computers", "Coordination", "Discipline", "Knowledge (Outer Rim)", "Mechanics", "Perception", "Piloting (Planetary)" ],
+      "horizontalConnections" : [ [ false, false, false ], [ false, true, true ], [ false, true, true ], [ true, true, true ], [ true, true, true ] ],
+      "name" : "Slicer",
+      "talents" : [ [ "codebreaker", "grit", "technicalAptitude", "bypassSecurity" ], [ "defensiveSlicing", "technicalAptitude", "grit", "bypassSecurity" ], [ "naturalProgrammer", "bypassSecurity", "defensiveSlicing", "grit" ], [ "defensiveSlicing", "improvedDefensiveSlicing", "codebreaker", "resolve" ], [ "skilledSlicer", "masterSlicer", "mentalFortress", "dedication" ] ],
+      "verticalConnections" : [ [ true, false, false, false ], [ true, true, true, true ], [ true, true, true, true ], [ true, true, true, true ], [ false, false, false, false ] ]
+    },
+    "squadronleader" : {
+      "bonusCareerSkills" : [ "Gunnery", "Mechanics", "Piloting (Planetary)", "Piloting (Space)" ],
+      "book" : "AoR Core",
+      "career" : "Commander",
+      "careerSkills" : [ "Coercion", "Cool", "Discipline", "Knowledge (Warfare)", "Leadership", "Perception", "Ranged (Light)", "Vigilance" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, false, true ], [ false, false, false ], [ false, true, true ], [ true, false, false ] ],
+      "name" : "Squadron Leader",
+      "talents" : [ [ "grit", "quickStrike", "letsRide", "defensiveDriving" ], [ "fieldCommander", "confidence", "quickStrike", "situationalAwareness" ], [ "command", "grit", "fullStop", "defensiveDriving" ], [ "improvedFieldCommander", "command", "formOnMe", "trickyTarget" ], [ "masterLeader", "confidence", "dedication", "brilliantEvasion" ] ],
+      "verticalConnections" : [ [ true, false, false, true ], [ true, true, true, false ], [ true, true, true, true ], [ false, true, true, true ], [ false, false, false, false ] ]
+    },
+    "survivalist" : {
+      "bonusCareerSkills" : [ "Knowledge (Xenology)", "Perception", "Resiliance", "Survival" ],
+      "book" : "EotE Core",
+      "career" : "Bounty Hunter",
+      "careerSkills" : [ "Astrogation", "Brawl", "Perception", "Piloting (Planetary)", "Piloting (Space)", "Ranged (Heavy)", "Streetwise", "Vigilance" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, true, true ], [ false, false, true ], [ false, false, false ], [ true, true, false ] ],
+      "name" : "Survivalist",
+      "talents" : [ [ "forager", "stalker", "outdoorsman", "expertTracker" ], [ "outdoorsman", "swift", "hunter", "softSpot" ], [ "toughened", "expertTracker", "stalker", "naturalOutdoorsman" ], [ "toughened", "hunter", "expertTracker", "blooded" ], [ "enduring", "dedication", "grit", "heroicFortitude" ] ],
+      "verticalConnections" : [ [ true, true, true, false ], [ true, true, true, true ], [ true, true, true, true ], [ true, false, true, true ], [ false, false, false, false ] ]
+    },
+    "tactician" : {
+      "bonusCareerSkills" : [ "Brawl", "Discipline", "Leadership", "Ranged (Heavy)" ],
+      "book" : "AoR Core",
+      "career" : "Commander",
+      "careerSkills" : [ "Coercion", "Cool", "Discipline", "Knowledge (Warfare)", "Leadership", "Perception", "Ranged (Light)", "Vigilance" ],
+      "horizontalConnections" : [ [ false, false, false ], [ false, false, true ], [ false, true, true ], [ true, true, false ], [ true, false, false ] ],
+      "name" : "Tactician",
+      "talents" : [ [ "outdoorsman", "commandingPresence", "toughened", "sideStep" ], [ "outdoorsman", "confidence", "quickDraw", "swift" ], [ "naturalOutdoorsman", "toughened", "bodyGuard", "bodyGuard" ], [ "confidence", "commandingPresence", "fieldCommander", "sideStep" ], [ "coordinatedAssault", "naturalLeader", "improvedFieldCommander", "dedication" ] ],
+      "verticalConnections" : [ [ true, true, false, true ], [ true, true, false, true ], [ false, true, false, true ], [ false, true, true, true ], [ false, false, false, false ] ]
+    },
+    "thief" : {
+      "bonusCareerSkills" : [ "Computers", "Skulduggery", "Stealth", "Vigilance" ],
+      "book" : "EotE Core",
+      "career" : "Smuggler",
+      "careerSkills" : [ "Coordination", "Deception", "Knowledge (Underworld)", "Perception", "Piloting (Space)", "Skulduggery" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, true, true ], [ true, true, true ], [ false, true, true ], [ false, true, false ] ],
+      "name" : "Thief",
+      "talents" : [ [ "streetSmarts", "blackMarketContacts", "indistinguishable", "bypassSecurity" ], [ "blackMarketContacts", "dodge", "grit", "hiddenStorage" ], [ "stalker", "grit", "rapidReaction", "shortcut" ], [ "bypassSecurity", "naturalRogue", "streetSmarts", "jumpUp" ], [ "masterOfShadows", "dodge", "indistinguishable", "dedication" ] ],
+      "verticalConnections" : [ [ true, false, false, true ], [ true, true, true, true ], [ true, true, true, true ], [ true, true, true, true ], [ false, false, false, false ] ]
+    },
+    "trader" : {
+      "bonusCareerSkills" : [ "Deception", "Knowledge (Core)", "Knowledge (Underworld)", "Negotiation" ],
+      "book" : "EotE Core",
+      "career" : "Explorer",
+      "careerSkills" : [ "Astrogation", "Cool", "Knowledge (Lore)", "Knowledge (Outer Rim)", "Knowledge (Xenology)", "Perception", "Piloting (Planetary)", "Survival" ],
+      "horizontalConnections" : [ [ false, false, false ], [ true, true, true ], [ true, true, true ], [ true, true, true ], [ true, true, true ] ],
+      "name" : "Trader",
+      "talents" : [ [ "knowSomebody", "convincingDemeanor", "wellRounded", "smoothTalker" ], [ "wheelAndDeal", "grit", "spareClip", "toughened" ], [ "knowSomebody", "nobodysFool", "smoothTalker", "nobodysFool" ], [ "wheelAndDeal", "steelyNerves", "blackMarketContacts", "blackMarketContacts" ], [ "knowSomebody", "naturalNegotiator", "dedication", "masterMerchant" ] ],
+      "verticalConnections" : [ [ true, false, false, false ], [ true, false, false, false ], [ true, false, false, false ], [ true, false, false, true ], [ false, false, false, false ] ]
     }
   },
   "talents" : {
@@ -693,6 +963,13 @@
       "name" : "Adversary",
       "passive" : true,
       "ranked" : true
+    },
+    "allTerrainDriver" : {
+      "description" : "Do not suffer the usual penalties for driving through difficult terrain using Piloting (Planetary)",
+      "key" : "allTerrainDriver",
+      "name" : "All-Terrain Driver",
+      "passive" : true,
+      "ranked" : false
     },
     "anatomyLessons" : {
       "description" : "After making a successful attack, you may spend 1 Destiny Point to add damage equal to Intellect to one hit",
@@ -708,10 +985,122 @@
       "passive" : true,
       "ranked" : false
     },
+    "bactaSpecialist" : {
+      "description" : "Patients heal 1 additional wound per rank of Bacta Specialist when they recover wounds from bacta tanks or long term care.",
+      "key" : "bactaSpecialist",
+      "name" : "Bacta Specialist",
+      "passive" : true,
+      "ranked" : true
+    },
+    "badMotivator" : {
+      "description" : "Once per session, you may take a Bad Motivator action; Make a Hard (3) Mechanics check to cause one targeted device to spontaneously fail.",
+      "key" : "badMotivator",
+      "name" : "Bad Motivator",
+      "passive" : false,
+      "ranked" : false
+    },
+    "barrage" : {
+      "description" : "Add 1 damage per rank of Barrage to 1 hit of a successful attack while using Ranged (Heavy) or Gunnery skills at long or extreme range.",
+      "key" : "barrage",
+      "name" : "Barrage",
+      "passive" : true,
+      "ranked" : true
+    },
+    "blackMarketContacts" : {
+      "description" : "When purchasing illegal goods, you may reduce the rarity by 1 per ranks of Black Market Contacts, increasing the cost by 50% of base cost per times reduced.",
+      "key" : "blackMarketContacts",
+      "name" : "Black Market Contacts",
+      "passive" : false,
+      "ranked" : true
+    },
+    "blooded" : {
+      "description" : "Add 1 Boost die per rank of Blooded to all checks to resist or recover from poisons, venoms, or toxins. Reduce the duration of ongoing poisons by 1 round per rank of Blooded to a minimum of 1.",
+      "key" : "blooded",
+      "name" : "Blooded",
+      "passive" : true,
+      "ranked" : true
+    },
+    "bodyGuard" : {
+      "description" : "Once per round, perform the Body Guard maneuver to guard an engaged character. Suffer a number of strain no greater than ranks of Body Guard, then until the beginning of the next turn, upgrade the difficulty of combat checks targeting the character by that number.",
+      "key" : "bodyGuard",
+      "name" : "Body Guard",
+      "passive" : false,
+      "ranked" : true
+    },
     "brace" : {
       "description" : "As a maneuver, you may brace yourself. On your next action, you remove 1 setback die per rank of Brace. This can only remove a setback die added due to environmental circumstances ",
       "key" : "brace",
       "name" : "Brace",
+      "passive" : false,
+      "ranked" : true
+    },
+    "brilliantEvasion" : {
+      "description" : "Once per encounter, you may take a Brilliant Evasion action. Select 1 opponent and make an opposed Piloting check to stop that opponent from attacking you for a number of rounds equal to your Agility score",
+      "key" : "brilliantEvasion",
+      "name" : "Brilliant Evasion",
+      "passive" : false,
+      "ranked" : false
+    },
+    "bypassSecurity" : {
+      "description" : "Remove 1 Setback per rank of Bypass Security from all checks to disable a security door or open a locked door.",
+      "key" : "bypassSecurity",
+      "name" : "Bypass Security",
+      "passive" : true,
+      "ranked" : true
+    },
+    "carefulPlanning" : {
+      "description" : "Once per session, you may introduce a \"fact\" to the narrative as if a Destiny Point had been spent",
+      "key" : "carefulPlanning",
+      "name" : "Careful Planning",
+      "passive" : false,
+      "ranked" : false
+    },
+    "codebreaker" : {
+      "description" : "Remove 1 setback per rank of Codebreaker from all checks to break codes or decrypt communications. Decrease the difficulty of all checks to break codes or decrypt communications by 1. ",
+      "key" : "codebreaker",
+      "name" : "Codebreaker",
+      "passive" : true,
+      "ranked" : true
+    },
+    "command" : {
+      "description" : "Add 1 Boost per rank of Command when making Leadership checks. Affected targets add 1 Boost to Discipline checks for the next 24 hours.",
+      "key" : "command",
+      "name" : "Command",
+      "passive" : true,
+      "ranked" : true
+    },
+    "commandingPresence" : {
+      "description" : "Remove 1 Setback per rank of Commanding Presence from Leadership and Cool checks",
+      "key" : "commandingPresence",
+      "name" : "Commanding Presence",
+      "passive" : true,
+      "ranked" : true
+    },
+    "confidence" : {
+      "description" : "You may decrease the difficulty of all Discipline checks to avoid fear by 1 per rank of Confidence",
+      "key" : "confidence",
+      "name" : "Confidence",
+      "passive" : true,
+      "ranked" : true
+    },
+    "contraption" : {
+      "description" : "Once per session, you may take a Contraption action; Make a Hard (3) Mechanics check to fashion a device to solve a current problem using just the tools and parts on hand.",
+      "key" : "contraption",
+      "name" : "Contraption",
+      "passive" : false,
+      "ranked" : false
+    },
+    "convincingDemeanor" : {
+      "description" : "Remove 1 Setback per rank of Convincing Demeanor from all Deception and Skulduggery checks. ",
+      "key" : "convincingDemeanor",
+      "name" : "Convincing Demeanor",
+      "passive" : true,
+      "ranked" : true
+    },
+    "coordinatedAssault" : {
+      "description" : "Take the Coordinated Assault maneuver; a number of engaged allies equal to your ranks in Leadership add 1 Advantage to all combat checks until the beginning of the next turn. Range increases per ranks in Coordinated Assault",
+      "key" : "coordinatedAssault",
+      "name" : "Coordinated Assault",
       "passive" : false,
       "ranked" : true
     },
@@ -722,6 +1111,13 @@
       "passive" : false,
       "ranked" : false
     },
+    "deadToRights" : {
+      "description" : "Spend 1 Destiny Point to add additional damage equal to half Agility (rounded up) to one hit of a successful attack made with a ship or vehicle mounted weapon.",
+      "key" : "deadToRights",
+      "name" : "Dead to Rights",
+      "passive" : false,
+      "ranked" : false
+    },
     "deadlyAccuracy" : {
       "description" : "Each time a rank of Deadly Accuracy is quired, pick one combat skill. You may add damage to one hit of a successful attack equal to ranks in the chosen skills",
       "key" : "deadlyAccuracy",
@@ -729,10 +1125,31 @@
       "passive" : true,
       "ranked" : true
     },
+    "debilitatingShot" : {
+      "description" : "Upon a successful attack with a starship or vehicle weapon, you may spend 2 Advantage to reduce the maximum speed of the target by 1 until the end of the next round",
+      "key" : "debilitatingShot",
+      "name" : "Debilitating Shot",
+      "passive" : false,
+      "ranked" : false
+    },
     "dedication" : {
       "description" : "When a rank in Dedication is aquired, gain +1 to a single characteristic. This cannot bring the characteristic above 6",
       "key" : "dedication",
       "name" : "Dedication",
+      "passive" : true,
+      "ranked" : true
+    },
+    "defensiveDriving" : {
+      "description" : "Increase the defense of the vehicle or starship being piloted by 1 per rank of Defensive Driving",
+      "key" : "defensiveDriving",
+      "name" : "Defensive Driving",
+      "passive" : true,
+      "ranked" : true
+    },
+    "defensiveSlicing" : {
+      "description" : "When defending a computer system, add 1 setback per rank of Defensive Slicing to opponents checks.",
+      "key" : "defensiveSlicing",
+      "name" : "Defensive Slicing",
       "passive" : true,
       "ranked" : true
     },
@@ -757,10 +1174,171 @@
       "passive" : true,
       "ranked" : true
     },
+    "durable" : {
+      "description" : "You may reduce any Critical Injury suffered by 10 per rank of Durable, to a minimum of 1",
+      "key" : "durable",
+      "name" : "Durable",
+      "passive" : true,
+      "ranked" : true
+    },
+    "enduring" : {
+      "description" : "Gain +1 Soak value. ",
+      "key" : "enduring",
+      "name" : "Enduring",
+      "passive" : true,
+      "ranked" : true
+    },
+    "exhaustPort" : {
+      "description" : "Before attacking a starship or vehicle, you may spend 1 Destiny Point to ignore the effects of the Massive rule for the attack",
+      "key" : "exhaustPort",
+      "name" : "Exhaust Port",
+      "passive" : false,
+      "ranked" : false
+    },
+    "expertTracker" : {
+      "description" : "Remove 1 setback die per rank of Expert Tracker from checks to find tracks, or track targets. Decrease time to track a target by half.",
+      "key" : "expertTracker",
+      "name" : "Expert Tracker",
+      "passive" : true,
+      "ranked" : true
+    },
+    "familiarSuns" : {
+      "description" : "Once per session, you may perform a Familiar Suns maneuver; Make a Hard (3) Knowledge (Outer Rim) or (Core Worlds) check to reveal the current type of planetary environment, and other useful information. ",
+      "key" : "familiarSuns",
+      "name" : "Familiar Suns",
+      "passive" : false,
+      "ranked" : false
+    },
+    "feralStrength" : {
+      "description" : "Add 1 damage per rank of Feral Strength to one hit of a successful attack made using Brawl or Melee.",
+      "key" : "feralStrength",
+      "name" : "Feral Strength",
+      "passive" : true,
+      "ranked" : true
+    },
+    "fieldCommander" : {
+      "description" : "Take the Field Commander action; make an Average (2) Leadership check. A number of allies equal to your Presence Rating may immediately suffer 1 strain to perform 1 free maneuver.",
+      "key" : "fieldCommander",
+      "name" : "Field Commander",
+      "passive" : false,
+      "ranked" : false
+    },
+    "fineTuning" : {
+      "description" : "When reducing the amount of system strain a starship or vehicle suffers, reduce 1 additional strain per rank of Fine Tuning",
+      "key" : "fineTuning",
+      "name" : "Fine Tuning",
+      "passive" : true,
+      "ranked" : true
+    },
+    "fireControl" : {
+      "description" : "Take a Fire Control action; all combat checks made form the current starship or vehicle count their target's silhouette as 1 higher than normal until the beginning of the next turn. Does not stack.",
+      "key" : "fireControl",
+      "name" : "Fire Control",
+      "passive" : false,
+      "ranked" : false
+    },
+    "forager" : {
+      "description" : "Remove up to 2 setback die from skill checks to find food, water, or shelter. Survival checks to forage take half the normal time. ",
+      "key" : "forager",
+      "name" : "Forager",
+      "passive" : true,
+      "ranked" : false
+    },
+    "formOnMe" : {
+      "description" : "When you would perform a Gain The Advantage action in a starship/vehicle, a number of allied starships/vehicles within close range also gain the benefits from Gain The Advantage until they leave close range, or Gain The Advantage loses its effects",
+      "key" : "formOnMe",
+      "name" : "Form On Me",
+      "passive" : true,
+      "ranked" : false
+    },
+    "frenziedAttack" : {
+      "description" : "When making a Melee or Brawl check, suffer a number of strain no greater than ranks in Frenzied Attack to upgrade the ability of the attack by an equal number.",
+      "key" : "frenziedAttack",
+      "name" : "Frenzied Attack",
+      "passive" : false,
+      "ranked" : true
+    },
+    "fullStop" : {
+      "description" : "When piloting a ship or vehicle, you may take a Full Stop maneuver to reduce speed to 0 and suffer system strain equal to the amount the speed was reduced",
+      "key" : "fullStop",
+      "name" : "Full Stop",
+      "passive" : false,
+      "ranked" : false
+    },
+    "fullThrottle" : {
+      "description" : "Take a Full Throttle action; Make a Hard (3) Piloting check to increase a vehicles top speed by 1 for a number of rounds equal to Cunning.",
+      "key" : "fullThrottle",
+      "name" : "Full Throttle",
+      "passive" : false,
+      "ranked" : false
+    },
+    "galaxyMapper" : {
+      "description" : "Remove 1 Setback 1 per rank of Galaxy Mapper from Astrogation Checks. Astrogation checks take half the normal time.",
+      "key" : "galaxyMapper",
+      "name" : "Galaxy Mapper",
+      "passive" : true,
+      "ranked" : true
+    },
+    "gearhead" : {
+      "description" : "Remove 1 Setback per rank of Gearhead from all Mechanics checks. Halve the credit cost to add mods to attachments",
+      "key" : "gearhead",
+      "name" : "Gearhead",
+      "passive" : true,
+      "ranked" : true
+    },
+    "greasedPalms" : {
+      "description" : "Instead of making a Knowledge check, you may take a Bought Info action; spend credits equal to 50 times the difficulty of the check to pass with 1 Success",
+      "key" : "greasedPalms",
+      "name" : "Bought Info",
+      "passive" : false,
+      "ranked" : true
+    },
     "grit" : {
       "description" : "Gain +1 Strain Threshold",
       "key" : "grit",
       "name" : "Grit",
+      "passive" : true,
+      "ranked" : true
+    },
+    "hardHeaded" : {
+      "description" : "When staggered or disoriented, perform the Hard Headed action; make a Daunting (4) Discipline check to remove that status. Reduce the difficulty of the skill check by ranks of Hard Headed",
+      "key" : "hardHeaded",
+      "name" : "Hard Headed",
+      "passive" : false,
+      "ranked" : true
+    },
+    "heightenedAwareness" : {
+      "description" : "Allies within short range add 1 Boost to Perception or Vigilance checks. Engaged Allies add 2 Boost.",
+      "key" : "heightenedAwareness",
+      "name" : "Heightened Awareness",
+      "passive" : true,
+      "ranked" : false
+    },
+    "heroicFortitude" : {
+      "description" : "You may spend 1 Destiny point to ignore the effects of Critical Injuries on Brawn or Agility checks until the end of the encounter",
+      "key" : "heroicFortitude",
+      "name" : "Heroic Fortitude",
+      "passive" : false,
+      "ranked" : false
+    },
+    "hiddenStorage" : {
+      "description" : "Gain a hidden storage in a vehicle or equipment that holds items with total encumbrance equal to ranks in Hidden Storage",
+      "key" : "hiddenStorage",
+      "name" : "Hidden Storage",
+      "passive" : true,
+      "ranked" : true
+    },
+    "holdTogether" : {
+      "description" : "Spend 1 Destiny Point to perform a Hold Together incidental immediately after a vehicle or starship takes damage to turn it into system strain. ",
+      "key" : "holdTogether",
+      "name" : "Hold Together",
+      "passive" : false,
+      "ranked" : false
+    },
+    "hunter" : {
+      "description" : "Add 1 boost die per rank of Hunter to all checks when interacting with beasts or animals (including combat checks). Add +10 to Critical Injury results against beasts or animals per rank of Hunter. ",
+      "key" : "hunter",
+      "name" : "Hunter",
       "passive" : true,
       "ranked" : true
     },
@@ -771,10 +1349,108 @@
       "passive" : true,
       "ranked" : false
     },
+    "improvedDeadToRights" : {
+      "description" : "Spend 1 Destiny Point to add additional damage equal to Agility to one hit of a successful attack made with ship or vehicle mounted weaponry",
+      "key" : "improvedDeadToRights",
+      "name" : "Improved Dead To Rights",
+      "passive" : false,
+      "ranked" : false
+    },
+    "improvedDefensiveSlicing" : {
+      "description" : "Defensive Slicing now upgrades opponents difficulty once per rank of Defensive Slicing, instead of adding Setback",
+      "key" : "improvedDefensiveSlicing",
+      "name" : "Improved Defensive Slicing",
+      "passive" : true,
+      "ranked" : false
+    },
+    "improvedFieldCommander" : {
+      "description" : "The Field Commander action affects allies equal to double your Presence, and you may spend 1 Triumph to allow allies to suffer 1 strain to perform 1 free action instead.",
+      "key" : "improvedFieldCommander",
+      "name" : "Improved Field Commander",
+      "passive" : true,
+      "ranked" : false
+    },
+    "improvedFullThrottle" : {
+      "description" : "Suffer 1 strain to attempt Full Throttle as a maneuver and decrease its difficulty to Average (2)",
+      "key" : "improvedFullThrottle",
+      "name" : "Improved Full Throttle",
+      "passive" : false,
+      "ranked" : false
+    },
+    "improvedHardHeaded" : {
+      "description" : "When incapacitated due to strain exceeding your threshold, you may take a Formidable (5) Hard Headed action to reduce strain to 1 below your threshold.",
+      "key" : "improvedHardHeaded",
+      "name" : "Improved Hard Headed",
+      "passive" : false,
+      "ranked" : false
+    },
+    "improvedInspiringRhetoric" : {
+      "description" : "Each Ally affected by Inspiring Rhetoric gains 1 Boost die on all skill checks for a number of rounds equal to your ranks in Leadership.",
+      "key" : "improvedInspiringRhetoric",
+      "name" : "Improved Inspiring Rhetoric",
+      "passive" : false,
+      "ranked" : true
+    },
+    "improvedScathingTirade" : {
+      "description" : "Each Enemy affected by Scathing Tirade suffers 1 Setback die on all skill checks for a number of rounds equal to your ranks in Coercion.",
+      "key" : "improvedScathingTirade",
+      "name" : "Improved Scathing Tirade",
+      "passive" : false,
+      "ranked" : true
+    },
+    "improvedStimApplication" : {
+      "description" : "When performing the Stim Application action, you may increase the difficulty to Hard (3), and the target only suffers 1 strain (rather than the normal 4). ",
+      "key" : "improvedStimApplication",
+      "name" : "Improved Stim Application",
+      "passive" : false,
+      "ranked" : false
+    },
     "improvedStunningBlow" : {
       "description" : "When dealing strain damage with Melee or Brawl checks, you may spend 1 Triumph to stagger the target for 1 round. You can do this multiple times.",
       "key" : "improvedStunningBlow",
       "name" : "Improved Stunning Blow",
+      "passive" : false,
+      "ranked" : false
+    },
+    "improvedTimeToGo" : {
+      "description" : "When activating Time To Go, allow 1 engaged ally to also perform Time To Go (without spending an extra Destiny Point)",
+      "key" : "improvedTimeToGo",
+      "name" : "Improved Time To Go",
+      "passive" : false,
+      "ranked" : false
+    },
+    "inciteRebellion" : {
+      "description" : "Once per session, you may take an Incite Rebellion action; Make a Hard (3) Coercion check to cause a number of beings up to ranks in Coercion to become rebellious until the end of the encounter",
+      "key" : "inciteRebellion",
+      "name" : "Incite Rebellion",
+      "passive" : false,
+      "ranked" : false
+    },
+    "indistinguishable" : {
+      "description" : "Upgrade the difficulty of all checks to identify you once per rank of Indistinguishable.",
+      "key" : "indistinguishable",
+      "name" : "Indistinguishable",
+      "passive" : true,
+      "ranked" : true
+    },
+    "inspiringRhetoric" : {
+      "description" : "Take the Inspiring Rhetoric action; Make an Average (2) Leadership check. Each uncancelled Success causes 1 ally in short range to recover 1 strain. Spend 1 Advantage to cause 1 affected ally to recover 1 additional strain.",
+      "key" : "inspiringRhetoric",
+      "name" : "Inspiring Rhetoric",
+      "passive" : false,
+      "ranked" : false
+    },
+    "intenseFocus" : {
+      "description" : "Perform an Intense Focus maneuver; suffer 1 strain and upgrade the ability of your next skill check once. ",
+      "key" : "intenseFocus",
+      "name" : "Intense Focus",
+      "passive" : false,
+      "ranked" : false
+    },
+    "intensePresence" : {
+      "description" : "Spend 1 Destiny Point to recover strain equal to your Presence rating. ",
+      "key" : "intensePresence",
+      "name" : "Intense Presence",
       "passive" : false,
       "ranked" : false
     },
@@ -783,6 +1459,13 @@
       "key" : "intimidating",
       "name" : "Intimidating",
       "passive" : false,
+      "ranked" : true
+    },
+    "inventor" : {
+      "description" : "When constructing new items or modifying attachments, add 1 Boost or remove 1 Setback per rank of Inventor",
+      "key" : "inventor",
+      "name" : "Inventor",
+      "passive" : true,
       "ranked" : true
     },
     "jumpUp" : {
@@ -799,6 +1482,41 @@
       "passive" : true,
       "ranked" : false
     },
+    "killWithKindness" : {
+      "description" : "Remove 1 setback per rank of Kill With Kindness from all Charm and Leadership checks",
+      "key" : "killWithKindness",
+      "name" : "Kill With Kindness",
+      "passive" : true,
+      "ranked" : true
+    },
+    "knockdown" : {
+      "description" : "After hitting with a melee attack, you may spend 1 Triumph to knock the target prone",
+      "key" : "knockdown",
+      "name" : "Knockdown",
+      "passive" : true,
+      "ranked" : false
+    },
+    "knowSomebody" : {
+      "description" : "Once per session, when attempting to purchase a legally available item, reduce its rarity by 1 per rank of Know Somebody",
+      "key" : "knowSomebody",
+      "name" : "Know Somebody",
+      "passive" : false,
+      "ranked" : true
+    },
+    "knowledgeSpecialization" : {
+      "description" : "When acquired, choose 1 Knowledge Skill. When making a skill check using the chosen skill, you may spend 1 Triumph to gain additional successes equal to ranks in Knowledge Specialization. ",
+      "key" : "knowledgeSpecialization",
+      "name" : "Knowledge Specialization",
+      "passive" : false,
+      "ranked" : true
+    },
+    "knownSchematic" : {
+      "description" : "Once per session, you may perform a Known Schematic maneuver; Make a Hard (3) Knowledge (Education) check to get familiarity with a building or ships design",
+      "key" : "knownSchematic",
+      "name" : "Known Schematic",
+      "passive" : false,
+      "ranked" : false
+    },
     "lethalBlows" : {
       "description" : "Add +10 per rank of Lethal Blows to any Critical Injury results inflicted on opponents",
       "key" : "lethalBlows",
@@ -806,10 +1524,108 @@
       "passive" : true,
       "ranked" : true
     },
+    "letsRide" : {
+      "description" : "Once per round, you may mount or dismount a vehicle or beast, or enter a cockpit or weapon station on a vehicle, as an incidental.",
+      "key" : "letsRide",
+      "name" : "Let's Ride",
+      "passive" : false,
+      "ranked" : false
+    },
+    "masterDoctor" : {
+      "description" : "Once per round, you may suffer 2 strain to decrease the difficulty of a Medicine check by 1.",
+      "key" : "masterDoctor",
+      "name" : "Master Doctor",
+      "passive" : false,
+      "ranked" : false
+    },
+    "masterDriver" : {
+      "description" : "Once per round, while driving a vehicle, you may suffer 2 strain to perform any action as a maneuver",
+      "key" : "masterDriver",
+      "name" : "Master Driver",
+      "passive" : false,
+      "ranked" : false
+    },
+    "masterGrenadier" : {
+      "description" : "Decrease the Advantage cost to activate the Blast quality of any weapon used by 1, to a minimum of 1 Advantage",
+      "key" : "masterGrenadier",
+      "name" : "Master Grenadier",
+      "passive" : true,
+      "ranked" : false
+    },
+    "masterLeader" : {
+      "description" : "Once per round, you may suffer 2 strain to decrease the difficulty of the next Leadership check by 1, to a minimum of Easy (1)",
+      "key" : "masterLeader",
+      "name" : "Master Leader",
+      "passive" : false,
+      "ranked" : false
+    },
+    "masterMerchant" : {
+      "description" : "When buying or selling goods, or paying off or taking Obligation, you may suffer 2 strain to sell for 25% more, buy for 25% less, pay off 1 more Obligation, or take 1 less.",
+      "key" : "masterMerchant",
+      "name" : "Master Merchant",
+      "passive" : false,
+      "ranked" : false
+    },
     "masterOfShadows" : {
       "description" : "Once per round, you may suffer 2 strain to decrease the difficulty of the next Stealth or Skulduggery check by 1",
       "key" : "masterOfShadows",
       "name" : "Master Of Shadows",
+      "passive" : false,
+      "ranked" : false
+    },
+    "masterPilot" : {
+      "description" : "Once per round, when piloting a starship, you may suffer 2 strain to perform any action as a maneuver. ",
+      "key" : "masterPilot",
+      "name" : "Master Pilot",
+      "passive" : false,
+      "ranked" : false
+    },
+    "masterSlicer" : {
+      "description" : "Once per round, you may make a Master Slicer incidental to suffer 2 strain and decrease the difficulty of the next Computers or other slicing checks by 1, to a minimum of Easy (1)",
+      "key" : "masterSlicer",
+      "name" : "Master Slicer",
+      "passive" : false,
+      "ranked" : false
+    },
+    "masterStarhopper" : {
+      "description" : "Once per round, suffer 2 strain to decrease the difficulty of the next Astrogation check by 1 to a minimum of Easy (1)",
+      "key" : "masterStarhopper",
+      "name" : "Master Starhopper",
+      "passive" : false,
+      "ranked" : false
+    },
+    "mentalFortress" : {
+      "description" : "Spend 1 Destiny Point to ignore the effects of Critical Injuries on Intellect or Cunning skill checks until the end of the encounter",
+      "key" : "mentalFortress",
+      "name" : "Mental Fortress",
+      "passive" : false,
+      "ranked" : false
+    },
+    "naturalBrawler" : {
+      "description" : "Once per session, you may re-roll any 1 Brawl or Melee check.",
+      "key" : "naturalBrawler",
+      "name" : "Natural Brawler",
+      "passive" : false,
+      "ranked" : false
+    },
+    "naturalCharmer" : {
+      "description" : "Once per session, you may re-roll any 1 Charm or Deception Check. ",
+      "key" : "naturalCharmer",
+      "name" : "Natural Charmer",
+      "passive" : false,
+      "ranked" : false
+    },
+    "naturalDoctor" : {
+      "description" : "Once per session, you may re-roll any 1 Medicine Check",
+      "key" : "naturalDoctor",
+      "name" : "Natural Doctor",
+      "passive" : false,
+      "ranked" : false
+    },
+    "naturalDriver" : {
+      "description" : "Once per session, you may re-roll any 1 Piloting (Planetary) or Gunnery check",
+      "key" : "naturalDriver",
+      "name" : "Natural Driver",
       "passive" : false,
       "ranked" : false
     },
@@ -820,10 +1636,115 @@
       "passive" : false,
       "ranked" : false
     },
+    "naturalHunter" : {
+      "description" : "Once per session, you may re-roll any 1 Perception or Vigilance check",
+      "key" : "naturalHunter",
+      "name" : "Natural Hunter",
+      "passive" : false,
+      "ranked" : false
+    },
+    "naturalLeader" : {
+      "description" : "Once per session, you may re-roll any 1 Cool or Leadership check",
+      "key" : "naturalLeader",
+      "name" : "Natural Leader",
+      "passive" : false,
+      "ranked" : false
+    },
+    "naturalMarksman" : {
+      "description" : "Once per session, you may re-roll any 1 Ranged (Light) or (Heavy) check.",
+      "key" : "naturalMarksman",
+      "name" : "Natural Marksman",
+      "passive" : false,
+      "ranked" : false
+    },
+    "naturalNegotiator" : {
+      "description" : "Once per session, you may re-roll any 1 Cool or Negotiation check.",
+      "key" : "naturalNegotiator",
+      "name" : "Natural Negotiator",
+      "passive" : false,
+      "ranked" : false
+    },
+    "naturalOutdoorsman" : {
+      "description" : "Once per session, you may re-roll any 1 Resilience or Survival check",
+      "key" : "naturalOutdoorsman",
+      "name" : "Natural Outdoorsman",
+      "passive" : false,
+      "ranked" : false
+    },
+    "naturalPilot" : {
+      "description" : "Once per session, you may re-roll any 1 Piloting (Space) or Gunnery check",
+      "key" : "naturalPilot",
+      "name" : "Natural Pilot",
+      "passive" : false,
+      "ranked" : false
+    },
+    "naturalProgrammer" : {
+      "description" : "Once per session, you may re-roll any 1 Computers or Astrogation check.",
+      "key" : "naturalProgrammer",
+      "name" : "Natural Programmer",
+      "passive" : true,
+      "ranked" : true
+    },
+    "naturalRogue" : {
+      "description" : "Once per session, you may re-roll any 1 Skulduggery or Stealth check",
+      "key" : "naturalRogue",
+      "name" : "Natural Rogue",
+      "passive" : false,
+      "ranked" : false
+    },
+    "naturalScholar" : {
+      "description" : "Once per session, you may re-roll any 1 Knowledge skill check. ",
+      "key" : "naturalScholar",
+      "name" : "Natural Scholar",
+      "passive" : false,
+      "ranked" : false
+    },
+    "naturalTinkerer" : {
+      "description" : "Once per session, you may re-roll any 1 Mechanics check",
+      "key" : "naturalTinkerer",
+      "name" : "Natural Tinkerer",
+      "passive" : false,
+      "ranked" : false
+    },
+    "nobodysFool" : {
+      "description" : "You may upgrade the difficulty of all incoming Charm, Coercion, or Deception checks once per rank of Nobody's Fool.",
+      "key" : "nobodysFool",
+      "name" : "Nobody's Fool",
+      "passive" : true,
+      "ranked" : true
+    },
+    "outdoorsman" : {
+      "description" : "Remove 1 setback die per rank of Outdoorsman from checks to move through terrainor manage environmental effects. Decrease overland travel times by half. ",
+      "key" : "outdoorsman",
+      "name" : "Outdoorsman",
+      "passive" : true,
+      "ranked" : true
+    },
+    "overwhelmDefenses" : {
+      "description" : "Upon an unsuccessful attack with a starship or vehicle weapon, you may spend 2 Advantage per rank of Overwhelm Defenses. Reduce the defense of the targeted zone by 1 for every 2 Advantage spent",
+      "key" : "Overwhelm Defenses",
+      "name" : "Overwhelm Defenses",
+      "passive" : false,
+      "ranked" : true
+    },
+    "plausibleDeniability" : {
+      "description" : "Remove 1 Setback per rank of Plausible Deniability from all Coercion and Deception checks.",
+      "key" : "plausibleDeniability",
+      "name" : "Plausible Deniability",
+      "passive" : true,
+      "ranked" : true
+    },
     "pointBlank" : {
-      "description" : "Add 1 damage per rank of Point Blank to damage of one successful attack while using Ranged (Heavy) or Ranged (Light) skills at close or engaged range",
+      "description" : "Add 1 damage per rank of Point Blank to damage of 1 hit of a successful Ranged (Heavy) or (Light) attack made while at close or engaged range.",
       "key" : "pointBlank",
       "name" : "Point Blank",
+      "passive" : true,
+      "ranked" : true
+    },
+    "powerfulBlast" : {
+      "description" : "Increase Blast damage dealt by explosives, explosive weapons, and grenades, by 1 per rank of Powerful Blast",
+      "key" : "powerfulBlast",
+      "name" : "Powerful Blast",
       "passive" : true,
       "ranked" : true
     },
@@ -833,6 +1754,13 @@
       "name" : "Precise Aim",
       "passive" : true,
       "ranked" : true
+    },
+    "pressurePoint" : {
+      "description" : "When making a Brawl check against an opponent, instead of dealing regular damage, you may deal that damage as strain, plus additional strain damage equal to your ranks in Medicine",
+      "key" : "pressurePoint",
+      "name" : "Pressure Point",
+      "passive" : false,
+      "ranked" : false
     },
     "quickDraw" : {
       "description" : "Once per round, you can draw or holster a weapon or accessible item as an incidental",
@@ -848,12 +1776,145 @@
       "passive" : true,
       "ranked" : true
     },
+    "rapidReaction" : {
+      "description" : "Suffer a number of strain no greater than ranks in Rapid Reaction to add an equal number of Successes to an Initiative check.",
+      "key" : "rapidReaction",
+      "name" : "Rapid Reaction",
+      "passive" : false,
+      "ranked" : true
+    },
+    "rapidRecovery" : {
+      "description" : "When healing strain after an encounter, heal 1 additional strain per rank of Rapid Recovery",
+      "key" : "rapidRecovery",
+      "name" : "Rapid Recovery",
+      "passive" : true,
+      "ranked" : true
+    },
+    "redundantSystems" : {
+      "description" : "Once per session, you may take a Redundant Systems action; Make an Easy (1) Mechanics check to harvest components from a functioning device to repair a broken one without breaking the first device.",
+      "key" : "redundantSystems",
+      "name" : "Redundant Systems",
+      "passive" : false,
+      "ranked" : false
+    },
+    "researcher" : {
+      "description" : "Remove 1 Setback per rank of Researcher from all Knowledge Checks. Researching a subject takes half the time. ",
+      "key" : "researcher",
+      "name" : "Researcher",
+      "passive" : true,
+      "ranked" : true
+    },
+    "resolve" : {
+      "description" : "When you would involuntarily suffer strain, you suffer 1 less strain per rank of Resolve, to a minimum of 1.",
+      "key" : "resolve",
+      "name" : "Resolve",
+      "passive" : true,
+      "ranked" : true
+    },
+    "respectedScholar" : {
+      "description" : "May downgrade the difficulty of checks to interact with institutes of learning by 1 level per rank of Respected Scholar",
+      "key" : "respectedScholar",
+      "name" : "Respected Scholar",
+      "passive" : true,
+      "ranked" : true
+    },
+    "scathingTirade" : {
+      "description" : "Take a Scathing Tirade action; make an Average (2) Coercion check. Each uncancelled Success causes 1 enemy in short range to suffer 1 strain. Spend 1 advantage to cause 1 affected enemy to suffer an additional strain. ",
+      "key" : "scathingTirade",
+      "name" : "Scathing Tirade",
+      "passive" : false,
+      "ranked" : false
+    },
+    "secondWind" : {
+      "description" : "Once per encounter, you may use a Second Wind incidental to heal strain equal to ranks in Second Wind.",
+      "key" : "secondWind",
+      "name" : "Second Wind",
+      "passive" : false,
+      "ranked" : true
+    },
+    "selectiveDetonation" : {
+      "description" : "When using any weapon with the Blast quality, you may spend 1 Advantage to exclude 1 target that would normally be affected by the explosion. Can be repeated as many times as you have ranks in Selective Detonation",
+      "key" : "selectiveDetonation",
+      "name" : "Selective Detonation",
+      "passive" : false,
+      "ranked" : true
+    },
+    "shortcut" : {
+      "description" : "During a chase, add 1 Boost per ranks in Shortcut to any checks made to catch or escape an opponent.",
+      "key" : "shortcut",
+      "name" : "Shortcut",
+      "passive" : true,
+      "ranked" : true
+    },
+    "sideStep" : {
+      "description" : "Once per round, you may perform a Side Step maneuver and suffer a number of strain no greater than ranks of Side Step. Upgrade the difficulty of all incoming ranged attacks by the strain suffered until the next round.",
+      "key" : "sideStep",
+      "name" : "Side Step",
+      "passive" : false,
+      "ranked" : true
+    },
+    "situationalAwareness" : {
+      "description" : "Allies within short range of the vehicle add 1 Boost to their Perception and Vigilance checks. Allies within close range add 2 Boost instead.",
+      "key" : "situationalAwareness",
+      "name" : "Situational Awareness",
+      "passive" : true,
+      "ranked" : false
+    },
+    "sixthSense" : {
+      "description" : "Gain +1 Ranged Defense",
+      "key" : "sixthSense",
+      "name" : "Sixth Sense",
+      "passive" : true,
+      "ranked" : true
+    },
+    "skilledJockey" : {
+      "description" : "Remove 1 Setback per rank of Skilled Jockey from all Piloting checks the character attempts",
+      "key" : "skilledJockey",
+      "name" : "Skilled Jockey",
+      "passive" : true,
+      "ranked" : true
+    },
+    "skilledSlicer" : {
+      "description" : "When making a Computers check, you may spend 1 Triumph to make further checks within this system as maneuvers",
+      "key" : "skilledSlicer",
+      "name" : "Skilled Slicer",
+      "passive" : false,
+      "ranked" : false
+    },
+    "smoothTalker" : {
+      "description" : "When first acquired, choose 1 skill from: Charm, Coercion, Deception, or Negotiation. When making checks with that skill, you may spend 1 Triumph to gain additional Successes equal to ranks in Smooth Talker",
+      "key" : "smoothTalker",
+      "name" : "Smooth Talker",
+      "passive" : false,
+      "ranked" : true
+    },
     "sniperShot" : {
-      "description" : "Once per round, you can draw or holster a weapon or accessible item as an incidental",
+      "description" : "Before making a non-thrown ranged attack, you may perform a Sniper Shot maneuver to increase the weapons range by 1 band per rank of Sniper Shot. Upgrade the difficulty of the attack by 1 per range band increase.",
       "key" : "sniperShot",
       "name" : "Sniper Shot",
       "passive" : false,
+      "ranked" : true
+    },
+    "softSpot" : {
+      "description" : "After making a successful attack, you may spend 1 Destiny point to add damage equal to your Cunning to one hit. ",
+      "key" : "softSpot",
+      "name" : "Soft Spot",
+      "passive" : false,
       "ranked" : false
+    },
+    "solidRepairs" : {
+      "description" : "You repair an additional 1 hull trauma per rank of Solid Repairs whenever you repair a starship or vehicle",
+      "key" : "solidRepairs",
+      "name" : "Solid Repairs",
+      "passive" : true,
+      "ranked" : true
+    },
+    "soundInvestments" : {
+      "description" : "At the start of each session, gain 100 credits per rank of Sound Investments",
+      "key" : "soundInvestments",
+      "name" : "Sound Investments",
+      "passive" : true,
+      "ranked" : true
     },
     "spareClip" : {
       "description" : "You cannot run out of ammo on a Despair. Items with the Limited Ammo Quality run out as normal. ",
@@ -862,12 +1923,54 @@
       "passive" : true,
       "ranked" : false
     },
+    "speaksBinary" : {
+      "description" : "When directing NPC droids, you may grant them 1 boost per rank of Speaks Binary on  all skill checks. ",
+      "key" : "speaksBinary",
+      "name" : "Speaks Binary",
+      "passive" : true,
+      "ranked" : true
+    },
     "stalker" : {
       "description" : "Add 1 boost die per rank of Stalker to all Stealth and Coordination checks",
       "key" : "stalker",
       "name" : "Stalker",
       "passive" : true,
       "ranked" : true
+    },
+    "steelyNerves" : {
+      "description" : "Spend 1 Destiny Point to ignore effects of Critical Injuries on Willpower or Presence Checks until the end of the encounter. ",
+      "key" : "steelyNerves",
+      "name" : "Steely Nerves",
+      "passive" : false,
+      "ranked" : false
+    },
+    "stimApplication" : {
+      "description" : "Take the Stim Application Action; make an Average (2) Medicine Check. If successful, 1 ally in engaged range increases 1 characteristic by 1 for the remainder of the encounter, and suffers 4 strain. ",
+      "key" : "stimApplication",
+      "name" : "Stim Application",
+      "passive" : false,
+      "ranked" : false
+    },
+    "streetSmarts" : {
+      "description" : "Remove 1 Setback per rank of Street Smarts from Streetwise or Knowledge (Underworld) checks.",
+      "key" : "streetSmarts",
+      "name" : "Street Smarts",
+      "passive" : true,
+      "ranked" : true
+    },
+    "strokeOfGenius" : {
+      "description" : "Once per session, you may make 1 skill check using Intellect, rather than the characteristic linked to that skill. ",
+      "key" : "strokeOfGenius",
+      "name" : "Stroke of Genius",
+      "passive" : false,
+      "ranked" : false
+    },
+    "strongArm" : {
+      "description" : "Treat thrown wewapons as if they had 1 greater range.",
+      "key" : "strongArm",
+      "name" : "Strong Arm",
+      "passive" : true,
+      "ranked" : false
     },
     "stunningBlow" : {
       "description" : "When making Melee checks, you may inflict damage as strain, rather than wounds. This does not ignore soak",
@@ -876,10 +1979,73 @@
       "passive" : false,
       "ranked" : false
     },
+    "superiorReflexes" : {
+      "description" : "Gain +1 Melee Defense",
+      "key" : "superiorReflexes",
+      "name" : "Superior Reflexes",
+      "passive" : true,
+      "ranked" : true
+    },
+    "supremeFullThrottle" : {
+      "description" : "When performing Full Throttle, top speed is increased by 2, instead of 1",
+      "key" : "supremeFullThrottle",
+      "name" : "Supreme Full Throttle",
+      "passive" : true,
+      "ranked" : false
+    },
+    "supremeInspiringRhetoric" : {
+      "description" : "Suffer 1 strain to perform Inspiring Rhetoric as a maneuver, rather than an action. ",
+      "key" : "supremeInspiringRhetoric",
+      "name" : "Supreme Inspiring Rhetoric",
+      "passive" : false,
+      "ranked" : false
+    },
+    "supremeScathingTirade" : {
+      "description" : "Suffer 1 Strain to perform Scathing Tirade as a maneuver, rather than an action",
+      "key" : "supremeScathingTirade",
+      "name" : "Supreme Scathing Tirade",
+      "passive" : false,
+      "ranked" : false
+    },
+    "supremeStimApplication" : {
+      "description" : "When performing the Stim Application action, you may spend 1 triumph to increate an additional characteristic by 1. ",
+      "key" : "supremeStimApplication",
+      "name" : "Supreme Stim Application",
+      "passive" : true,
+      "ranked" : false
+    },
+    "surgeon" : {
+      "description" : "When making a Medicine check to help a character heal wounds, the target heals 1 additional wound per rank of Surgeon",
+      "key" : "surgeon",
+      "name" : "Surgeon",
+      "passive" : true,
+      "ranked" : true
+    },
+    "swift" : {
+      "description" : "Do not suffer usual penalties for moving through difficult terrain.",
+      "key" : "swift",
+      "name" : "Swift",
+      "passive" : true,
+      "ranked" : false
+    },
     "targetedBlow" : {
       "description" : "After making a successful attack, you may spend 1 Destiny Point to add damage equal to Agility to one hit",
       "key" : "targetedBlow",
       "name" : "Targeted Blow",
+      "passive" : false,
+      "ranked" : false
+    },
+    "technicalAptitude" : {
+      "description" : "Reduce the time needed to complete Computer related tasks by 25% per rank of Technical Aptitude",
+      "key" : "technicalAptitude",
+      "name" : "Technical Aptitude",
+      "passive" : true,
+      "ranked" : true
+    },
+    "timeToGo" : {
+      "description" : "May spend 1 Destiny Point to perform a Move maneuver as an incidental to attempt to move into cover or out of the Blast range of a weapon or explosion",
+      "key" : "timeToGo",
+      "name" : "Time To Go",
       "passive" : false,
       "ranked" : false
     },
@@ -896,6 +2062,55 @@
       "name" : "Toughened",
       "passive" : true,
       "ranked" : true
+    },
+    "trickyTarget" : {
+      "description" : "Count the vehicle or starship  piloted as having a silhouette 1 lower when being attacked",
+      "key" : "trickyTarget",
+      "name" : "Tricky Target",
+      "passive" : true,
+      "ranked" : false
+    },
+    "trueAim" : {
+      "description" : "Once per round, you may perform a True Aim maneuver to gain the benefits of aiming, and upgrade the ability of the next combat check once per rank of True Aim.",
+      "key" : "trueAim",
+      "name" : "True Aim",
+      "passive" : false,
+      "ranked" : true
+    },
+    "utilityBelt" : {
+      "description" : "Spend 1 Destiny Point to perform a Utility Belt incidental; produce a previously undocumented item (with rarity 4 or less) or weapon (with the Limited Ammo 1 quality) from a tool belt or satchel.",
+      "key" : "utilityBelt",
+      "name" : "Utility Belt",
+      "passive" : false,
+      "ranked" : false
+    },
+    "utinni" : {
+      "description" : "Remove 1 Setback per rank of Utinni! from all checks to find or scavenge items or gear. Such checks take half the time.",
+      "key" : "utinni",
+      "name" : "Utinni!",
+      "passive" : true,
+      "ranked" : true
+    },
+    "wellRounded" : {
+      "description" : "Choose any 2 skills. They permanently become career skills. ",
+      "key" : "wellRounded",
+      "name" : "Well Rounded",
+      "passive" : true,
+      "ranked" : true
+    },
+    "wheelAndDeal" : {
+      "description" : "When selling goods legally, you gain 10% more credits per rank of Wheel And Deal.",
+      "key" : "wheelAndDeal",
+      "name" : "Wheel And Deal",
+      "passive" : true,
+      "ranked" : true
+    },
+    "worksLikeACharm" : {
+      "description" : "Once per session, make one skill check using Presence, rather than the characteristic linked to that skill",
+      "key" : "worksLikeACharm",
+      "name" : "Works Like A Charm",
+      "passive" : false,
+      "ranked" : false
     }
   }
 }
