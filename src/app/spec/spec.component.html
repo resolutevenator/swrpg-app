@@ -5,25 +5,42 @@
         <img src="../../assets/{{specData.name}}.jpg" alt="{{spec}}">
         <hr>
         <mat-card-title>{{specData.name}}</mat-card-title>
+        <mat-card-content>{{specData.career}}</mat-card-content>
+      </mat-card>
+      <mat-card class="career-skills">
+        <mat-card-title>Career Skills</mat-card-title>
+        <mat-card-content *ngIf="careerSkills">{{careerSkills}}</mat-card-content>
+      </mat-card>
+      <mat-card class="career-skills">
+        <mat-card-title>Bonus Career Skills</mat-card-title>
+        <mat-card-content *ngIf="bonusSkills">{{bonusSkills}}</mat-card-content>
       </mat-card>
     </div>
     <div class="right">
       <div class="talents" *ngFor="let row of specData.talents; let i = index" [attr.data-index]="i">
         <div class="line">
           <mat-card>
-            <mat-card-title>{{row[0]}}</mat-card-title>
+            <mat-card-title *ngIf="talents[row[0]]">{{talents[row[0]].name}}</mat-card-title>
+            <hr>
+            <mat-card-content  *ngIf="talents[row[0]]">{{talents[row[0]].description}}</mat-card-content>
           </mat-card>
           <div class="horizontal-connection" [class.black]="specData.horizontalConnections[i][0]"></div>
           <mat-card>
-            <mat-card-title>{{row[1]}}</mat-card-title>
+            <mat-card-title *ngIf="talents[row[1]]">{{talents[row[1]].name}}</mat-card-title>
+            <hr>
+            <mat-card-content  *ngIf="talents[row[1]]">{{talents[row[1]].description}}</mat-card-content>
           </mat-card>
           <div class="horizontal-connection" [class.black]="specData.horizontalConnections[i][1]"></div>
           <mat-card>
-            <mat-card-title>{{row[2]}}</mat-card-title>
+            <mat-card-title *ngIf="talents[row[2]]">{{talents[row[2]].name}}</mat-card-title>
+            <hr>
+            <mat-card-content  *ngIf="talents[row[2]]">{{talents[row[2]].description}}</mat-card-content>
           </mat-card>
           <div class="horizontal-connection" [class.black]="specData.horizontalConnections[i][2]"></div>
           <mat-card>
-            <mat-card-title>{{row[3]}}</mat-card-title>
+            <mat-card-title *ngIf="talents[row[3]]">{{talents[row[3]].name}}</mat-card-title>
+            <hr>
+            <mat-card-content  *ngIf="talents[row[3]]">{{talents[row[3]].description}}</mat-card-content>
           </mat-card>
         </div>
         <div class="vertical-connectors">

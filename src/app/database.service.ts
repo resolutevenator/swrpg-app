@@ -22,6 +22,14 @@ export class DatabaseService {
     return this.db.list(path).valueChanges();
   }
 
+  public getTalentsObject() {
+    return this.db.object('talents/').valueChanges();
+  }
+
+  public getTalentObject(talentName: string) {
+    return this.db.object('talents/' + talentName).valueChanges();
+  }
+
   public pushTalent(talent: Object, key: string) {
     this.db.object('talents/' + key).update(talent);
   }
