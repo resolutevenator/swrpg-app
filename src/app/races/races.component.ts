@@ -21,7 +21,7 @@ export class RacesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.race = this._route.snapshot.params['raceName'].toLowerCase();
+    this.race = this._route.snapshot.params['raceName'];
     this.db.getRaceDataObject(this.race).subscribe(data => {
       this.raceData = data;
     });
