@@ -4,10 +4,11 @@
     margin-top: 50px;
 }
 
-.card-image {
+.entry-image {
     height: 320px;
     width: auto;
-    margin: auto;
+    max-width: 180px;
+    // margin: auto;
 }
 
 .flex-container {
@@ -25,6 +26,7 @@ mat-card {
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
+    text-align: center;
 }
 
 mat-card-title {

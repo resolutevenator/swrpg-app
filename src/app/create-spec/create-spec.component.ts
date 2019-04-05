@@ -210,7 +210,8 @@ export class CreateSpecComponent implements OnInit {
       name: this.specName,
       horizontalConnections: this.horizontalConnections,
       verticalConnections: this.verticalConnections,
-      talents: this.talentTree
+      talents: this.talentTree,
+      key: this.specKey
     }
 
     this.db.pushSpec(spec, this.specKey);
