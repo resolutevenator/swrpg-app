@@ -37,4 +37,8 @@ export class DatabaseService {
   public pushSpec(spec: Object, key: string) {
     this.db.object('specs/' + key).update(spec)
   }
+
+  public pushRace(race: Object, key: string) {
+    this.db.object('races/' + key).update(race)
+  }
 }

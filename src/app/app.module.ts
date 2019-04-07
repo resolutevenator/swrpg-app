@@ -35,6 +35,7 @@ import { BrowseComponent } from './browse/browse.component';
 import { environment } from '../environments/environment';
 import { SpecComponent } from './spec/spec.component';
 import { CreateSpecComponent } from './create-spec/create-spec.component';
+import { CreateRaceComponent } from './create-race/create-race.component';
 
 declare var Hammer: any;
 @Injectable()
@@ -53,7 +54,8 @@ export class HammerConfig extends GestureConfig  {
     NotFoundComponent,
     BrowseComponent,
     SpecComponent,
-    CreateSpecComponent
+    CreateSpecComponent,
+    CreateRaceComponent
   ],
   imports: [
     BrowserModule,

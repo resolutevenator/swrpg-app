@@ -6,6 +6,7 @@ import { BrowseComponent } from './browse/browse.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SpecComponent } from './spec/spec.component';
 import { CreateSpecComponent } from './create-spec/create-spec.component';
+import { CreateRaceComponent } from './create-race/create-race.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'specs/new',
     component: CreateSpecComponent
+  },
+  {
+    path: 'races/new',
+    component: CreateRaceComponent
   },
   {
     path: 'races/:raceName',
