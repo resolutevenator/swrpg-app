@@ -20,6 +20,7 @@ export class CreateRaceComponent implements OnInit {
   strain = '';
   xp = '';
   ability = '';
+  book = "";
 
   specialAbilities = []
 
@@ -54,7 +55,8 @@ export class CreateRaceComponent implements OnInit {
       startingXP: this.xp,
       strainThreshold: this.strain,
       willpower: this.willpower,
-      woundThreshold: this.wounds
+      woundThreshold: this.wounds,
+      books: this.book
     }
 
     this.db.pushRace(race, this.raceKey);

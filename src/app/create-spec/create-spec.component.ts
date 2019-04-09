@@ -205,7 +205,7 @@ export class CreateSpecComponent implements OnInit {
     const spec = {
       careerSkills: this.getSkills(),
       bonusCareerSkills: this.getAdditionalSkills(),
-      book: this.book,
+      books: this.book,
       career: this.careerName,
       name: this.specName,
       horizontalConnections: this.horizontalConnections,
