@@ -21,6 +21,28 @@ export class BrowseComponent implements OnInit {
     this.router.navigate(['/' + this.type, raceName]);
   }
 
+  getCardClass(books) {
+    const book = books[0]
+    if(book.startsWith("FaD")){
+      return "black"
+    } else if (book.startsWith("EotE")) {
+      return "orange"
+    } else if (book.startsWith("AoR")) {
+      return "red"
+    }
+
+  }
+
+  isBlack(books) {
+    return books[0].startsWith("FaD")
+  }
+  isOrange(books) {
+    return books[0].startsWith("EotE")
+  }
+  isRed(books) {
+    return books[0].startsWith("FaD")
+  }
+
   ngOnInit() {
     const url = this.router.url;
     const urlSegments = url.split('/');
