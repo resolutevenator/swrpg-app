@@ -23,6 +23,26 @@
     background-color: rgb(202, 44, 44);
 }
 
+.blue {
+    background-color: rgb(74, 74, 255);
+}
+
+.orange-red, .red-orange {
+    background-image: linear-gradient(to right, rgb(255, 102, 0) , rgb(202, 44, 44));
+}
+
+.orange-black, .black-orange {
+    background-image: linear-gradient(to right, rgb(255, 102, 0) , rgb(80, 80, 80));
+}
+
+.red-black, .black-red {
+    background-image: linear-gradient(to right, rgb(202, 44, 44) , rgb(80, 80, 80));
+}
+
+.orange-red-black {
+    background-image: linear-gradient(to right, rgb(255, 102, 0), rgb(202, 44, 44), rgb(80, 80, 80));
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;

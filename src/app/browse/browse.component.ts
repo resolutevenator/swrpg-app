@@ -22,15 +22,27 @@ export class BrowseComponent implements OnInit {
   }
 
   getCardClass(books) {
-    const book = books[0]
-    if(book.startsWith("FaD")){
+    if (books.length === 1) {
+      return this.convertBookToColour(books[0])
+    } else if (books.length === 2) {
+      const cssClass = this.convertBookToColour(books[0]) + '-' + this.convertBookToColour(books[1])
+      return cssClass;
+    } else {
+      return 'orange-red-black'
+    }
+
+  }
+
+  convertBookToColour(book: string) {
+    if (book.startsWith("FaD")) {
       return "black"
     } else if (book.startsWith("EotE")) {
       return "orange"
     } else if (book.startsWith("AoR")) {
       return "red"
+    } else {
+      return "blue"
     }
-
   }
 
   isBlack(books) {
@@ -46,8 +58,8 @@ export class BrowseComponent implements OnInit {
   ngOnInit() {
     const url = this.router.url;
     const urlSegments = url.split('/');
-    this.type = urlSegments[urlSegments.length-1];
-    
+    this.type = urlSegments[urlSegments.length - 1];
+
     this.db.getList(this.type).subscribe(data => {
       this.data = data;
       console.log(data);
