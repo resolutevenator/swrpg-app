@@ -7,11 +7,24 @@
     <mat-form-field class="input text">
       <input matInput #key type='text' [(ngModel)]="raceKey" placeholder="Race Key" name="Race Key">
     </mat-form-field>
-    
-    <mat-form-field class="input text">
-      <input matInput #key type='text' [(ngModel)]="book" placeholder="Books" name="Books">
-    </mat-form-field>
   </form>
+  <mat-card>
+    <mat-card-title>Books</mat-card-title>
+    <form class="new-race-form">
+      <mat-form-field class="input text">
+        <textarea matInput #key type='text' [(ngModel)]="book" placeholder="Input Book" name="Input Book"></textarea>
+      </mat-form-field>
+      <button mat-raised-button (click)="addBook()" color="primary">add book</button>
+      <mat-card-content>
+        <div *ngFor="let book of books; let i = index">
+          {{book}}
+          <button mat-icon-button color="warn">
+            <mat-icon (click)="removeBook(i)">clear</mat-icon>
+          </button>
+        </div>
+      </mat-card-content>
+    </form>
+  </mat-card>
   <mat-card>
     <mat-card-title>Characteristics</mat-card-title>
     <form class="new-race-form">

@@ -20,7 +20,8 @@ export class CreateRaceComponent implements OnInit {
   strain = '';
   xp = '';
   ability = '';
-  book = "";
+  books = [];
+  book = ''
 
   specialAbilities = []
 
@@ -42,6 +43,17 @@ export class CreateRaceComponent implements OnInit {
     })
   }
 
+  addBook() {
+    this.books.push(this.book);
+    this.book = '';
+  }
+
+  removeBook(i) {
+    this.books = this.books.filter((value, index) => {
+      return index != i;
+    })
+  }
+
   submitRace() {
     const race = {
       agility: this.agility,
@@ -56,7 +68,7 @@ export class CreateRaceComponent implements OnInit {
       strainThreshold: this.strain,
       willpower: this.willpower,
       woundThreshold: this.wounds,
-      books: this.book
+      books: this.books
     }
 
     this.db.pushRace(race, this.raceKey);

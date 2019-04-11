@@ -9,13 +9,27 @@
     </mat-form-field>
 
     <mat-form-field class="input text">
-      <input matInput #key type='text' [(ngModel)]="book" placeholder="Book" name="Book">
-    </mat-form-field>
-
-    <mat-form-field class="input text">
       <input matInput #key type='text' [(ngModel)]="specKey" placeholder="Spec Key" name="Spec Key">
     </mat-form-field>
   </form>
+
+  <mat-card>
+    <mat-card-title>Books</mat-card-title>
+    <form class="new-race-form">
+      <mat-form-field class="input text">
+        <textarea matInput #key type='text' [(ngModel)]="book" placeholder="Input Book" name="Input Book"></textarea>
+      </mat-form-field>
+      <button mat-raised-button (click)="addBook()" color="primary">add book</button>
+      <mat-card-content>
+        <div *ngFor="let book of books; let i = index">
+          {{book}}
+          <button mat-icon-button color="warn">
+            <mat-icon (click)="removeBook(i)">clear</mat-icon>
+          </button>
+        </div>
+      </mat-card-content>
+    </form>
+  </mat-card>
 
   <mat-expansion-panel class="expansion" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
     <mat-expansion-panel-header>
