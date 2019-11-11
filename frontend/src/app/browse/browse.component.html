@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="flex-container" *ngIf="data != null">
+    <div *ngFor="let entry of data">
+      <mat-card (click)="navigate(entry.key)">
+        <img mat-card-image class="entry-image" src="../../assets/{{type}}/{{entry.key}}.jpg" alt="{{entry.key}}">
+        <mat-card-footer [ngClass]="getCardClass(entry.books)">
+            <mat-card-title>{{entry.name}}</mat-card-title>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</div>
