@@ -1,0 +1,269 @@
+CREATE TYPE series AS ENUM ('empire', 'rebellion', 'force', 'other');
+
+CREATE TABLE books (
+    bookid serial NOT NULL,
+    name varchar(32) NOT NULL,
+    series series NOT NULL,
+    PRIMARY KEY (bookid),
+    UNIQUE (name)
+);
+
+CREATE TYPE characteristic AS ENUM ('Brawn', 'Agility', 'Intellect', 'Cunning', 'Willpower', 'Presence');
+
+CREATE TABLE skills (
+    skillid serial NOT NULL,
+    name varchar(32) NOT NULL,
+    characteristic characteristic,
+    PRIMARY KEY (skillid),
+    UNIQUE (name)
+);
+
+CREATE TABLE talents (
+    talentid serial NOT NULL,
+    name varchar(64) NOT NULL,
+    description text NOT NULL,
+    passive boolean,
+    ranked boolean,
+    PRIMARY KEY (talentid),
+    UNIQUE (name)
+); 
+
+CREATE TABLE specs (
+    careerskills int[8] NOT NULL,
+    bonuscareerskills int[4] NOT NULL,
+    book int,
+    name varchar(16) NOT NULL,
+    career varchar(16) NOT NULL,
+    horizontalconnections boolean[5][3],
+    verticalconnections boolean[5][4],
+    talents int[5][4] NOT NULL,
+    PRIMARY KEY (name, career),
+    FOREIGN KEY (book) REFERENCES books(bookid)
+);
+
+CREATE TABLE races (
+    name varchar(32) NOT NULL,
+    brawn numeric(1, 0) DEFAULT 2,
+    agility numeric(1, 0) DEFAULT 2,
+    intellect numeric(1, 0) DEFAULT 2,
+    cunning numeric(1, 0) DEFAULT 2,
+    willpower numeric(1, 0) DEFAULT 2,
+    presence numeric(1, 0) DEFAULT 2,
+    baseWounds numeric(2, 0) DEFAULT 10,
+    baseStrain numeric(2, 0) DEFAULT 10,
+    skills int[],
+    talents int[],
+    otherAbilities text[],
+    books int[],
+    PRIMARY KEY (name)
+);
+
+INSERT INTO books (name, series)
+VALUES ('Edge Of The Empire Core', 'empire');
+
+INSERT INTO books (name, series)
+VALUES ('Dangerous Covenants', 'empire');
+
+INSERT INTO books (name, series)
+VALUES ('Enter The Unknown', 'empire');
+
+INSERT INTO books (name, series)
+VALUES ('Far Horizons', 'empire');
+
+INSERT INTO books (name, series)
+VALUES ('Fly Casual', 'empire');
+
+INSERT INTO books (name, series)
+VALUES ('Lords of Nal Hutta', 'empire');
+
+INSERT INTO books (name, series)
+VALUES ('Special Modifications', 'empire');
+
+INSERT INTO books (name, series)
+VALUES ('No Disintegrations', 'empire');
+
+INSERT INTO books (name, series)
+VALUES ('Suns Of Fortune', 'empire');
+
+INSERT INTO books (name, series)
+VALUES ('Beyond The Rim', 'empire');
+
+INSERT INTO books (name, series)
+VALUES ('The Jewel Of Yavin', 'empire');
+
+INSERT INTO books (name, series)
+VALUES ('Mask Of The Pirate Queen', 'empire');
+
+INSERT INTO books (name, series)
+VALUES ('Age Of Rebellion Core', 'rebellion');
+
+INSERT INTO books (name, series)
+VALUES ('Desperate Allies', 'rebellion');
+
+INSERT INTO books (name, series)
+VALUES ('Forged In Battle', 'rebellion');
+
+INSERT INTO books (name, series)
+VALUES ('Fully Operational', 'rebellion');
+
+INSERT INTO books (name, series)
+VALUES ('Lead By Example', 'rebellion');
+
+INSERT INTO books (name, series)
+VALUES ('Stay On Target', 'rebellion');
+
+INSERT INTO books (name, series)
+VALUES ('Strongholds of Resistance', 'rebellion');
+
+INSERT INTO books (name, series)
+VALUES ('Cyphers And Masks', 'rebellion');
+
+INSERT INTO books (name, series)
+VALUES ('Onslaught At Arda 1', 'rebellion');
+
+INSERT INTO books (name, series)
+VALUES ('Friends Like These', 'rebellion');
+
+INSERT INTO books (name, series)
+VALUES ('Force And Destiny Core', 'force');
+
+INSERT INTO books (name, series)
+VALUES ('Keeping The Peace', 'force');
+
+INSERT INTO books (name, series)
+VALUES ('Nexus Of Power', 'force');
+
+INSERT INTO books (name, series)
+VALUES ('Endless Vigil', 'force');
+
+INSERT INTO books (name, series)
+VALUES ('Disciples Of Harmony', 'force');
+
+INSERT INTO books (name, series)
+VALUES ('Savage Spirits', 'force');
+
+INSERT INTO books (name, series)
+VALUES ('Knights Of Fate', 'force');
+
+INSERT INTO books (name, series)
+VALUES ('Unlimited Power', 'force');
+
+INSERT INTO books (name, series)
+VALUES ('Chronicles Of The Gatekeeper', 'force');
+
+INSERT INTO books (name, series)
+VALUES ('Ghosts Of Dathomir', 'force');
+
+INSERT INTO books (name, series)
+VALUES ('Allies And Adversaries', 'other');
+
+INSERT INTO books (name, series)
+VALUES ('Rise Of The Sepratists', 'other');
+
+INSERT INTO books (name, series)
+VALUES ('Collapse Of The Republic', 'other');
+
+INSERT INTO books (name, series)
+VALUES ('Dawn Of Rebellion', 'other');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Astrogation', 'Intellect');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Athletics', 'Brawn');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Charm', 'Presence');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Coercion', 'Willpower');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Computers', 'Intellect');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Cool', 'Presence');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Coordination', 'Agility');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Deception', 'Cunning');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Discipline', 'Willpower');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Leadership', 'Presence');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Mechanics', 'Intellect');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Negotiation', 'Presence');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Perception', 'Cunning');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Piloting Planetary', 'Agility');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Piloting Space', 'Agility');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Resilience', 'Brawn');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Skulduggery', 'Cunning');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Stealth', 'Agility');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Streetwise', 'Cunning');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Survival', 'Cunning');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Vigilance', 'Willpower');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Brawl', 'Brawn');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Gunnery', 'Agility');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Lightsaber', 'Brawn');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Melee', 'Brawn');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Ranged Light', 'Agility');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Ranged Heavy', 'Agility');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Core Worlds', 'Intellect');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Education', 'Intellect');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Lore', 'Intellect');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Outer Rim', 'Intellect');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Underworld', 'Intellect');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Warfare', 'Intellect');
+
+INSERT INTO skills (name, characteristic)
+VALUES ('Xenology', 'Intellect');
