@@ -21,6 +21,8 @@ export class CreateSpecComponent implements OnInit {
   panelOpenState = false;
   panel1OpenState = false;
 
+  books = [];
+
   talents: any;
 
   skills = [
@@ -205,7 +207,7 @@ export class CreateSpecComponent implements OnInit {
     const spec = {
       careerSkills: this.getSkills(),
       bonusCareerSkills: this.getAdditionalSkills(),
-      book: this.book,
+      books: this.books,
       career: this.careerName,
       name: this.specName,
       horizontalConnections: this.horizontalConnections,
@@ -275,6 +277,17 @@ export class CreateSpecComponent implements OnInit {
     })
 
     return sk;
+  }  
+
+  addBook() {
+    this.books.push(this.book);
+    this.book = '';
+  }
+
+  removeBook(i) {
+    this.books = this.books.filter((value, index) => {
+      return index != i;
+    })
   }
 
   ngOnInit() {
