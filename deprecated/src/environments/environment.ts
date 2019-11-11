@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyBEfTWVnqpK02IvmrZFpRWuR5vMYF_nfs4",
+    authDomain: "swrpg-app.firebaseapp.com",
+    databaseURL: "https://swrpg-app.firebaseio.com",
+    projectId: "swrpg-app",
+    storageBucket: "swrpg-app.appspot.com",
+    messagingSenderId: "693129020032"
+  }
 };
 
 /*
