@@ -5,6 +5,9 @@ import { BrowseComponent } from './browse/browse.component';
 import { RacesComponent } from './races/races.component';
 import { SpecComponent } from './spec/spec.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './login/login.component';
+import { AuthTestComponent } from './auth-test/auth-test.component';
+import { AuthGuard } from './services/auth.guard';
 
 
 const routes: Routes = [
@@ -14,8 +17,12 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'login',
+    component: AuthTestComponent
+  },
+  {
     path: 'browse/races',
-    component: BrowseComponent,
+    component: BrowseComponent
   },
   {
     path: 'browse/specs',

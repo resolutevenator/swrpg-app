@@ -36,6 +36,10 @@ import { HeaderComponent } from './header/header.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RacesComponent } from './races/races.component';
 import { SpecComponent } from './spec/spec.component';
+import { LoginComponent } from './login/login.component';
+import { AuthTestComponent } from './auth-test/auth-test.component';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { AuthGuard } from './services/auth.guard';
 
 @NgModule({
   declarations: [
@@ -46,6 +50,8 @@ import { SpecComponent } from './spec/spec.component';
     NotFoundComponent,
     RacesComponent,
     SpecComponent,
+    LoginComponent,
+    AuthTestComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +76,10 @@ import { SpecComponent } from './spec/spec.component';
     AngularFireDatabaseModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    AngularFirestore,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

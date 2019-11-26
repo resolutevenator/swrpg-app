@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="left">
+        <mat-card>
+            <mat-card-title>Login</mat-card-title>
+
+            <form class="login-form">
+                <mat-form-field class="full-width">
+                    <input matInput type="email" placeholder="Email" [(ngModel)]="emailLogin" name="emailLogin">
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput type="password" placeholder="Password" [(ngModel)]="passwordLogin" name="passwordLogin">
+                </mat-form-field>
+            </form>
+
+            <button mat-button class="full-width" color="primary">Login</button>
+        </mat-card>
+    </div>
+
+    <div class="right">
+        <mat-card>
+            <mat-card-title>Register</mat-card-title>
+
+            <form class="login-form">
+                <mat-form-field class="full-width">
+                    <input matInput type="email" placeholder="Email" [(ngModel)]="emailRegister" name="emailRegister">
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <input matInput type="email" placeholder="Confirm Email" [(ngModel)]="emailConfirm" name="emailConfirm">
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput type="password" placeholder="Password" [(ngModel)]="passwordRegister" name="passwordRegister">
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <input matInput type="password" placeholder="Confirm Password" [(ngModel)]="passwordConfirm" name="passwordConfirm">
+                </mat-form-field>
+            </form>
+
+            <button mat-button class="full-width" color="primary">Register</button>
+
+        </mat-card>
+    </div>
+</div>
