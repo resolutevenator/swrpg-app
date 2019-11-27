@@ -1,5 +1,11 @@
 <div class="page-content">
-  <div class="race-content" *ngIf="raceData != null">
+  <pre>
+      {{ raceInfo | async | json }}
+    </pre>
+    <pre>
+        {{ raceParent | async | json }}
+    </pre>
+  <!-- <div class="race-content" *ngIf="raceData != null">
     <div class="main">
       <div class="left">
         <mat-card class="race-image">
@@ -69,5 +75,5 @@
         <mat-card-content>{{ability}}</mat-card-content>
       </mat-card>
     </div>
-  </div>
+  </div> -->
 </div>

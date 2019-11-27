@@ -8,6 +8,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
 import { AuthTestComponent } from './auth-test/auth-test.component';
 import { AuthGuard } from './services/auth.guard';
+import { RaceListComponent } from './race-list/race-list.component';
+import { SpecListComponent } from './spec-list/spec-list.component';
 
 
 const routes: Routes = [
@@ -22,11 +24,11 @@ const routes: Routes = [
   },
   {
     path: 'browse/races',
-    component: BrowseComponent
+    component: RaceListComponent
   },
   {
     path: 'browse/specs',
-    component: BrowseComponent,
+    component: SpecListComponent,
   },
   {
     path: 'races/:raceName',

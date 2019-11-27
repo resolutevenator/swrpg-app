@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DatabaseService } from '../database.service';
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+
+import { RaceInfo, Race } from '../services/data.model'
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-races',
@@ -12,19 +15,24 @@ export class RacesComponent implements OnInit {
 
   public race: string;
 
-  raceData: any;
+  raceDoc: AngularFirestoreDocument<RaceInfo>;
+  raceInfo: Observable<RaceInfo>;
+  raceParentDoc: AngularFirestoreDocument<Race>;
+  raceParent: Observable<Race>;
 
   constructor(
     private _route: ActivatedRoute,
-    private db: DatabaseService
+    private afStore: AngularFirestore
   ) {
   }
 
   ngOnInit() {
     this.race = this._route.snapshot.params['raceName'];
-    this.db.getRaceDataObject(this.race).subscribe(data => {
-      this.raceData = data;
-    });
+    
+    this.raceDoc = this.afStore.doc(`races/${this.race}/race/content`);
+    this.raceInfo = this.raceDoc.valueChanges();
+    this.raceParentDoc = this.afStore.doc(`races/${this.race}`);
+    this.raceParent = this.raceParentDoc.valueChanges();
   }
 
 }

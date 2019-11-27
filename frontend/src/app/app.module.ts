@@ -23,8 +23,9 @@ import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { GestureConfig } from '@angular/material';
 
 import { AngularFireModule } from '@angular/fire/';
-import { AngularFireDatabaseModule } from '@angular/fire/database/';
+// import { AngularFireDatabaseModule } from '@angular/fire/database/';
 import { AngularFireAuthModule } from '@angular/fire/auth/';
+import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 
 import 'hammerjs';
 
@@ -38,8 +39,9 @@ import { RacesComponent } from './races/races.component';
 import { SpecComponent } from './spec/spec.component';
 import { LoginComponent } from './login/login.component';
 import { AuthTestComponent } from './auth-test/auth-test.component';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { AuthGuard } from './services/auth.guard';
+import { RaceListComponent } from './race-list/race-list.component';
+import { SpecListComponent } from './spec-list/spec-list.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { AuthGuard } from './services/auth.guard';
     SpecComponent,
     LoginComponent,
     AuthTestComponent,
+    RaceListComponent,
+    SpecListComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,7 +77,7 @@ import { AuthGuard } from './services/auth.guard';
     NoopAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFireDatabaseModule,
+    AngularFirestoreModule,
     FormsModule,
   ],
   providers: [
