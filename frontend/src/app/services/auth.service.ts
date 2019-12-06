@@ -38,6 +38,30 @@ export class AuthService {
     this.updateUserData(credential.user);
   }
 
+  async emailPasswordRegistration(email: string, password: string, username: string) {
+    this.afAuth.auth.createUserWithEmailAndPassword(email, password)
+      .then(data => {
+        const user = {
+          ...data.user,
+          displayName: username,          
+        }
+        // console.log(user)
+        this.updateUserData(user);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
+
+  async emailPasswordSignIn(email: string, password: string) {
+    this.afAuth.auth.signInWithEmailAndPassword(email, password)
+      .then(data => {
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
+
   async signOut() {
     await this.afAuth.auth.signOut();
     return this.router.navigate(['/']);

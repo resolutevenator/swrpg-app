@@ -16,9 +16,11 @@ export class RacesComponent implements OnInit {
   public race: string;
 
   raceDoc: AngularFirestoreDocument<RaceInfo>;
-  raceInfo: Observable<RaceInfo>;
+  raceObservable: Observable<RaceInfo>;
+  raceInfo: RaceInfo;
   raceParentDoc: AngularFirestoreDocument<Race>;
-  raceParent: Observable<Race>;
+  raceParentObservable: Observable<Race>;
+  raceParent: any;
 
   constructor(
     private _route: ActivatedRoute,
@@ -30,9 +32,15 @@ export class RacesComponent implements OnInit {
     this.race = this._route.snapshot.params['raceName'];
     
     this.raceDoc = this.afStore.doc(`races/${this.race}/race/content`);
-    this.raceInfo = this.raceDoc.valueChanges();
+    this.raceObservable = this.raceDoc.valueChanges();
+    this.raceObservable.subscribe(doc => {
+      this.raceInfo = doc;
+    })
     this.raceParentDoc = this.afStore.doc(`races/${this.race}`);
-    this.raceParent = this.raceParentDoc.valueChanges();
+    this.raceParentObservable = this.raceParentDoc.valueChanges();
+    this.raceParentObservable.subscribe(doc => {
+      this.raceParent = doc;
+    })
   }
 
 }

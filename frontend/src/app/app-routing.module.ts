@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: AuthTestComponent
+    component: LoginComponent
   },
   {
     path: 'browse/races',

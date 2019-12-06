@@ -22,8 +22,6 @@ export class SpecComponent implements OnInit {
   // public careerSkills: string = '';
   // public bonusSkills: string = '';
 
-  // specData: any;
-
   // talents = {}
 
   constructor(
@@ -35,7 +33,7 @@ export class SpecComponent implements OnInit {
   ngOnInit() {
     this.spec = this._route.snapshot.params['specName'];
     
-    this.specDoc = this.afStore.doc(`specs/${this.spec}/specs/content`);
+    this.specDoc = this.afStore.doc(`specs/${this.spec}/spec/content`);
     this.specInfo = this.specDoc.valueChanges();
     this.specParentDoc = this.afStore.doc(`specs/${this.spec}`);
     this.specParent = this.specParentDoc.valueChanges();

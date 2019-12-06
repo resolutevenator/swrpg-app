@@ -1,4 +1,10 @@
 <div class="header">
   <h3 class="header-text">Star Wars RPG Character Creator</h3>
-  <button mat-raised-button color="primary" (click)="navigate('/login')">Sign In</button>
+  <div *ngIf="auth.user$ | async; else login">
+    <button mat-raised-button color="primary" (click)="auth.signOut()">Sign Out</button>
+  </div>
 </div>
+
+<ng-template #login>
+  <button mat-raised-button color="primary" (click)="navigate('/login')">Sign In</button>
+</ng-template>

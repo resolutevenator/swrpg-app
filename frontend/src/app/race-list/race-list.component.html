@@ -1,3 +1,12 @@
-<div *ngFor="let race of races | async">
-    {{ race | json }}
+<div class="page-container">
+    <div class="flex-container">
+        <div *ngFor="let race of races | async">
+            <!-- {{ race | json }} -->
+            <mat-card (click)="navigate(race.key)">
+                <mat-card-footer [ngClass]="getCardClass(race.books)">
+                    <mat-card-title>{{race.name}}</mat-card-title>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+    </div>
 </div>

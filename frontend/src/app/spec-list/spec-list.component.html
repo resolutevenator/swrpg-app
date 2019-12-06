@@ -1,3 +1,12 @@
-<div *ngFor="let spec of specs | async">
-    {{ spec | json }}
+<div class="page-container">
+    <div class="flex-container">
+        <div *ngFor="let spec of specs | async">
+            <!-- {{ spec | json }} -->
+            <mat-card (click)="navigate(spec.key)">
+                <mat-card-footer [ngClass]="getCardClass(spec.books)">
+                    <mat-card-title>{{spec.name}}</mat-card-title>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+    </div>
 </div>

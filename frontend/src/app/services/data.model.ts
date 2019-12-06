@@ -36,11 +36,11 @@ export interface SpecInfo {
     careerSkills: string[],
     bonusCareerSkills: string[],
     talentTree: {
-        row0: boolean[],
-        row1: boolean[],
-        row2: boolean[],
-        row3: boolean[],
-        row4: boolean[],
+        row0: string[],
+        row1: string[],
+        row2: string[],
+        row3: string[],
+        row4: string[],
         horizontalConnections: {
             row0: boolean[],
             row1: boolean[],
@@ -48,7 +48,32 @@ export interface SpecInfo {
             row3: boolean[],
             row4: boolean[]
         },
-        verticalConnections: {        
+        verticalConnections: {
+            row0: boolean[],
+            row1: boolean[],
+            row2: boolean[],
+            row3: boolean[],
+            row4: boolean[]
+        }
+    }
+}
+
+export interface GenSpecInfo {
+    bonusCareerSkills: string[],
+    talentTree: {
+        row0: string[],
+        row1: string[],
+        row2: string[],
+        row3: string[],
+        row4: string[],
+        horizontalConnections: {
+            row0: boolean[],
+            row1: boolean[],
+            row2: boolean[],
+            row3: boolean[],
+            row4: boolean[]
+        },
+        verticalConnections: {
             row0: boolean[],
             row1: boolean[],
             row2: boolean[],
