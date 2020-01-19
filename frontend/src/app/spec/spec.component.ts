@@ -15,14 +15,16 @@ export class SpecComponent implements OnInit {
   public spec: string;
 
   specDoc: AngularFirestoreDocument<SpecInfo>;
-  specInfo: Observable<SpecInfo>;
+  specObservable: Observable<SpecInfo>;
+  specInfo: SpecInfo;
   specParentDoc: AngularFirestoreDocument<SpecInfo>;
-  specParent: Observable<SpecInfo>;
+  specParentObservable: Observable<SpecInfo>;
+  specParent: SpecInfo;
 
-  // public careerSkills: string = '';
-  // public bonusSkills: string = '';
+  public careerSkills: string = '';
+  public bonusSkills: string = '';
 
-  // talents = {}
+  talents = {}
 
   constructor(
     private _route: ActivatedRoute,
@@ -34,9 +36,16 @@ export class SpecComponent implements OnInit {
     this.spec = this._route.snapshot.params['specName'];
     
     this.specDoc = this.afStore.doc(`specs/${this.spec}/spec/content`);
-    this.specInfo = this.specDoc.valueChanges();
+    this.specObservable = this.specDoc.valueChanges();
+    this.specObservable.subscribe(doc => {
+      this.specInfo = doc;
+      this.initStrings();
+    })
     this.specParentDoc = this.afStore.doc(`specs/${this.spec}`);
-    this.specParent = this.specParentDoc.valueChanges();
+    this.specParentObservable = this.specParentDoc.valueChanges();
+    this.specParentObservable.subscribe(doc => {
+      this.specParent = doc;
+    })
 
 
     // this.db.getSpecDataObject(this.spec).subscribe(data => {
@@ -53,23 +62,23 @@ export class SpecComponent implements OnInit {
     // })
   }
 
-  // pushTalent(talent: Object, talentName: string) {
-  //   console.log(talentName, talent);
-  //   this.talents[talentName] = talent;
-  // }
+  pushTalent(talent: Object, talentName: string) {
+    console.log(talentName, talent);
+    this.talents[talentName] = talent;
+  }
 
-  // initStrings() {
-  //   this.specData.careerSkills.forEach((value: string) => {
-  //     if (value) {
-  //       this.careerSkills = this.careerSkills + ' ' + value;
-  //     }
-  //   })
+  initStrings() {
+    this.specInfo.careerSkills.forEach((value: string) => {
+      if (value) {
+        this.careerSkills = this.careerSkills + ' ' + value;
+      }
+    })
 
-  //   this.specData.bonusCareerSkills.forEach((value: string) => {
-  //     if (value) {
-  //       this.bonusSkills = this.bonusSkills + ' ' + value;
-  //     }
-  //   })
-  // }
+    this.specInfo.bonusCareerSkills.forEach((value: string) => {
+      if (value) {
+        this.bonusSkills = this.bonusSkills + ' ' + value;
+      }
+    })
+  }
 
 }

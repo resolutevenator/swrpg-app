@@ -1,9 +1,14 @@
 .spec-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     margin: 20px auto;
     max-width: 1000px;
+}
+
+.left, .right {
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .left mat-card {
@@ -11,7 +16,7 @@
     width: 200px;
 }
 
-.line {
+.line, .talents {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -40,9 +45,9 @@
     height: 20px;
 }
 
-.career-skills mat-card-title {
-    font-size: 16px;
-}
+// .career-skills mat-card-title {
+//     font-size: 16px;
+// }
 
 .line mat-card {
     width: 135px;
@@ -58,12 +63,12 @@
     font-size: 14px;
 }
 
-.spec-image {
-    width: 200px;
-    text-align: center;
-}
+// .spec-image {
+//     width: 200px;
+//     text-align: center;
+// }
 
-img {
-    width: 200px;
-    height: auto;
-}
+// img {
+//     width: 200px;
+//     height: auto;
+// }
