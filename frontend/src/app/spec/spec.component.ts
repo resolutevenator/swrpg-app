@@ -26,6 +26,8 @@ export class SpecComponent implements OnInit {
 
   talents = {}
 
+  test;
+
   constructor(
     private _route: ActivatedRoute,
     private afStore: AngularFirestore
@@ -40,6 +42,7 @@ export class SpecComponent implements OnInit {
     this.specObservable.subscribe(doc => {
       this.specInfo = doc;
       this.initStrings();
+      this.initTalents();
     })
     this.specParentDoc = this.afStore.doc(`specs/${this.spec}`);
     this.specParentObservable = this.specParentDoc.valueChanges();
@@ -60,6 +63,37 @@ export class SpecComponent implements OnInit {
     //     });
     //   });
     // })
+  }
+
+  initTalents() {
+    const talentTreeRef = this.specInfo.talentTree;
+
+    let talentsList = [];
+
+    this.addTalentsIfNotPresent(talentsList, talentTreeRef.row0)
+    this.addTalentsIfNotPresent(talentsList, talentTreeRef.row1)
+    this.addTalentsIfNotPresent(talentsList, talentTreeRef.row2)
+    this.addTalentsIfNotPresent(talentsList, talentTreeRef.row3)
+    this.addTalentsIfNotPresent(talentsList, talentTreeRef.row4)
+
+    console.log(talentsList);
+
+    talentsList.forEach(talent => {
+      this.afStore.collection('talents', ref => ref.where('key', '==', `${talent}`).limit(1)).valueChanges().subscribe(tData => {
+        this.pushTalent(tData, talent);
+        console.log(tData);
+      })
+    })
+
+    // this.afStore.collection('talents', ref => ref.where('key', 'in', talentsList)).valueChanges().subscribe(collection => {
+    //   console.log(collection)
+    // })
+  }
+
+  addTalentsIfNotPresent(talentsList: string[], talentRow: string[]) {
+    talentRow.forEach(talent => {
+      talentsList.indexOf(talent) === -1 ? talentsList.push(talent) : console.log("already present")
+    })
   }
 
   pushTalent(talent: Object, talentName: string) {
