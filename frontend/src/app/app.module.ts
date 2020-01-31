@@ -42,6 +42,7 @@ import { AuthTestComponent } from './auth-test/auth-test.component';
 import { AuthGuard } from './services/auth.guard';
 import { RaceListComponent } from './race-list/race-list.component';
 import { SpecListComponent } from './spec-list/spec-list.component';
+import { SeriesChooserComponent } from './browse/series-chooser/series-chooser.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { SpecListComponent } from './spec-list/spec-list.component';
     AuthTestComponent,
     RaceListComponent,
     SpecListComponent,
+    SeriesChooserComponent,
   ],
   imports: [
     BrowserModule,
