@@ -3,7 +3,10 @@
     justify-content: space-between;
     align-items: flex-start;
     margin: 20px auto;
-    max-width: 1000px;
+    // margin-left: 300px;
+    // margin-right: 300px;
+    // margin-top: 20px;
+    max-width: 1250px;
 }
 
 .left, .right {
@@ -11,20 +14,39 @@
     margin-right: 25px;
 }
 
+// left
+
 .left mat-card {
     margin-bottom: 20px;
     width: 200px;
 }
 
+// right
+
 .line, .talents {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
+}
+
+.line mat-card, mat-expansion-panel {
+    width: 175px;
+    border-style: solid;
+    align-self: stretch;
+}
+
+.line mat-card-title, mat-expannsion-panel-header, mat-panel-title {
+    font-size: 14px;
+}
+
+.line mat-card-content {
+    font-size: 14px;
 }
 
 .horizontal-connection {
     width: 20px;
     height: 5px;
+    align-self: center;
 }
 
 .vertical-connectors {
@@ -44,25 +66,6 @@
     width: 5px;
     height: 20px;
 }
-
-// .career-skills mat-card-title {
-//     font-size: 16px;
-// }
-
-.line mat-card {
-    width: 135px;
-    border-style: solid;
-    align-self: stretch;
-}
-
-.line mat-card-title {
-    font-size: 14px;
-}
-
-.line mat-card-content {
-    font-size: 14px;
-}
-
 // .spec-image {
 //     width: 200px;
 //     text-align: center;

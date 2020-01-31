@@ -26,8 +26,6 @@ export class SpecComponent implements OnInit {
 
   talents = {}
 
-  test;
-
   constructor(
     private _route: ActivatedRoute,
     private afStore: AngularFirestore
@@ -79,15 +77,11 @@ export class SpecComponent implements OnInit {
     console.log(talentsList);
 
     talentsList.forEach(talent => {
-      this.afStore.collection('talents', ref => ref.where('key', '==', `${talent}`).limit(1)).valueChanges().subscribe(tData => {
+      this.afStore.doc(`talents/${talent}`).valueChanges().subscribe(tData => {
         this.pushTalent(tData, talent);
-        console.log(tData);
+        // console.log(tData);
       })
     })
-
-    // this.afStore.collection('talents', ref => ref.where('key', 'in', talentsList)).valueChanges().subscribe(collection => {
-    //   console.log(collection)
-    // })
   }
 
   addTalentsIfNotPresent(talentsList: string[], talentRow: string[]) {
@@ -97,8 +91,9 @@ export class SpecComponent implements OnInit {
   }
 
   pushTalent(talent: Object, talentName: string) {
-    console.log(talentName, talent);
+    // console.log(talentName, talent);
     this.talents[talentName] = talent;
+    console.log(this.talents)
   }
 
   initStrings() {

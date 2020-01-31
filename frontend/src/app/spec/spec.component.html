@@ -24,7 +24,9 @@
         <div class="line">
           <div class="talents" *ngFor="let talent of specInfo.talentTree.row0; let i = index" [attr.data-index]="i">
             <mat-card>
-              <mat-card-title>{{talent}}</mat-card-title>
+              <mat-card-title *ngIf="talents[talent]">{{talents[talent].name}}</mat-card-title>
+              <hr>
+              <mat-card-content *ngIf="talents[talent]">{{talents[talent].description}}</mat-card-content>
             </mat-card>
             <div class="horizontal-connection" [class.black]="specInfo.talentTree.horizontalConnections.row0[i]"></div>
           </div>
@@ -40,7 +42,9 @@
         <div class="line">
           <div class="talents" *ngFor="let talent of specInfo.talentTree.row1; let i = index" [attr.data-index]="i">
             <mat-card>
-              <mat-card-title>{{talent}}</mat-card-title>
+              <mat-card-title *ngIf="talents[talent]">{{talents[talent].name}}</mat-card-title>
+              <hr>
+              <mat-card-content *ngIf="talents[talent]">{{talents[talent].description}}</mat-card-content>
             </mat-card>
             <div class="horizontal-connection" [class.black]="specInfo.talentTree.horizontalConnections.row1[i]"></div>
           </div>
@@ -56,7 +60,9 @@
         <div class="line">
           <div class="talents" *ngFor="let talent of specInfo.talentTree.row2; let i = index" [attr.data-index]="i">
             <mat-card>
-              <mat-card-title>{{talent}}</mat-card-title>
+              <mat-card-title *ngIf="talents[talent]">{{talents[talent].name}}</mat-card-title>
+              <hr>
+              <mat-card-content *ngIf="talents[talent]">{{talents[talent].description}}</mat-card-content>
             </mat-card>
             <div class="horizontal-connection" [class.black]="specInfo.talentTree.horizontalConnections.row2[i]"></div>
           </div>
@@ -72,7 +78,9 @@
         <div class="line">
           <div class="talents" *ngFor="let talent of specInfo.talentTree.row3; let i = index" [attr.data-index]="i">
             <mat-card>
-              <mat-card-title>{{talent}}</mat-card-title>
+              <mat-card-title *ngIf="talents[talent]">{{talents[talent].name}}</mat-card-title>
+              <hr>
+              <mat-card-content *ngIf="talents[talent]">{{talents[talent].description}}</mat-card-content>
             </mat-card>
             <div class="horizontal-connection" [class.black]="specInfo.talentTree.horizontalConnections.row3[i]"></div>
           </div>
@@ -88,7 +96,9 @@
         <div class="line">
           <div class="talents" *ngFor="let talent of specInfo.talentTree.row4; let i = index" [attr.data-index]="i">
             <mat-card>
-              <mat-card-title>{{talent}}</mat-card-title>
+              <mat-card-title *ngIf="talents[talent]">{{talents[talent].name}}</mat-card-title>
+              <hr>
+              <mat-card-content *ngIf="talents[talent]">{{talents[talent].description}}</mat-card-content>
             </mat-card>
             <div class="horizontal-connection" [class.black]="specInfo.talentTree.horizontalConnections.row4[i]"></div>
           </div>
