@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import Data from '../../../../database.json';
+// import Data from '../../../../database.json';
 import { RaceInfo, Race, Spec, SpecInfo } from '../services/data.model.js';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from '@angular/fire/firestore';
 
@@ -92,11 +92,11 @@ export class HomeComponent implements OnInit {
 
     // })
 
-    Object.keys(Data.talents).forEach(key => {
-      const talent = Data.talents[key];
+    // Object.keys(Data.talents).forEach(key => {
+    //   const talent = Data.talents[key];
 
-      this.afs.collection('talents').doc(key).set(talent);
-    })
+    //   this.afs.collection('talents').doc(key).set(talent);
+    // })
 
     // const raceRef: AngularFirestoreDocument<Race> = this.afs.doc(`races/`);
     // raceRef.set(newAleena)

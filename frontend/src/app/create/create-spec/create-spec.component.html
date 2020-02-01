@@ -1,0 +1,155 @@
+<div class="page-content">
+    <form class="new-spec-form">
+      <mat-form-field class="input text">
+        <input matInput #key type='text' [(ngModel)]="specName" placeholder="Spec Name" name="Spec Name">
+      </mat-form-field>
+  
+      <mat-form-field class="input text">
+        <input matInput #key type='text' [(ngModel)]="careerName" placeholder="Career" name="Career">
+      </mat-form-field>
+  
+      <mat-form-field class="input text">
+        <input matInput #key type='text' [(ngModel)]="specKey" placeholder="Spec Key" name="Spec Key">
+      </mat-form-field>
+    </form>
+  
+    <mat-card>
+      <mat-card-title>Books</mat-card-title>
+      <form class="new-race-form">
+        <mat-form-field class="input text">
+          <textarea matInput #key type='text' [(ngModel)]="book" placeholder="Input Book" name="Input Book"></textarea>
+        </mat-form-field>
+        <button mat-raised-button (click)="addBook()" color="primary">add book</button>
+        <mat-card-content>
+          <div *ngFor="let book of books; let i = index">
+            {{book}}
+            <button mat-icon-button color="warn">
+              <mat-icon (click)="removeBook(i)">clear</mat-icon>
+            </button>
+          </div>
+        </mat-card-content>
+      </form>
+    </mat-card>
+  
+    <mat-expansion-panel class="expansion" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>Career Skills</mat-panel-title>
+        <mat-panel-description>
+          {{panelOpenState ? '' : getSkillsString()}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <div class="checkboxes">
+        <mat-checkbox class="checkbox" *ngFor="let skill of skills; let i = index" [(ngModel)]="careerSkills[i]">{{skill}}
+        </mat-checkbox>
+      </div>
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel class="expansion" (opened)="panel1OpenState = true" (closed)="panel1OpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>Additional Career Skills</mat-panel-title>
+        <mat-panel-description>
+          {{panel1OpenState ? '' : getAdditionalSkillsString()}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <div class="checkboxes">
+        <mat-checkbox class="checkbox" *ngFor="let skill of skills; let i = index"
+          [(ngModel)]="additionalCareerSkills[i]">{{skill}}
+        </mat-checkbox>
+      </div>
+    </mat-expansion-panel>
+  
+    <mat-card class="card">
+      <mat-card-title>Talent Tree</mat-card-title>
+      <hr>
+      <mat-card-content class="talent-tree">
+        <div class="talents" *ngFor="let row of talentTree; let i = index" [attr.data-index]="i">
+          <div class="line">
+            <mat-card>
+              <mat-card-title>
+                <mat-form-field class="input dropdown">
+                  <mat-select placeholder="Select Talent" [(ngModel)]="talentTree[i][0]">
+                    <mat-option *ngFor="let talent of talents" [value]="talent.key">{{talent.name}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </mat-card-title>
+            </mat-card>
+            <div class="horizontal-connection">
+              <mat-checkbox class="checkbox" [(ngModel)]="horizontalConnections[i][0]"></mat-checkbox>
+            </div>
+            <mat-card>
+              <mat-card-title>
+                <mat-form-field class="input dropdown">
+                  <mat-select placeholder="Select Talent" [(ngModel)]="talentTree[i][1]">
+                    <mat-option *ngFor="let talent of talents" [value]="talent.key">{{talent.name}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </mat-card-title>
+            </mat-card>
+            <div class="horizontal-connection">
+              <mat-checkbox class="checkbox" [(ngModel)]="horizontalConnections[i][1]"></mat-checkbox>
+            </div>
+            <mat-card>
+              <mat-card-title>
+                <mat-form-field class="input dropdown">
+                  <mat-select placeholder="Select Talent" [(ngModel)]="talentTree[i][2]">
+                    <mat-option *ngFor="let talent of talents" [value]="talent.key">{{talent.name}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </mat-card-title>
+            </mat-card>
+            <div class="horizontal-connection">
+              <mat-checkbox class="checkbox" [(ngModel)]="horizontalConnections[i][2]"></mat-checkbox>
+            </div>
+            <mat-card>
+              <mat-card-title>
+                <mat-form-field class="input dropdown">
+                  <mat-select placeholder="Select Talent" [(ngModel)]="talentTree[i][3]">
+                    <mat-option *ngFor="let talent of talents" [value]="talent.key">{{talent.name}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </mat-card-title>
+            </mat-card>
+          </div>
+          <div class="vertical-connectors" *ngIf="i != 4">
+            <div class="vertical-connection">
+              <mat-checkbox class="checkbox" [(ngModel)]="verticalConnections[i][0]"></mat-checkbox>
+            </div>
+            <div class="vertical-connection">
+              <mat-checkbox class="checkbox" [(ngModel)]="verticalConnections[i][1]"></mat-checkbox>
+            </div>
+            <div class="vertical-connection">
+              <mat-checkbox class="checkbox" [(ngModel)]="verticalConnections[i][2]"></mat-checkbox>
+            </div>
+            <div class="vertical-connection">
+              <mat-checkbox class="checkbox" [(ngModel)]="verticalConnections[i][3]"></mat-checkbox>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <br>
+    <mat-card class="card">
+      <mat-card-title>Update Talent</mat-card-title>
+      <hr>
+      <mat-card-content class="new-talent">
+        <mat-form-field class="input text">
+          <input matInput #key type='text' [(ngModel)]="talentName" placeholder="Talent Name">
+        </mat-form-field>
+        <mat-form-field class="input text">
+          <textarea matInput #key type='text' [(ngModel)]="talentDesc" placeholder="Talent Desc"></textarea>
+        </mat-form-field>
+        <mat-form-field class="input text">
+          <input matInput #key type='text' [(ngModel)]="talentKey" placeholder="Talent Key">
+        </mat-form-field>
+        <mat-checkbox class="input checkbox" [(ngModel)]="talentPassive">Passive?</mat-checkbox>
+        <mat-checkbox class="input checkbox" [(ngModel)]="talentRanked">Ranked?</mat-checkbox>
+        <button mat-raised-button (click)="submitTalent()" color="primary">submit talent</button>
+      </mat-card-content>
+    </mat-card>
+  
+    <br>
+  
+    <button mat-raised-button (click)="submitSpec()" color="primary">submit career</button>
+  </div>

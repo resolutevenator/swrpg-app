@@ -43,6 +43,9 @@ import { AuthGuard } from './services/auth.guard';
 import { RaceListComponent } from './race-list/race-list.component';
 import { SpecListComponent } from './spec-list/spec-list.component';
 import { SeriesChooserComponent } from './browse/series-chooser/series-chooser.component';
+import { CreateComponent } from './create/create.component';
+import { CreateRaceComponent } from './create/create-race/create-race.component';
+import { CreateSpecComponent } from './create/create-spec/create-spec.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +61,9 @@ import { SeriesChooserComponent } from './browse/series-chooser/series-chooser.c
     RaceListComponent,
     SpecListComponent,
     SeriesChooserComponent,
+    CreateComponent,
+    CreateRaceComponent,
+    CreateSpecComponent,
   ],
   imports: [
     BrowserModule,

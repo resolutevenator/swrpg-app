@@ -10,6 +10,7 @@ import { AuthTestComponent } from './auth-test/auth-test.component';
 import { AuthGuard } from './services/auth.guard';
 import { RaceListComponent } from './race-list/race-list.component';
 import { SpecListComponent } from './spec-list/spec-list.component';
+import { CreateComponent } from './create/create.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'browse',
     component: BrowseComponent
+  },
+  {
+    path: 'create/:type',
+    component: CreateComponent
   },
   {
     path: 'login',
