@@ -82,3 +82,126 @@ export interface GenSpecInfo {
         }
     }
 }
+
+export interface Weapon {
+    name: string,
+    skill: string,
+    damage: number,
+    critical: number,
+    range: string,
+    encum: number,
+    hp: number,
+    price: number,
+    rarity: number,
+    properties: string[],
+    damageAdditive: boolean,
+    restricted: boolean
+}
+
+export interface Armor {
+    name: string,
+    meleeDefense: number,
+    rangedDefense: number,
+    soak: number,
+    price: number,
+    encum: number,
+    hp: number,
+    rarity: number,
+    restricted: boolean,
+    properties: string[]
+}
+
+export interface Gear {
+    name: string,
+    category: string,
+    price: number,
+    encum: number,
+    rarity: number,
+    restricted: boolean,
+    properties: string[]
+}
+
+export interface Starship {
+    name: string,
+    type: string,
+    hyperdrive: string,
+    navicomputer: string,
+    sensorRange: string,
+    shipsComplement: string,
+    encum: number,
+    passengerCapacity: number,
+    price: number,
+    rarity: number,
+    hp: number, 
+    weapons: Weapon[],
+    silhouette: number,
+    speed: number,
+    handling: number,
+    foreDefense: number,
+    portDefennse: number,
+    starDefense: number,
+    aftDefense: number,
+    armor: number,
+    hullTrauma: number,
+    systemStrain: number
+}
+
+export interface Vehicle {
+    name: string,
+    type: string,
+    sensorRange: string,
+    encum: number,
+    crew: number,
+    passengerCapacity: number,
+    maximumAltitude: string,
+    price: number,
+    rarity: number,
+    hp: number, 
+    weapons: Weapon[],
+    silhouette: number,
+    speed: number,
+    handling: number,
+    foreDefense: number,
+    aftDefense: number,
+    armor: number,
+    hullTrauma: number,
+    systemStrain: number
+}
+
+export enum Skills {    
+    Astrogation = 'Astrogation',
+    Athletics = 'Athletics',
+    Brawl = 'Brawl',
+    Charm = 'Charm',
+    Coercion = 'Coercion',
+    Computers = 'Computers',
+    Cool = 'Cool',
+    Coordination = 'Coordination',
+    Deception = 'Deception',
+    Discipline = 'Discipline',
+    Gunnery = 'Gunnery',
+    KnowledgeC = 'Knowledge (Core)',
+    KnowledgeE = 'Knowledge (Education)',
+    KnowledgeL = 'Knowledge (Lore)',
+    KnowledgeOR = 'Knowledge (Outer Rim)',
+    KnowledgeU = 'Knowledge (Underworld)',
+    KnowledgeW = 'Knowledge (Warfare)',
+    KnowledgeX = 'Knowledge (Xenology)',
+    Lightsaber = 'Lightsaber',
+    Leadership = 'Leadership',
+    Mechanics = 'Mechanics',
+    Medicine = 'Medicine',
+    Melee = 'Melee',
+    Negotiation = 'Negotiation',
+    Perception = 'Perception',
+    PilotingP = 'Piloting (Planetary)',
+    PilotingS = 'Piloting (Space)',
+    RangedL = 'Ranged (Light)',
+    RangedH = 'Ranged (Heavy)',
+    Resiliance = 'Resiliance',
+    Skulduggery = 'Skulduggery',
+    Stealth = 'Stealth',
+    Streetwise = 'Streetwise',
+    Survival = 'Survival',
+    Vigilance = 'Vigilance',
+}

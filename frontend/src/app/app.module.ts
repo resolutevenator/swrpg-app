@@ -47,6 +47,11 @@ import { CreateComponent } from './create/create.component';
 import { CreateRaceComponent } from './create/create-race/create-race.component';
 import { CreateSpecComponent } from './create/create-spec/create-spec.component';
 import { CreateTalentComponent } from './create/create-talent/create-talent.component';
+import { CreateArmorComponent } from './create/create-armor/create-armor.component';
+import { CreateWeaponComponent } from './create/create-weapon/create-weapon.component';
+import { CreateGearComponent } from './create/create-gear/create-gear.component';
+import { CreateVehicleComponent } from './create/create-vehicle/create-vehicle.component';
+import { CreateStarshipComponent } from './create/create-starship/create-starship.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +71,11 @@ import { CreateTalentComponent } from './create/create-talent/create-talent.comp
     CreateRaceComponent,
     CreateSpecComponent,
     CreateTalentComponent,
+    CreateArmorComponent,
+    CreateWeaponComponent,
+    CreateGearComponent,
+    CreateVehicleComponent,
+    CreateStarshipComponent,
   ],
   imports: [
     BrowserModule,

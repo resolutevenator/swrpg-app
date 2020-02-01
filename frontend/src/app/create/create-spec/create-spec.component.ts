@@ -38,6 +38,7 @@ export class CreateSpecComponent implements OnInit {
     'Knowledge (Underworld)',
     'Knowledge (Warfare)',
     'Knowledge (Xenology)',
+    'Lightsaber',
     'Leadership',
     'Mechanics',
     'Medicine',

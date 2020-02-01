@@ -11,6 +11,11 @@ export class CreateComponent implements OnInit {
   race: boolean = false;
   spec: boolean = false;
   talent: boolean = false;
+  armor: boolean = false;
+  weapon: boolean = false;
+  gear: boolean = false;
+  vehicle: boolean = false;
+  starship: boolean = false;
 
   constructor(
     private router: Router,
@@ -29,6 +34,21 @@ export class CreateComponent implements OnInit {
         break;
       case 'talent':
         this.talent = true;
+        break;
+      case 'armor':
+        this.armor = true;
+        break;
+      case 'weapon':
+        this.weapon = true;
+        break;
+      case 'gear':
+        this.gear = true;
+        break;
+      case 'vehicle':
+        this.vehicle = true;
+        break;
+      case 'starship':
+        this.starship = true;
         break;
       default:
         this.router.navigate(['**'])

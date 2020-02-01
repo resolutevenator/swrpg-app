@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Talent } from 'src/app/services/data.model';
 
 @Component({
   selector: 'app-create-talent',
@@ -7,19 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateTalentComponent implements OnInit {
 
-  talentName = '';
-  talentDesc = '';
-  talentPassive = false;
-  talentRanked = false;
-  talentKey = '';
+  talentName: string = '';
+  talentDesc: string = '';
+  talentPassive: boolean = false;
+  talentRanked: boolean = false;
+  talentKey: string = '';
 
-  constructor() { }
+  constructor(
+    private afs: AngularFirestore
+    ) { }
 
   ngOnInit() {
   }
 
   submitTalent() {
-    const talent = {
+    const talent: Talent = {
       description: this.talentDesc,
       name: this.talentName,
       passive: this.talentPassive,
@@ -27,6 +31,7 @@ export class CreateTalentComponent implements OnInit {
       key: this.talentKey
     }
 
+    this.afs.collection('talents').doc(this.talentKey).set(talent);
   }
 
 }

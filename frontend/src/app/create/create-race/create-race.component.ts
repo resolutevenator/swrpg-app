@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { DatabaseService } from '../database.service';
+import { Race, RaceInfo } from '../../services/data.model'
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-create-race',
@@ -21,11 +22,12 @@ export class CreateRaceComponent implements OnInit {
   xp: number = 0;
   ability = '';
   books = [];
-  book = ''
+  book = '';
 
   specialAbilities = []
 
   constructor(
+    private afs: AngularFirestore
   ) { }
 
   ngOnInit() {
@@ -54,25 +56,27 @@ export class CreateRaceComponent implements OnInit {
   }
 
   submitRace() {
-    const race = {
+    const race: Race = {
+      key: this.raceKey,
+      name: this.raceName,
+      books: this.books
+    }
+
+    const raceInfo: RaceInfo = {
       agility: this.agility,
       brawn: this.brawn,
       cunning: this.cunning,
       intellect: this.intellect,
-      key: this.raceKey,
-      name: this.raceName,
       presence: this.presence,
-      specialAbilities: this.specialAbilities,
-      startingXP: this.xp,
-      strainThreshold: this.strain,
+      abilities: this.specialAbilities,
+      xp: this.xp,
+      strain: this.strain,
       willpower: this.willpower,
-      woundThreshold: this.wounds,
-      books: this.books
+      wounds: this.wounds,
     }
 
-    console.log(race)
-
-    // this.db.pushRace(race, this.raceKey);
+    this.afs.collection('races').doc(this.raceKey).set(race);
+    this.afs.collection('races').doc(this.raceKey).collection('race').doc('content').set(raceInfo);;    
   }
 
 }
