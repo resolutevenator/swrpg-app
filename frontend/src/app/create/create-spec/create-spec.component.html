@@ -130,24 +130,7 @@
       </mat-card-content>
     </mat-card>
     <br>
-    <mat-card class="card">
-      <mat-card-title>Update Talent</mat-card-title>
-      <hr>
-      <mat-card-content class="new-talent">
-        <mat-form-field class="input text">
-          <input matInput #key type='text' [(ngModel)]="talentName" placeholder="Talent Name">
-        </mat-form-field>
-        <mat-form-field class="input text">
-          <textarea matInput #key type='text' [(ngModel)]="talentDesc" placeholder="Talent Desc"></textarea>
-        </mat-form-field>
-        <mat-form-field class="input text">
-          <input matInput #key type='text' [(ngModel)]="talentKey" placeholder="Talent Key">
-        </mat-form-field>
-        <mat-checkbox class="input checkbox" [(ngModel)]="talentPassive">Passive?</mat-checkbox>
-        <mat-checkbox class="input checkbox" [(ngModel)]="talentRanked">Ranked?</mat-checkbox>
-        <button mat-raised-button (click)="submitTalent()" color="primary">submit talent</button>
-      </mat-card-content>
-    </mat-card>
+    <app-create-talent></app-create-talent>
   
     <br>
   

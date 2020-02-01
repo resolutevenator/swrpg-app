@@ -46,6 +46,7 @@ import { SeriesChooserComponent } from './browse/series-chooser/series-chooser.c
 import { CreateComponent } from './create/create.component';
 import { CreateRaceComponent } from './create/create-race/create-race.component';
 import { CreateSpecComponent } from './create/create-spec/create-spec.component';
+import { CreateTalentComponent } from './create/create-talent/create-talent.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { CreateSpecComponent } from './create/create-spec/create-spec.component'
     CreateComponent,
     CreateRaceComponent,
     CreateSpecComponent,
+    CreateTalentComponent,
   ],
   imports: [
     BrowserModule,

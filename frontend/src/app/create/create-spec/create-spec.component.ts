@@ -11,11 +11,6 @@ export class CreateSpecComponent implements OnInit {
   careerName = '';
   book = '';
   specKey = '';
-  talentName = '';
-  talentDesc = '';
-  talentPassive = false;
-  talentRanked = false;
-  talentKey = '';
 
   panelOpenState = false;
   panel1OpenState = false;
@@ -213,17 +208,6 @@ export class CreateSpecComponent implements OnInit {
       talents: this.talentTree,
       key: this.specKey
     }
-  }
-
-  submitTalent() {
-    const talent = {
-      description: this.talentDesc,
-      name: this.talentName,
-      passive: this.talentPassive,
-      ranked: this.talentRanked,
-      key: this.talentKey
-    }
-
   }
 
   getSkillsString() {

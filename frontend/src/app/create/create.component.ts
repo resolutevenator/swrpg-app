@@ -10,11 +10,12 @@ export class CreateComponent implements OnInit {
 
   race: boolean = false;
   spec: boolean = false;
+  talent: boolean = false;
 
   constructor(
     private router: Router,
     private _route: ActivatedRoute
-    ) { }
+  ) { }
 
   ngOnInit() {
     const type = this._route.snapshot.params['type'];
@@ -25,6 +26,9 @@ export class CreateComponent implements OnInit {
         break;
       case 'spec':
         this.spec = true;
+        break;
+      case 'talent':
+        this.talent = true;
         break;
       default:
         this.router.navigate(['**'])
