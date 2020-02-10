@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Spec, SpecInfo } from 'src/app/services/data.model';
 
 @Component({
   selector: 'app-create-spec',
@@ -195,20 +197,45 @@ export class CreateSpecComponent implements OnInit {
   ]
 
   constructor(
+    private afs: AngularFirestore
   ) { }
 
   submitSpec() {
-    const spec = {
-      careerSkills: this.getSkills(),
-      bonusCareerSkills: this.getAdditionalSkills(),
+    const spec: Spec = {
       books: this.books,
       career: this.careerName,
       name: this.specName,
-      horizontalConnections: this.horizontalConnections,
-      verticalConnections: this.verticalConnections,
-      talents: this.talentTree,
       key: this.specKey
     }
+
+    const specInfo: SpecInfo = {
+      careerSkills: this.getSkills(),
+      bonusCareerSkills: this.getAdditionalSkills(),
+      talentTree: {
+        row0: this.talentTree[0],
+        row1: this.talentTree[1],
+        row2: this.talentTree[2],
+        row3: this.talentTree[3],
+        row4: this.talentTree[4],
+        horizontalConnections: {
+          row0: this.horizontalConnections[0],
+          row1: this.horizontalConnections[1],
+          row2: this.horizontalConnections[2],
+          row3: this.horizontalConnections[3],
+          row4: this.horizontalConnections[4],
+        },
+        verticalConnections: {
+          row0: this.verticalConnections[0],
+          row1: this.verticalConnections[1],
+          row2: this.verticalConnections[2],
+          row3: this.verticalConnections[3],
+          row4: this.verticalConnections[4],
+        }
+      }
+    }
+
+    this.afs.collection('specs').doc(this.specKey).set(spec);
+    this.afs.collection('specs').doc(this.specKey).collection('spec').doc('content').set(specInfo);
   }
 
   getSkillsString() {
@@ -257,7 +284,7 @@ export class CreateSpecComponent implements OnInit {
     })
 
     return sk;
-  }  
+  }
 
   addBook() {
     this.books.push(this.book);

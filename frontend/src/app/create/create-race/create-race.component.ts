@@ -76,7 +76,7 @@ export class CreateRaceComponent implements OnInit {
     }
 
     this.afs.collection('races').doc(this.raceKey).set(race);
-    this.afs.collection('races').doc(this.raceKey).collection('race').doc('content').set(raceInfo);;    
+    this.afs.collection('races').doc(this.raceKey).collection('race').doc('content').set(raceInfo);   
   }
 
 }

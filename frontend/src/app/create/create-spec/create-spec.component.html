@@ -68,10 +68,13 @@
           <div class="line">
             <mat-card>
               <mat-card-title>
-                <mat-form-field class="input dropdown">
+                <!-- <mat-form-field class="input text">
                   <mat-select placeholder="Select Talent" [(ngModel)]="talentTree[i][0]">
                     <mat-option *ngFor="let talent of talents" [value]="talent.key">{{talent.name}}</mat-option>
                   </mat-select>
+                </mat-form-field> -->
+                <mat-form-field class="input text">
+                  <textarea matInput #key type='text' [(ngModel)]="talentTree[i][0]" placeholder="Input Talent" name="Input Talent"></textarea>
                 </mat-form-field>
               </mat-card-title>
             </mat-card>
@@ -80,10 +83,13 @@
             </div>
             <mat-card>
               <mat-card-title>
-                <mat-form-field class="input dropdown">
+                <!-- <mat-form-field class="input dropdown">
                   <mat-select placeholder="Select Talent" [(ngModel)]="talentTree[i][1]">
                     <mat-option *ngFor="let talent of talents" [value]="talent.key">{{talent.name}}</mat-option>
                   </mat-select>
+                </mat-form-field> -->
+                <mat-form-field class="input text">
+                  <textarea matInput #key type='text' [(ngModel)]="talentTree[i][1]" placeholder="Input Talent" name="Input Talent"></textarea>
                 </mat-form-field>
               </mat-card-title>
             </mat-card>
@@ -92,10 +98,13 @@
             </div>
             <mat-card>
               <mat-card-title>
-                <mat-form-field class="input dropdown">
+                <!-- <mat-form-field class="input dropdown">
                   <mat-select placeholder="Select Talent" [(ngModel)]="talentTree[i][2]">
                     <mat-option *ngFor="let talent of talents" [value]="talent.key">{{talent.name}}</mat-option>
                   </mat-select>
+                </mat-form-field> -->
+                <mat-form-field class="input text">
+                  <textarea matInput #key type='text' [(ngModel)]="talentTree[i][2]" placeholder="Input Talent" name="Input Talent"></textarea>
                 </mat-form-field>
               </mat-card-title>
             </mat-card>
@@ -104,10 +113,13 @@
             </div>
             <mat-card>
               <mat-card-title>
-                <mat-form-field class="input dropdown">
+                <!-- <mat-form-field class="input dropdown">
                   <mat-select placeholder="Select Talent" [(ngModel)]="talentTree[i][3]">
                     <mat-option *ngFor="let talent of talents" [value]="talent.key">{{talent.name}}</mat-option>
                   </mat-select>
+                </mat-form-field> -->
+                <mat-form-field class="input text">
+                  <textarea matInput #key type='text' [(ngModel)]="talentTree[i][3]" placeholder="Input Talent" name="Input Talent"></textarea>
                 </mat-form-field>
               </mat-card-title>
             </mat-card>

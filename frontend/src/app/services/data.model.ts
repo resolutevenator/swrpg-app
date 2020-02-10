@@ -1,9 +1,9 @@
 export interface Talent {
     name: string,
     key: string,
-    passive: boolean,
     ranked: boolean,
-    description: string
+    description: string,
+    type: ActionType
 }
 
 export interface Race {
@@ -204,4 +204,11 @@ export enum Skills {
     Streetwise = 'Streetwise',
     Survival = 'Survival',
     Vigilance = 'Vigilance',
+}
+
+export enum ActionType {
+    Passive = 'passive',
+    Action = 'action',
+    Incidental = 'incidental',
+    Maneuver = 'maneuver'
 }
