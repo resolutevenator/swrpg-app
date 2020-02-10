@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { SpecInfo } from '../services/data.model';
+import { SpecInfo, Spec } from '../services/data.model';
 import { Observable } from 'rxjs';
 // import { DatabaseService } from '../database.service';
 
@@ -17,9 +17,9 @@ export class SpecComponent implements OnInit {
   specDoc: AngularFirestoreDocument<SpecInfo>;
   specObservable: Observable<SpecInfo>;
   specInfo: SpecInfo;
-  specParentDoc: AngularFirestoreDocument<SpecInfo>;
-  specParentObservable: Observable<SpecInfo>;
-  specParent: SpecInfo;
+  specParentDoc: AngularFirestoreDocument<Spec>;
+  specParentObservable: Observable<Spec>;
+  specParent: Spec;
 
   public careerSkills: string = '';
   public bonusSkills: string = '';
