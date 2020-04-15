@@ -1,0 +1,16 @@
+<div class="page-container">
+    <div *ngIf="gearAttachmentObservable | async as gearAttachment; else loading">
+        <mat-card class="race-image">
+            <mat-card-title>{{gearAttachment.name}}</mat-card-title>
+            <mat-card-subtitle>{{gearAttachment.category}}</mat-card-subtitle>
+            <mat-card-content>Price: {{gearAttachment.price}}</mat-card-content>
+            <mat-card-content>Encumbrance: {{gearAttachment.encum}}</mat-card-content>
+            <mat-card-content>HP: {{gearAttachment.hp}}</mat-card-content>
+            <mat-card-content>Rarity: {{gearAttachment.rarity}}</mat-card-content>
+          </mat-card>
+    </div>
+</div>
+
+<ng-template #loading>
+    LOADING
+</ng-template>

@@ -52,6 +52,13 @@ import { CreateWeaponComponent } from './create/create-weapon/create-weapon.comp
 import { CreateGearComponent } from './create/create-gear/create-gear.component';
 import { CreateVehicleComponent } from './create/create-vehicle/create-vehicle.component';
 import { CreateStarshipComponent } from './create/create-starship/create-starship.component';
+import { WeaponComponent } from './items/weapon/weapon.component';
+import { ArmorComponent } from './items/armor/armor.component';
+import { GearComponent } from './items/gear/gear.component';
+import { StarshipComponent } from './vehicles/starship/starship.component';
+import { VehiclesComponent } from './vehicles/vehicles/vehicles.component';
+import { GearAttachmentComponent } from './attachments/gearattachment/gearattachment.component';
+import { VehicleAttachmentComponent } from './attachments/vehicleattachment/vehicleattachment.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +83,13 @@ import { CreateStarshipComponent } from './create/create-starship/create-starshi
     CreateGearComponent,
     CreateVehicleComponent,
     CreateStarshipComponent,
+    WeaponComponent,
+    ArmorComponent,
+    GearComponent,
+    StarshipComponent,
+    VehiclesComponent,
+    GearAttachmentComponent,
+    VehicleAttachmentComponent,
   ],
   imports: [
     BrowserModule,

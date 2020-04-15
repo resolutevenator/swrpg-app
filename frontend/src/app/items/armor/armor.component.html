@@ -1,0 +1,19 @@
+<div class="page-container">
+    <div *ngIf="armorObservable | async as armor; else loading">
+        <mat-card class="race-image">
+            <mat-card-title>{{armor.name}}</mat-card-title>
+            <mat-card-subtitle>{{armor.category}}</mat-card-subtitle>
+            <mat-card-content>Melee Defense: {{armor.meleeDefense}}</mat-card-content>
+            <mat-card-content>Ranged Defense: {{armor.rangedDefense}}</mat-card-content>
+            <mat-card-content>Soak: {{armor.soak}}</mat-card-content>
+            <mat-card-content>Encumbrance: {{armor.encum}}</mat-card-content>
+            <mat-card-content>HP: {{armor.hp}}</mat-card-content>
+            <mat-card-content>Price: {{armor.price}}</mat-card-content>
+            <mat-card-content>Rarity: {{armor.rarity}}</mat-card-content>
+          </mat-card>
+    </div>
+</div>
+
+<ng-template #loading>
+    LOADING
+</ng-template>

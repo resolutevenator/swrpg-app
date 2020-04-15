@@ -1,0 +1,15 @@
+<div class="page-container">
+    <div *ngIf="gearObservable | async as gear; else loading">
+        <mat-card class="race-image">
+            <mat-card-title>{{gear.name}}</mat-card-title>
+            <mat-card-subtitle>{{gear.category}}</mat-card-subtitle>
+            <mat-card-content>Price: {{gear.price}}</mat-card-content>
+            <mat-card-content>Encumbrance: {{gear.encum}}</mat-card-content>
+            <mat-card-content>Rarity: {{gear.rarity}}</mat-card-content>
+          </mat-card>
+    </div>
+</div>
+
+<ng-template #loading>
+    LOADING
+</ng-template>

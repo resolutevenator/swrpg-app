@@ -1,0 +1,20 @@
+<div class="page-container">
+    <div *ngIf="weaponObservable | async as weapon; else loading">
+        <mat-card class="race-image">
+            <mat-card-title>{{weapon.name}}</mat-card-title>
+            <mat-card-subtitle>{{weapon.category}}</mat-card-subtitle>
+            <mat-card-content>Skill: {{weapon.skill}}</mat-card-content>
+            <mat-card-content>Damage: {{weapon.damage}}</mat-card-content>
+            <mat-card-content>Crit: {{weapon.crit}}</mat-card-content>
+            <mat-card-content>Range: {{weapon.range}}</mat-card-content>
+            <mat-card-content>Encumbrance: {{weapon.encum}}</mat-card-content>
+            <mat-card-content>HP: {{weapon.hp}}</mat-card-content>
+            <mat-card-content>Price: {{weapon.price}}</mat-card-content>
+            <mat-card-content>Rarity: {{weapon.rarity}}</mat-card-content>
+          </mat-card>
+    </div>
+</div>
+
+<ng-template #loading>
+    LOADING
+</ng-template>

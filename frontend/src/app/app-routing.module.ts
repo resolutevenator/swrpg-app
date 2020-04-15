@@ -11,6 +11,11 @@ import { AuthGuard } from './services/auth.guard';
 import { RaceListComponent } from './race-list/race-list.component';
 import { SpecListComponent } from './spec-list/spec-list.component';
 import { CreateComponent } from './create/create.component';
+import { WeaponComponent } from './items/weapon/weapon.component';
+import { ArmorComponent } from './items/armor/armor.component';
+import { GearComponent } from './items/gear/gear.component';
+import { GearAttachmentComponent } from './attachments/gearattachment/gearattachment.component';
+import { VehicleAttachmentComponent } from './attachments/vehicleattachment/vehicleattachment.component';
 
 
 const routes: Routes = [
@@ -46,6 +51,26 @@ const routes: Routes = [
   {
     path: 'specs/:specName',
     component: SpecComponent
+  },
+  {
+    path: 'weapon/:weapon',
+    component: WeaponComponent
+  },
+  {
+    path: 'armor/:armor',
+    component: ArmorComponent
+  },
+  {
+    path: 'gear/:gear',
+    component: GearComponent
+  },
+  {
+    path: 'gearAttachments/:gearAttachment',
+    component: GearAttachmentComponent
+  },
+  {
+    path: 'vehicleAttachments/:vehicleAttachment',
+    component: VehicleAttachmentComponent
   },
   {
     path: '**',

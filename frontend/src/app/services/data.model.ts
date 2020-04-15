@@ -85,6 +85,8 @@ export interface GenSpecInfo {
 
 export interface Weapon {
     name: string,
+    key: string,
+    category: string,
     skill: string,
     damage: number,
     critical: number,
@@ -100,6 +102,8 @@ export interface Weapon {
 
 export interface Armor {
     name: string,
+    key: string,
+    category: string,
     meleeDefense: number,
     rangedDefense: number,
     soak: number,
@@ -113,6 +117,7 @@ export interface Armor {
 
 export interface Gear {
     name: string,
+    key: string,
     category: string,
     price: number,
     encum: number,
@@ -123,6 +128,7 @@ export interface Gear {
 
 export interface Starship {
     name: string,
+    key: string,
     type: string,
     hyperdrive: string,
     navicomputer: string,
@@ -148,6 +154,7 @@ export interface Starship {
 
 export interface Vehicle {
     name: string,
+    key: string,
     type: string,
     sensorRange: string,
     encum: number,
@@ -166,6 +173,27 @@ export interface Vehicle {
     armor: number,
     hullTrauma: number,
     systemStrain: number
+}
+
+export interface GearAttachments{
+    name: string,
+    category: string,
+    price: number,
+    encum: number,
+    hp: number,
+    rarity: number,
+    properties: string,
+    restricted: boolean
+}
+
+export interface VehicleAttachments{
+    name: string,
+    category: string,
+    price: number,
+    hp: number,
+    rarity: number,
+    properties: string,
+    restricted: boolean
 }
 
 export enum Skills {    

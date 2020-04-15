@@ -1,11 +1,13 @@
 export const environment = {
-  production: true,
+  production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyBEfTWVnqpK02IvmrZFpRWuR5vMYF_nfs4",
-    authDomain: "swrpg-app.firebaseapp.com",
-    databaseURL: "https://swrpg-app.firebaseio.com",
-    projectId: "swrpg-app",
-    storageBucket: "swrpg-app.appspot.com",
-    messagingSenderId: "693129020032"
+    apiKey: "AIzaSyCD5uyp6jMWvuUIesNxaGM-eyRaHOIVods",
+    authDomain: "swrpg-5bab9.firebaseapp.com",
+    databaseURL: "https://swrpg-5bab9.firebaseio.com",
+    projectId: "swrpg-5bab9",
+    storageBucket: "swrpg-5bab9.appspot.com",
+    messagingSenderId: "140429836978",
+    appId: "1:140429836978:web:96a06daf161ab04a6b7fab",
+    measurementId: "G-2DHYR3WS8D"
   }
 };
