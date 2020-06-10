@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 
 import { RaceInfo, Race } from '../services/data.model'
@@ -24,6 +24,7 @@ export class RacesComponent implements OnInit {
 
   constructor(
     private _route: ActivatedRoute,
+    private router: Router,
     private afStore: AngularFirestore
   ) {
   }
@@ -41,6 +42,10 @@ export class RacesComponent implements OnInit {
     this.raceParentObservable.subscribe(doc => {
       this.raceParent = doc;
     })
+  }
+
+  edit() {
+    this.router.navigate(['/create', 'race'], {state: {race: this.raceInfo, parent: this.raceParent}});
   }
 
 }

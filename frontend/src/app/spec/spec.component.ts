@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { SpecInfo, Spec } from '../services/data.model';
 import { Observable } from 'rxjs';
@@ -28,6 +28,7 @@ export class SpecComponent implements OnInit {
 
   constructor(
     private _route: ActivatedRoute,
+    private router: Router,
     private afStore: AngularFirestore
     // private db: DatabaseService
   ) { }
@@ -61,6 +62,10 @@ export class SpecComponent implements OnInit {
     //     });
     //   });
     // })
+  }
+
+  edit() {    
+    this.router.navigate(['/create', 'spec'], {state: {spec: this.specInfo, parent: this.specParent}});
   }
 
   initTalents() {

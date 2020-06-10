@@ -198,7 +198,54 @@ export class CreateSpecComponent implements OnInit {
 
   constructor(
     private afs: AngularFirestore
-  ) { }
+  ) { 
+    const state = history.state;
+    if(state.parent && state.spec) {
+      this.books = state.parent.books;
+      this.specKey = state.parent.key;
+      this.specName = state.parent.name;
+      this.careerName = state.parent.career;
+
+      // this.careerSkills = state.spec.careerSkills; //undo array
+      // this.additionalCareerSkills = state.spec.bonusCareerSkills; //undo array
+      this.initSkills(state);
+      this.initTalentTree(state);
+    }
+
+  }
+
+  initSkills(state) {
+    const career = state.spec.careerSkills;
+    const additional = state.spec.bonusCareerSkills;
+
+    career.forEach(skill => {
+      this.careerSkills[this.skills.indexOf(skill)] = true;
+    });
+
+    additional.forEach(skill => {
+      this.additionalCareerSkills[this.skills.indexOf(skill)] = true;
+    })
+  }
+
+  initTalentTree(state) {
+    this.talentTree[0] = state.spec.talentTree.row0; 
+    this.talentTree[1] = state.spec.talentTree.row1;
+    this.talentTree[2] = state.spec.talentTree.row2; 
+    this.talentTree[3] = state.spec.talentTree.row3; 
+    this.talentTree[4] = state.spec.talentTree.row4; 
+
+    this.horizontalConnections[0] = state.spec.talentTree.horizontalConnections.row0;
+    this.horizontalConnections[1] = state.spec.talentTree.horizontalConnections.row1;
+    this.horizontalConnections[2] = state.spec.talentTree.horizontalConnections.row2;
+    this.horizontalConnections[3] = state.spec.talentTree.horizontalConnections.row3;
+    this.horizontalConnections[4] = state.spec.talentTree.horizontalConnections.row4;
+
+    this.verticalConnections[0] = state.spec.talentTree.verticalConnections.row0;
+    this.verticalConnections[1] = state.spec.talentTree.verticalConnections.row1;
+    this.verticalConnections[2] = state.spec.talentTree.verticalConnections.row2;
+    this.verticalConnections[3] = state.spec.talentTree.verticalConnections.row3;
+    this.verticalConnections[4] = state.spec.talentTree.verticalConnections.row4;
+  }
 
   submitSpec() {
     const spec: Spec = {

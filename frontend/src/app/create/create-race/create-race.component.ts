@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Race, RaceInfo } from '../../services/data.model'
 import { AngularFirestore } from '@angular/fire/firestore';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-create-race',
@@ -27,8 +28,28 @@ export class CreateRaceComponent implements OnInit {
   specialAbilities = []
 
   constructor(
+    private _route: ActivatedRoute,
+    private router: Router,
     private afs: AngularFirestore
-  ) { }
+  ) {
+    const state = history.state;
+    if(state.parent && state.race) {
+      this.books = state.parent.books;
+      this.raceKey = state.parent.key;
+      this.raceName = state.parent.name;
+
+      this.agility = state.race.agility;
+      this.brawn = state.race.brawn;
+      this.cunning = state.race.cunning;
+      this.intellect = state.race.intellect;
+      this.presence = state.race.presence;
+      this.willpower = state.race.willpower;
+      this.xp = state.race.xp;
+      this.wounds = state.race.wounds;
+      this.strain = state.race.strain;
+      this.specialAbilities = state.race.abilities;
+    }
+  }
 
   ngOnInit() {
   }
