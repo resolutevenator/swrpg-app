@@ -1,1 +1,62 @@
-<p>create-armor works!</p>
+<div class="page-content">
+    <mat-card class="card">
+        <mat-card-title>Update Armor</mat-card-title>
+        <hr>
+        <mat-card-content class="new-talent">
+            <mat-form-field class="input text">
+                <input matInput #key type='text' [(ngModel)]="armorName" placeholder="Armor Name">
+            </mat-form-field>
+            <mat-form-field class="input text">
+                <input matInput #key type='text' [(ngModel)]="armorKey" placeholder="Armor Key">
+            </mat-form-field>
+            
+            <mat-form-field class="input dropdown">
+                <mat-select placeholder="Select Category" [(ngModel)]="category">
+                    <mat-option *ngFor="let type of armorCategory | keyvalue" [value]="type.value">{{type.key}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="input number">
+                <input matInput #key type='number' [(ngModel)]="meleeDefense" placeholder="Melee Defense">
+            </mat-form-field>
+            <mat-form-field class="input number">
+                <input matInput #key type='number' [(ngModel)]="rangedDefense" placeholder="Ranged Defense">
+            </mat-form-field>
+            <mat-form-field class="input number">
+                <input matInput #key type='number' [(ngModel)]="soak" placeholder="Soak">
+            </mat-form-field>
+
+            <mat-form-field class="input number">
+                <input matInput #key type='number' [(ngModel)]="encum" placeholder="Encumbrance">
+            </mat-form-field>
+            <mat-form-field class="input number">
+                <input matInput #key type='number' [(ngModel)]="hp" placeholder="Hard Points">
+            </mat-form-field>
+            <mat-form-field class="input number">
+                <input matInput #key type='number' [(ngModel)]="price" placeholder="Price">
+            </mat-form-field>
+            <mat-form-field class="input number">
+                <input matInput #key type='number' [(ngModel)]="rarity" placeholder="Rarity">
+            </mat-form-field>
+
+            <mat-checkbox class="input checkbox" [(ngModel)]="talentRanked">Restricted?</mat-checkbox>
+
+            <br>
+
+            <mat-form-field class="input text">
+                <textarea matInput #key type='text' [(ngModel)]="property" placeholder="Input Property" name="Input Property"></textarea>
+              </mat-form-field>
+              <button mat-raised-button (click)="addProperty()" color="primary">add property</button>
+              <mat-card-content>
+                <div *ngFor="let ppty of properties; let i = index">
+                  {{ppty}}
+                  <button mat-icon-button color="warn">
+                    <mat-icon (click)="removeProperty(i)">clear</mat-icon>
+                  </button>
+                </div>
+              </mat-card-content>
+
+            <button mat-raised-button (click)="submitArmor()" color="primary">submit armor</button>
+        </mat-card-content>
+    </mat-card>
+</div>

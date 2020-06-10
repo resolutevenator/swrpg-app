@@ -86,11 +86,11 @@ export interface GenSpecInfo {
 export interface Weapon {
     name: string,
     key: string,
-    category: string,
-    skill: string,
+    category: WeaponCategory,
+    skill: Skills,
     damage: number,
-    critical: number,
-    range: string,
+    crit: number,
+    range: RangeBand,
     encum: number,
     hp: number,
     price: number,
@@ -235,8 +235,58 @@ export enum Skills {
 }
 
 export enum ActionType {
-    Passive = 'passive',
-    Action = 'action',
-    Incidental = 'incidental',
-    Maneuver = 'maneuver'
+    Passive = 'Passive',
+    Action = 'Action',
+    Incidental = 'Incidental',
+    Maneuver = 'Maneuver'
+}
+
+export enum WeaponCategory {
+    Brawl = 'Brawl',
+    Energy = 'Energy',
+    Explosives = 'Explosives',
+    Grenade = 'Grenade',
+    Lightsaber = 'Lightsaber',
+    LightsaberHilt = 'Lightsaber Hilt',
+    Melee = 'Melee',
+    Other = 'Other',
+    PortableMissiles = 'Portable Missiles',
+    Slugthrowers = 'Slugthrowers',
+    Thrown = 'Thrown',
+}
+
+export enum ArmorCategory {
+    Light = 'Light',
+    Medium = 'Medium',
+    Heavy = 'Heavy',
+    Special = 'Special'
+}
+
+export enum GearCategory {
+    AncientTalismans = 'Ancient Talismans',
+    ChemsPoisons = 'Chems and Poisons',
+    Communications = 'Communications',
+    Consumables = 'Consumables',
+    Cybernetics = 'Cybernetics',
+    DetectionDevices = 'Detection Devices',
+    Droids = 'Droids',
+    Drugs = 'Drugs',
+    Electronics = 'Electronics',
+    FieldEquipment = 'Field Equipment',
+    Medical = 'Medical',
+    Poison = 'Poison',
+    Recreational = 'Recreational',
+    Security = 'Security',
+    Storage = 'Storage',
+    Survival = 'Survival',
+    Tools = 'Tools',
+    Uniform = 'Uniform'
+}
+
+export enum RangeBand {
+    Engaged = 'engaged',
+    Short = 'short',
+    Medium = 'medium',
+    Long = 'long',
+    Extreme = 'extreme'
 }

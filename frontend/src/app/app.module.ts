@@ -23,7 +23,7 @@ import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { GestureConfig } from '@angular/material';
 
 import { AngularFireModule } from '@angular/fire/';
-// import { AngularFireDatabaseModule } from '@angular/fire/database/';
+import { AngularFireDatabaseModule } from '@angular/fire/database/';
 import { AngularFireAuthModule } from '@angular/fire/auth/';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 
