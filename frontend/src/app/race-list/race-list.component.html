@@ -1,4 +1,6 @@
 <div class="page-container">
+    <button mat-raised-button color="warn" (click)="this.router.navigate(['/create/race']);">Create</button>
+    <br>
     <div class="flex-container">
         <div *ngFor="let race of races | async">
             <!-- {{ race | json }} -->

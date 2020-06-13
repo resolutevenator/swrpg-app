@@ -65,6 +65,12 @@ export class CreateRaceComponent implements OnInit {
     })
   }
 
+  editAbility(i: number) {
+    const abilityToEdit = this.specialAbilities[i];
+    this.ability = abilityToEdit;
+    this.removeAbility(i);
+  }
+
   addBook() {
     this.books.push(this.book);
     this.book = '';
@@ -74,6 +80,12 @@ export class CreateRaceComponent implements OnInit {
     this.books = this.books.filter((value, index) => {
       return index != i;
     })
+  }
+
+  editBook(i: number) {
+    const bookToEdit = this.books[i];
+    this.book = bookToEdit;
+    this.removeBook(i);
   }
 
   submitRace() {

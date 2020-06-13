@@ -60,4 +60,10 @@ export class CreateArmorComponent implements OnInit {
     this.properties.splice(i, 1);
   }
 
+  editProperty(i: number) {
+    const propertyToEdit = this.properties[i];
+    this.property = propertyToEdit;
+    this.removeProperty(i);
+  }
+
 }

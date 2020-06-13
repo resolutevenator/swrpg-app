@@ -1,4 +1,6 @@
 <div class="page-container">
+    <button mat-raised-button color="warn" (click)="this.router.navigate(['/create/spec']);">Create</button>
+    <br>
     <div class="flex-container">
         <div *ngFor="let spec of specs | async">
             <!-- {{ spec | json }} -->

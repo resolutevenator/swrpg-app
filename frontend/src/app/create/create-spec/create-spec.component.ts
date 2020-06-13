@@ -344,6 +344,12 @@ export class CreateSpecComponent implements OnInit {
     })
   }
 
+  editBook(i: number) {
+    const bookToEdit = this.books[i];
+    this.book = bookToEdit;
+    this.removeBook(i);
+  }
+
   ngOnInit() {
     // this.db.getList('talents/').subscribe(data => {
     //   this.talents = data;

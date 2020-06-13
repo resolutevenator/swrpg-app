@@ -37,6 +37,9 @@
               <mat-card-content>
                 <div *ngFor="let ppty of properties; let i = index">
                   {{ppty}}
+                  <button mat-icon-button color="primary">
+                    <mat-icon (click)="editProperty(i)">edit</mat-icon>
+                  </button>
                   <button mat-icon-button color="warn">
                     <mat-icon (click)="removeProperty(i)">clear</mat-icon>
                   </button>

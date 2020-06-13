@@ -65,6 +65,12 @@ export class CreateWeaponComponent implements OnInit {
     this.properties.splice(i, 1);
   }
 
+  editProperty(i: number) {
+    const propertyToEdit = this.properties[i];
+    this.property = propertyToEdit;
+    this.removeProperty(i);
+  }
+
   _skills = [
     'Brawl',
     'Gunnery',

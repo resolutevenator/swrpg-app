@@ -18,6 +18,9 @@
         <mat-card-content>
           <div *ngFor="let book of books; let i = index">
             {{book}}
+            <button mat-icon-button color="primary">
+              <mat-icon (click)="editBook(i)">edit</mat-icon>
+            </button>
             <button mat-icon-button color="warn">
               <mat-icon (click)="removeBook(i)">clear</mat-icon>
             </button>
@@ -87,6 +90,9 @@
       <mat-card-content>
         <div *ngFor="let ability of specialAbilities; let i = index">
           {{ability}}
+          <button mat-icon-button color="primary">
+            <mat-icon (click)="editAbility(i)">edit</mat-icon>
+          </button>
           <button mat-icon-button color="warn">
             <mat-icon (click)="removeAbility(i)">clear</mat-icon>
           </button>
