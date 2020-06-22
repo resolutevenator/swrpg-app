@@ -35,6 +35,9 @@ export class RaceListComponent implements OnInit {
     if (books.length === 1) {
       return this.convertBookToColour(books[0])
     } else if (books.length === 2) {
+      if (books[0].startsWith("Era") && books[1].startsWith("Era")) {
+        return "blue";
+      }
       const cssClass = this.convertBookToColour(books[0]) + '-' + this.convertBookToColour(books[1])
       return cssClass;
     } else {

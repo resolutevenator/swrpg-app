@@ -16,6 +16,7 @@ import { ArmorComponent } from './items/armor/armor.component';
 import { GearComponent } from './items/gear/gear.component';
 import { GearAttachmentComponent } from './attachments/gearattachment/gearattachment.component';
 import { VehicleAttachmentComponent } from './attachments/vehicleattachment/vehicleattachment.component';
+import { CreateCharacterComponent } from './create/create-character/create-character.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'browse',
     component: BrowseComponent
+  },
+  {
+    path: 'createcharacter',
+    component: CreateCharacterComponent
   },
   {
     path: 'create/:type',

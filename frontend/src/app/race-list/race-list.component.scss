@@ -48,6 +48,18 @@ mat-card-title {
     background-image: linear-gradient(to right, rgb(202, 44, 44) , rgb(80, 80, 80));
 }
 
+.blue-red, .red-blue {
+    background-image: linear-gradient(to right, rgb(202, 44, 44) , rgb(48, 57, 177));
+}
+
+.blue-orange, .orange-blue {
+    background-image: linear-gradient(to right, rgb(255, 102, 0) , rgb(48, 57, 177));
+}
+
+.blue-black, .black-blue {
+    background-image: linear-gradient(to right, rgb(80, 80, 80) , rgb(48, 57, 177));
+}
+
 .orange-red-black {
     background-image: linear-gradient(to right, rgb(255, 102, 0), rgb(202, 44, 44), rgb(80, 80, 80));
 }

@@ -1,0 +1,23 @@
+<div class="page-content">
+
+        <mat-card>
+            <mat-card-title>Character Info</mat-card-title>
+            <mat-form-field class="input text">
+                <input matInput #key type='text' [(ngModel)]="characterName" placeholder="Character Name"
+                    name="Character Name">
+            </mat-form-field>
+        </mat-card>
+
+        <mat-card>
+            <mat-card-title>Sources</mat-card-title>
+            <mat-card-subtitle>Allow or Restrict content for this character</mat-card-subtitle>
+            <div class="toggles">
+                <mat-slide-toggle [(ngModel)]="aorActive">Age of Rebellion</mat-slide-toggle>
+                <mat-slide-toggle [(ngModel)]="fndActive">Force and Destiny</mat-slide-toggle>
+                <mat-slide-toggle [(ngModel)]="eoteActive">Edge of the Empire</mat-slide-toggle>
+                <mat-slide-toggle [(ngModel)]="cwActive">Clone Wars</mat-slide-toggle>
+                <mat-slide-toggle [(ngModel)]="rebActive">Rebellion</mat-slide-toggle>
+                <mat-slide-toggle [(ngModel)]="hbActive">Homebrew</mat-slide-toggle>
+            </div>
+        </mat-card>
+</div>

@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -61,6 +63,12 @@ import { StarshipComponent } from './vehicles/starship/starship.component';
 import { VehiclesComponent } from './vehicles/vehicles/vehicles.component';
 import { GearAttachmentComponent } from './attachments/gearattachment/gearattachment.component';
 import { VehicleAttachmentComponent } from './attachments/vehicleattachment/vehicleattachment.component';
+import { CreateCharacterComponent } from './create/create-character/create-character.component';
+import { CreateCharacterInfoComponent } from './create/create-character/create-character-info/create-character-info.component';
+import { CreateCharacterRaceComponent } from './create/create-character/create-character-race/create-character-race.component';
+import { CreateCharacterClassComponent } from './create/create-character/create-character-class/create-character-class.component';
+import { CreateCharacterAbilitiesComponent } from './create/create-character/create-character-abilities/create-character-abilities.component';
+import { CreateCharacterDescriptionComponent } from './create/create-character/create-character-description/create-character-description.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +100,12 @@ import { VehicleAttachmentComponent } from './attachments/vehicleattachment/vehi
     VehiclesComponent,
     GearAttachmentComponent,
     VehicleAttachmentComponent,
+    CreateCharacterComponent,
+    CreateCharacterInfoComponent,
+    CreateCharacterRaceComponent,
+    CreateCharacterClassComponent,
+    CreateCharacterAbilitiesComponent,
+    CreateCharacterDescriptionComponent,
   ],
   imports: [
     BrowserModule,
@@ -109,6 +123,8 @@ import { VehicleAttachmentComponent } from './attachments/vehicleattachment/vehi
     MatInputModule,
     MatExpansionModule,
     MatSelectModule,
+    MatStepperModule,
+    MatSlideToggleModule,
     HttpClientModule,
     NoopAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
