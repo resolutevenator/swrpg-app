@@ -69,6 +69,8 @@ import { CreateCharacterRaceComponent } from './create/create-character/create-c
 import { CreateCharacterClassComponent } from './create/create-character/create-character-class/create-character-class.component';
 import { CreateCharacterAbilitiesComponent } from './create/create-character/create-character-abilities/create-character-abilities.component';
 import { CreateCharacterDescriptionComponent } from './create/create-character/create-character-description/create-character-description.component';
+import { ListComponent } from './browse/list/list.component';
+import { ListEntryComponent } from './browse/list/list-entry/list-entry.component';
 
 @NgModule({
   declarations: [
@@ -106,6 +108,8 @@ import { CreateCharacterDescriptionComponent } from './create/create-character/c
     CreateCharacterClassComponent,
     CreateCharacterAbilitiesComponent,
     CreateCharacterDescriptionComponent,
+    ListComponent,
+    ListEntryComponent,
   ],
   imports: [
     BrowserModule,

@@ -27,6 +27,11 @@ const routes: Routes = [
   },
   {
     path: 'browse',
+    component: BrowseComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'browse/:type',
     component: BrowseComponent
   },
   {
@@ -40,14 +45,6 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
-  },
-  {
-    path: 'browse/races',
-    component: RaceListComponent
-  },
-  {
-    path: 'browse/specs',
-    component: SpecListComponent,
   },
   {
     path: 'races/:raceName',

@@ -1,0 +1,7 @@
+<!-- <button mat-raised-button color="warn" (click)="this.router.navigate(['/create/race']);">Create</button> -->
+<br>
+<div class="flex-container">
+    <div *ngFor="let entry of entries | async">
+        <app-list-entry (entryClicked)="onEntryClicked($event)" [class]="getCardClass(entry.books)" [title]="entry.name" [key]="entry.key"></app-list-entry>
+    </div>
+</div>

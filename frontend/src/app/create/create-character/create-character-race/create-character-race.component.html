@@ -1,1 +1,18 @@
-<p>create-character-race works!</p>
+<div class="page-content">
+
+    <mat-card>
+        <mat-card-title>Species</mat-card-title>
+        <!-- Current Race Go Here -->
+    </mat-card>
+
+    <mat-card>
+        <mat-card-title>Sources</mat-card-title>
+        <!-- <mat-card-subtitle>Allow or Restrict content for this character</mat-card-subtitle> -->
+        
+        <mat-form-field class="input text">
+            <input matInput #key type='text' [(ngModel)]="filter" placeholder="Species Filter"
+                name="Species Filter">
+        </mat-form-field>
+        <app-race-list></app-race-list>
+    </mat-card>
+</div>

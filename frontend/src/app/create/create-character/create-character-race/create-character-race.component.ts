@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateCharacterRaceComponent implements OnInit {
 
+  filter: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
