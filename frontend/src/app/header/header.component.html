@@ -1,5 +1,5 @@
 <div class="header">
-  <h3 class="header-text">Star Wars RPG Character Creator</h3>
+  <h3 class="header-text" (click)="navigate('/')">Star Wars RPG Character Creator</h3>
   <div *ngIf="auth.user$ | async; else login">
     <button mat-raised-button color="primary" (click)="auth.signOut()">Sign Out</button>
   </div>
