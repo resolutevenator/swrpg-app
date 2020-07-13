@@ -13,6 +13,6 @@
             <input matInput #key type='text' [(ngModel)]="filter" placeholder="Species Filter"
                 name="Species Filter">
         </mat-form-field>
-        <app-race-list></app-race-list>
+        <app-list [collection]="collection" (listClicked)="onClicked($event)"></app-list>
     </mat-card>
 </div>

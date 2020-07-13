@@ -1,4 +1,4 @@
 <div class="container">
   <app-series-chooser></app-series-chooser>
-  <app-list [collection]="collection" (listClicked)="onClicked($event)"></app-list>
+  <app-list [collection]="collection" [sortBy]="sort" (listClicked)="onClicked($event)"></app-list>
 </div>

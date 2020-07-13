@@ -9,7 +9,8 @@ export interface Talent {
 export interface Race {
     name: string,
     key: string,
-    books: string[]
+    books: string[],
+    series: string
 }
 
 export interface RaceInfo {
@@ -29,7 +30,8 @@ export interface Spec {
     name: string,
     key: string,
     books: string[],
-    career: string
+    career: string,
+    series: string
 }
 
 export interface SpecInfo {
@@ -81,6 +83,13 @@ export interface GenSpecInfo {
             row4: boolean[]
         }
     }
+}
+
+export interface Career {
+    name: string,
+    key: string,
+    books: string[],
+    series: string
 }
 
 export interface Weapon {
@@ -289,4 +298,9 @@ export enum RangeBand {
     Medium = 'medium',
     Long = 'long',
     Extreme = 'extreme'
+}
+
+export enum SortableType {
+    Name = 'name',
+    Series = 'series'
 }

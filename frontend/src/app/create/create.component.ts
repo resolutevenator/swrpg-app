@@ -10,6 +10,7 @@ export class CreateComponent implements OnInit {
 
   race: boolean = false;
   spec: boolean = false;
+  career: boolean = false;
   talent: boolean = false;
   armor: boolean = false;
   weapon: boolean = false;
@@ -31,6 +32,9 @@ export class CreateComponent implements OnInit {
         break;
       case 'spec':
         this.spec = true;
+        break;
+      case 'career':
+        this.career = true;
         break;
       case 'talent':
         this.talent = true;

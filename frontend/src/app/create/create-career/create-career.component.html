@@ -1,0 +1,38 @@
+<div class="page-content">
+    <mat-card class="card">
+        <mat-card-title>Create Career</mat-card-title>
+        <hr>
+        <mat-card-content class="new-career">
+            <mat-form-field class="input text">
+                <input matInput #key type='text' [(ngModel)]="careerName" placeholder="Career Name">
+            </mat-form-field>
+            <mat-form-field class="input text">
+                <input matInput #key type='text' [(ngModel)]="careerKey" placeholder="Career Key">
+            </mat-form-field>
+            <mat-form-field class="input text">
+                <input matInput #key type='text' [(ngModel)]="careerSeries" placeholder="Career Series">
+            </mat-form-field>
+            <mat-form-field class="input text">
+                <textarea matInput #key type='text' [(ngModel)]="book" placeholder="Input Book"
+                    name="Input Book"></textarea>
+            </mat-form-field>
+            <button mat-raised-button (click)="addBook()" color="primary">add book</button>
+            <button mat-raised-button (click)="submitCareer()" color="primary">submit career</button>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="card">
+        <mat-card-title>Books</mat-card-title>
+        <mat-card-content>
+            <div *ngFor="let book of books; let i = index">
+                {{book}}
+                <button mat-icon-button color="primary">
+                    <mat-icon (click)="editBook(i)">edit</mat-icon>
+                </button>
+                <button mat-icon-button color="warn">
+                    <mat-icon (click)="removeBook(i)">clear</mat-icon>
+                </button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

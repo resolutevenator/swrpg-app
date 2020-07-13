@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Race } from '../../services/data.model'
+import { Race, SortableType } from '../../services/data.model'
 
 import { Observable } from 'rxjs';
 
@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
 export class ListComponent implements OnInit {
 
   @Input() collection: string;
+  @Input() sortBy: SortableType;
 
   @Output() listClicked = new EventEmitter<string>();
 

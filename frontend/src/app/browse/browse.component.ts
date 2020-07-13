@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DatabaseService } from '../database.service';
+import { SortableType } from '../services/data.model';
 
 @Component({
   selector: 'app-browse',
@@ -10,6 +11,7 @@ import { DatabaseService } from '../database.service';
 export class BrowseComponent implements OnInit {
   
   public collection: string;
+  private sort: SortableType = SortableType.Name;
 
   constructor(
     private router: Router,

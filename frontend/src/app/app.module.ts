@@ -51,6 +51,7 @@ import { SeriesChooserComponent } from './browse/series-chooser/series-chooser.c
 import { CreateComponent } from './create/create.component';
 import { CreateRaceComponent } from './create/create-race/create-race.component';
 import { CreateSpecComponent } from './create/create-spec/create-spec.component';
+import { CreateCareerComponent } from './create/create-career/create-career.component';
 import { CreateTalentComponent } from './create/create-talent/create-talent.component';
 import { CreateArmorComponent } from './create/create-armor/create-armor.component';
 import { CreateWeaponComponent } from './create/create-weapon/create-weapon.component';
@@ -111,6 +112,7 @@ import { ListEntryComponent } from './browse/list/list-entry/list-entry.componen
     CreateCharacterDescriptionComponent,
     ListComponent,
     ListEntryComponent,
+    CreateCareerComponent,
   ],
   imports: [
     BrowserModule,

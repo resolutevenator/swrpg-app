@@ -10,6 +10,7 @@ import { Spec, SpecInfo } from 'src/app/services/data.model';
 export class CreateSpecComponent implements OnInit {
 
   specName = '';
+  specSeries = '';
   careerName = '';
   book = '';
   specKey = '';
@@ -205,6 +206,7 @@ export class CreateSpecComponent implements OnInit {
       this.specKey = state.parent.key;
       this.specName = state.parent.name;
       this.careerName = state.parent.career;
+      this.specSeries = state.parent.series;
 
       // this.careerSkills = state.spec.careerSkills; //undo array
       // this.additionalCareerSkills = state.spec.bonusCareerSkills; //undo array
@@ -252,7 +254,8 @@ export class CreateSpecComponent implements OnInit {
       books: this.books,
       career: this.careerName,
       name: this.specName,
-      key: this.specKey
+      key: this.specKey,
+      series: this.specSeries
     }
 
     const specInfo: SpecInfo = {

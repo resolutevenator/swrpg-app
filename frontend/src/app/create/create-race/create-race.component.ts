@@ -12,6 +12,7 @@ export class CreateRaceComponent implements OnInit {
 
   raceName = '';
   raceKey = '';
+  raceSeries = '';
   brawn: number = 0;
   agility: number = 0;
   intellect: number = 0;
@@ -37,6 +38,7 @@ export class CreateRaceComponent implements OnInit {
       this.books = state.parent.books;
       this.raceKey = state.parent.key;
       this.raceName = state.parent.name;
+      this.raceSeries = state.parent.series;
 
       this.agility = state.race.agility;
       this.brawn = state.race.brawn;
@@ -92,7 +94,8 @@ export class CreateRaceComponent implements OnInit {
     const race: Race = {
       key: this.raceKey,
       name: this.raceName,
-      books: this.books
+      books: this.books,
+      series: this.raceSeries
     }
 
     const raceInfo: RaceInfo = {
