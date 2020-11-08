@@ -23,16 +23,12 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-
-import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 // import { GestureConfig } from '@angular/material/';
 
 import { AngularFireModule } from '@angular/fire/';
 import { AngularFireDatabaseModule } from '@angular/fire/database/';
 import { AngularFireAuthModule } from '@angular/fire/auth/';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
-
-import 'hammerjs';
 
 import { environment } from '../environments/environment';
 
