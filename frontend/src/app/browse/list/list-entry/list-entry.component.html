@@ -1,4 +1,4 @@
-<mat-card (click)="onClick()">
+<mat-card (click)="onClick()" [ngClass]="{ highlight : highlighted === 'true' }">
     <mat-card-footer [ngClass]="class">
         <mat-card-title>{{title}}</mat-card-title>
     </mat-card-footer>

@@ -11,7 +11,7 @@
         
         <mat-form-field class="input text">
             <input matInput #key type='text' [(ngModel)]="filter" placeholder="Species Filter"
-                name="Species Filter">
+                name="Class Filter">
         </mat-form-field>
         <app-list [collection]="collection" (listClicked)="onClicked($event)"></app-list>
     </mat-card>

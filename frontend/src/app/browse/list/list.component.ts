@@ -13,11 +13,14 @@ export class ListComponent implements OnInit {
 
   @Input() collection: string;
   @Input() sortBy: SortableType;
+  //@Input() sortMethod: Function;
 
   @Output() listClicked = new EventEmitter<string>();
 
   listCollection: AngularFirestoreCollection<Race>;
   entries: Observable<Race[]>;
+
+  private highlightedName: string = '';
 
   constructor(
     private afStore: AngularFirestore
@@ -28,11 +31,19 @@ export class ListComponent implements OnInit {
       return ref.orderBy('name');
     });
     this.entries = this.listCollection.valueChanges();
-  }  
+  }
 
   onEntryClicked(title: string) {
-    // console.log(title);    
     this.listClicked.emit(title);
+    if (this.highlightedName === title) {
+      this.highlightedName = '';
+    } else {
+      this.highlightedName = title;
+    }
+  }
+
+  isSelected(key: string) {
+    return key === this.highlightedName;
   }
 
   getCardClass(books: string[]) {
@@ -47,7 +58,7 @@ export class ListComponent implements OnInit {
     } else {
       return 'orange-red-black'
     }
-  }  
+  }
 
   convertBookToColour(book: string) {
     if (book.startsWith("FaD")) {

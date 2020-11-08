@@ -12,6 +12,8 @@ export class CreateCharacterRaceComponent implements OnInit {
   private collection: string = "races";
   private sort: SortableType = SortableType.Name;
 
+  private selectedRace: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
@@ -19,6 +21,7 @@ export class CreateCharacterRaceComponent implements OnInit {
 
   onClicked(title: string) {
     console.log(title);
+    this.selectedRace = title;
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 
@@ -12,6 +12,8 @@ import { Observable } from 'rxjs';
 })
 
 export class RacesComponent implements OnInit {
+
+  @Input() raceInjected: string;
 
   public race: string;
 
@@ -30,7 +32,10 @@ export class RacesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.race = this._route.snapshot.params['raceName'];
+    if(!this.raceInjected)
+      this.race = this._route.snapshot.params['raceName'];
+    else 
+      this.race = this.raceInjected;
     
     this.raceDoc = this.afStore.doc(`races/${this.race}/race/content`);
     this.raceObservable = this.raceDoc.valueChanges();
