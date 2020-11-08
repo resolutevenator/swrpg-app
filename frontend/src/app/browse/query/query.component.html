@@ -1,0 +1,5 @@
+<div class="flex-container">
+    <div *ngFor="let entry of entries | async">
+        <app-list-entry (entryClicked)="onEntryClicked($event)" [class]="getCardClass(entry.books)" [highlighted]="isSelected(entry.key)" [title]="entry.name" [key]="entry.key"></app-list-entry>
+    </div>
+</div>

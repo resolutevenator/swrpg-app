@@ -24,4 +24,8 @@ export class CreateCharacterRaceComponent implements OnInit {
     this.selectedRace = title;
   }
 
+  deselectRace() {
+    this.selectedRace = '';
+  }
+
 }

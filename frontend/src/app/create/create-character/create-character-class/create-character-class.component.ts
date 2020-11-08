@@ -11,14 +11,28 @@ export class CreateCharacterClassComponent implements OnInit {
   filter: string = '';
   private collection: string = "careers";
   private sort: SortableType = SortableType.Name;
+  private selectedClass: string = '';
+  private selectedClassQuery: string = '';
+  private selectedSpec: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onClicked(title: string) {
+  onClickedClass(title: string) {
     console.log(title);
+    this.selectedClass = title;
+    this.selectedClassQuery = 'careerKey == ' + title;
+  }
+
+  deselectClass() {
+    this.selectedClass = '';
+    this.selectedClassQuery = '';
+  }
+
+  deselectSpec() {
+    this.selectedSpec = '';
   }
 
 }

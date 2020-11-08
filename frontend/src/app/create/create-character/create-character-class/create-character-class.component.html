@@ -1,11 +1,10 @@
 <div class="page-content">
 
-    <mat-card>
+    <!-- <mat-card>
         <mat-card-title>Classes</mat-card-title>
-        <!-- Current Race Go Here -->
-    </mat-card>
+    </mat-card> -->
 
-    <mat-card>
+    <mat-card *ngIf="selectedClass === '' && selectedSpec === ''">
         <mat-card-title>Sources</mat-card-title>
         <!-- <mat-card-subtitle>Allow or Restrict content for this character</mat-card-subtitle> -->
         
@@ -13,6 +12,16 @@
             <input matInput #key type='text' [(ngModel)]="filter" placeholder="Species Filter"
                 name="Class Filter">
         </mat-form-field>
-        <app-list [collection]="collection" (listClicked)="onClicked($event)"></app-list>
+        <app-list [collection]="collection" (listClicked)="onClickedClass($event)"></app-list>
+    </mat-card>
+
+    <mat-card *ngIf="selectedClass !== '' && selectedSpec === ''">
+        <button mat-flat-button (click)="deselectClass()">Change Class</button>
+        <app-query [query]="selectedClassQuery" collection="specs" (listClicked)="onClickedClass($event)"></app-query>
+    </mat-card>
+
+    <mat-card *ngIf="selectedClass !== '' && selectedSpec !== ''">
+        <button mat-flat-button (click)="deselectSpec()">Change Spec</button>
+        {{selectedClass}}
     </mat-card>
 </div>

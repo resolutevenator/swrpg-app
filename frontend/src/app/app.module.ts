@@ -69,6 +69,7 @@ import { CreateCharacterAbilitiesComponent } from './create/create-character/cre
 import { CreateCharacterDescriptionComponent } from './create/create-character/create-character-description/create-character-description.component';
 import { ListComponent } from './browse/list/list.component';
 import { ListEntryComponent } from './browse/list/list-entry/list-entry.component';
+import { QueryComponent } from './browse/query/query.component';
 
 @NgModule({
   declarations: [
@@ -109,6 +110,7 @@ import { ListEntryComponent } from './browse/list/list-entry/list-entry.componen
     ListComponent,
     ListEntryComponent,
     CreateCareerComponent,
+    QueryComponent,
   ],
   imports: [
     BrowserModule,

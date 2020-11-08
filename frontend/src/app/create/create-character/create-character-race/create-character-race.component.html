@@ -1,9 +1,8 @@
 <div class="page-content">
 
-    <mat-card>
+    <!-- <mat-card>
         <mat-card-title>Species</mat-card-title>
-        <!-- Current Race Go Here -->
-    </mat-card>
+    </mat-card> -->
 
     <mat-card *ngIf="selectedRace === ''">
         <mat-card-title>Sources</mat-card-title>
@@ -17,8 +16,11 @@
     </mat-card>
 
     <mat-card *ngIf="selectedRace !== ''">
-        <mat-card-title>Race</mat-card-title>
+        <mat-card-header>
+            <mat-card-title>Race</mat-card-title>
+            <button mat-flat-button (click)="deselectRace()">Change Race</button>
+        </mat-card-header>
         
-        <!-- <app-race [raceInjected]="selectedRace"></app-race> -->
+        <app-races [raceInjected]="selectedRace"></app-races>
     </mat-card>
 </div>
