@@ -1,18 +1,18 @@
 <div class="page-content">
-    <mat-horizontal-stepper>
-        <mat-step label="Step 1">
+    <mat-horizontal-stepper [linear]="true">
+        <mat-step label="Basic Info">
             <app-create-character-info></app-create-character-info>
         </mat-step>
-        <mat-step label="Step 2">
+        <mat-step label="Race">
             <app-create-character-race></app-create-character-race>
         </mat-step>
-        <mat-step label="Step 3">
+        <mat-step label="Class">
             <app-create-character-class></app-create-character-class>
         </mat-step>
-        <mat-step label="Step 4">
+        <mat-step label="Abilities">
             <app-create-character-abilities></app-create-character-abilities>
         </mat-step>
-        <mat-step label="Step 5">
+        <mat-step label="Description">
             <app-create-character-description></app-create-character-description>
         </mat-step>
     </mat-horizontal-stepper>
