@@ -21,7 +21,7 @@ export class ListEntryComponent implements OnInit {
 
   onClick() {
     this.entryClicked.emit(this.key);
-    console.log(this.highlighted)
+    // console.log(this.highlighted)
 
     //css to pick highlight on click
   }

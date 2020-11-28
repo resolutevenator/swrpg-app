@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { SpecInfo, Spec } from '../services/data.model';
@@ -11,6 +11,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./spec.component.scss']
 })
 export class SpecComponent implements OnInit {
+
+  @Input() specInjected: string;
 
   public spec: string;
 
@@ -34,8 +36,11 @@ export class SpecComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.spec = this._route.snapshot.params['specName'];
-    
+    if (!this.specInjected)
+      this.spec = this._route.snapshot.params['specName'];
+    else
+      this.spec = this.specInjected;
+
     this.specDoc = this.afStore.doc(`specs/${this.spec}/spec/content`);
     this.specObservable = this.specDoc.valueChanges();
     this.specObservable.subscribe(doc => {
@@ -64,8 +69,8 @@ export class SpecComponent implements OnInit {
     // })
   }
 
-  edit() {    
-    this.router.navigate(['/create', 'spec'], {state: {spec: this.specInfo, parent: this.specParent}});
+  edit() {
+    this.router.navigate(['/create', 'spec'], { state: { spec: this.specInfo, parent: this.specParent } });
   }
 
   initTalents() {
@@ -98,7 +103,7 @@ export class SpecComponent implements OnInit {
   pushTalent(talent: Object, talentName: string) {
     // console.log(talentName, talent);
     this.talents[talentName] = talent;
-    console.log(this.talents)
+    // console.log(this.talents)
   }
 
   initStrings() {

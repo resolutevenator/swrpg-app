@@ -5,23 +5,27 @@
     </mat-card> -->
 
     <mat-card *ngIf="selectedClass === '' && selectedSpec === ''">
-        <mat-card-title>Sources</mat-card-title>
+        <mat-card-title>Class</mat-card-title>
         <!-- <mat-card-subtitle>Allow or Restrict content for this character</mat-card-subtitle> -->
-        
+
         <mat-form-field class="input text">
-            <input matInput #key type='text' [(ngModel)]="filter" placeholder="Species Filter"
-                name="Class Filter">
+            <input matInput #key type='text' [(ngModel)]="filter" placeholder="Class Filter" name="Class Filter">
         </mat-form-field>
         <app-list [collection]="collection" (listClicked)="onClickedClass($event)"></app-list>
     </mat-card>
 
     <mat-card *ngIf="selectedClass !== '' && selectedSpec === ''">
+        <mat-card-title>Specialization</mat-card-title>
+        <mat-form-field class="input text">
+            <input matInput #key type='text' [(ngModel)]="filter" placeholder="Specialization Filter" name="Specialization Filter">
+        </mat-form-field>
         <button mat-flat-button (click)="deselectClass()">Change Class</button>
-        <app-query [query]="selectedClassQuery" collection="specs" (listClicked)="onClickedClass($event)"></app-query>
+        <app-query [query]="selectedClassQuery" collection="specs" (listClicked)="onClickedSpec($event)"></app-query>
     </mat-card>
 
     <mat-card *ngIf="selectedClass !== '' && selectedSpec !== ''">
         <button mat-flat-button (click)="deselectSpec()">Change Spec</button>
-        {{selectedClass}}
+
+        <app-spec [specInjected]="selectedSpec"></app-spec>
     </mat-card>
 </div>

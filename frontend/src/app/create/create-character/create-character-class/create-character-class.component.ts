@@ -31,6 +31,11 @@ export class CreateCharacterClassComponent implements OnInit {
     this.selectedClassQuery = '';
   }
 
+  onClickedSpec(title: string) {
+    console.log(title);
+    this.selectedSpec = title;
+  }
+
   deselectSpec() {
     this.selectedSpec = '';
   }
