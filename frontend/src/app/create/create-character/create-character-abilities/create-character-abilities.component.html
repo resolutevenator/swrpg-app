@@ -1,1 +1,69 @@
-<p>create-character-abilities works!</p>
+<div class="page-content">
+    <mat-card class="section">
+        <mat-card-title>Characteristics</mat-card-title>
+        <div class="characteristics">
+            <mat-card>
+                <mat-card-title>Brawn</mat-card-title>
+                <hr>
+                <mat-card-content>{{brawn}}</mat-card-content>
+                <mat-card-actions>
+                    <button mat-button (click)="decreaseStat('b')">-1</button>
+                    <button mat-button (click)="increaseStat('b')">+1</button>
+                </mat-card-actions>
+            </mat-card>
+            <mat-card>
+                <mat-card-title>Agility</mat-card-title>
+                <hr>
+                <mat-card-content>{{agility}}</mat-card-content>
+                <mat-card-actions>
+                    <button mat-button (click)="decreaseStat('a')">-1</button>
+                    <button mat-button (click)="increaseStat('a')">+1</button>
+                </mat-card-actions>
+            </mat-card>
+            <mat-card>
+                <mat-card-title>Intellect</mat-card-title>
+                <hr>
+                <mat-card-content>{{intellect}}</mat-card-content>
+                <mat-card-actions>
+                    <button mat-button (click)="decreaseStat('i')">-1</button>
+                    <button mat-button (click)="increaseStat('i')">+1</button>
+                </mat-card-actions>
+            </mat-card>
+            <mat-card>
+                <mat-card-title>Cunning</mat-card-title>
+                <hr>
+                <mat-card-content>{{cunning}}</mat-card-content>
+                <mat-card-actions>
+                    <button mat-button (click)="decreaseStat('c')">-1</button>
+                    <button mat-button (click)="increaseStat('c')">+1</button>
+                </mat-card-actions>
+            </mat-card>
+            <mat-card>
+                <mat-card-title>Willpower</mat-card-title>
+                <hr>
+                <mat-card-content>{{willpower}}</mat-card-content>
+                <mat-card-actions>
+                    <button mat-button (click)="decreaseStat('w')">-1</button>
+                    <button mat-button (click)="increaseStat('w')">+1</button>
+                </mat-card-actions>
+            </mat-card>
+            <mat-card>
+                <mat-card-title>Presence</mat-card-title>
+                <hr>
+                <mat-card-content>{{presence}}</mat-card-content>
+                <mat-card-actions>
+                    <button mat-button (click)="decreaseStat('p')">-1</button>
+                    <button mat-button (click)="increaseStat('p')">+1</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </mat-card>
+
+    <mat-card class="section">
+        <mat-card-title>Skills</mat-card-title>
+
+    </mat-card>
+    <div>
+        <button mat-button matStepperNext>Next</button>
+    </div>
+</div>

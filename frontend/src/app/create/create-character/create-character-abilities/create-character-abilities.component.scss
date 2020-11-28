@@ -1,0 +1,26 @@
+.page-content {
+    margin: 20px;
+    align-content: center;
+}
+
+.section {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.characteristics {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.characteristics mat-card-title, mat-card-content {
+    font-size: 18px;    
+}
+
+.characteristics mat-card {
+    margin: 5px 5px 0 0;
+    text-align: center;
+    // height: 60px;
+}
