@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Skills } from 'src/app/services/data.model';
 
 @Component({
   selector: 'app-create-character-abilities',
@@ -14,6 +15,17 @@ export class CreateCharacterAbilitiesComponent implements OnInit {
   willpower: number = 1;
   presence: number = 1;
 
+  private minimumbrawn: number = 1;
+  private minimumagility: number = 1;
+  private minimumintellect: number = 1;
+  private minimumcunning: number = 1;
+  private minimumwillpower: number = 1;
+  private minimumpresence: number = 1;
+
+  skills = Object.values(Skills);
+
+  currentXP: number = 100;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -22,49 +34,96 @@ export class CreateCharacterAbilitiesComponent implements OnInit {
   increaseStat(stat: string) {
     switch (stat) {
       case "b":
-        this.brawn++;
+        if (this.spendXP((this.brawn + 1) * 10)) {
+          this.brawn++;
+        }
         break;
       case "a":
-        this.agility++;
+        if (this.spendXP((this.agility + 1) * 10)) {
+          this.agility++;
+        }
         break;
       case "i":
-        this.intellect++;
+        if (this.spendXP((this.intellect + 1) * 10)) {
+          this.intellect++;
+        }
         break;
       case "c":
-        this.cunning++;
+        if (this.spendXP((this.cunning + 1) * 10)) {
+          this.cunning++;
+        }
         break;
       case "w":
-        this.willpower++;
+        if (this.spendXP((this.willpower + 1) * 10)) {
+          this.willpower++;
+        }
         break;
       case "p":
-        this.presence++;
+        if (this.spendXP((this.presence + 1) * 10)) {
+          this.presence++;
+        }
         break;
     }
 
   }
 
+  clickSkillButton() {
+    console.log("click")
+  }
+
   decreaseStat(stat: string) {
     switch (stat) {
       case "b":
-        this.brawn--;
+        if (this.brawn > this.minimumbrawn) {
+          this.returnXP(this.brawn * 10)
+          this.brawn--;
+        }
         break;
       case "a":
-        this.agility--;
+        if (this.agility > this.minimumagility) {
+          this.returnXP(this.agility * 10)
+          this.agility--;
+        }
         break;
       case "i":
-        this.intellect--;
+        if (this.intellect > this.minimumintellect) {
+          this.returnXP(this.intellect * 10)
+          this.intellect--;
+        }
         break;
       case "c":
-        this.cunning--;
+        if (this.cunning > this.minimumcunning) {
+          this.returnXP(this.cunning * 10)
+          this.cunning--;
+        }
         break;
       case "w":
-        this.willpower--;
+        if (this.willpower > this.minimumwillpower) {
+          this.returnXP(this.willpower * 10)
+          this.willpower--;
+        }
         break;
       case "p":
-        this.presence--;
+        if (this.presence > this.minimumpresence) {
+          this.returnXP(this.presence * 10)
+          this.presence--;
+        }
         break;
     }
 
+  }
+
+  private spendXP(amount): boolean {
+    if (this.currentXP > amount) {
+      this.currentXP -= amount;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  private returnXP(amount) {
+    this.currentXP += amount;
   }
 
 }

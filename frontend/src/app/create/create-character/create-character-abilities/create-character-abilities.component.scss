@@ -24,3 +24,67 @@
     text-align: center;
     // height: 60px;
 }
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 450px;
+    // align-items: stretch;
+    // justify-content: flex-end;
+}
+
+.skillbutton {
+    // width: 1px;
+}
+
+.currentxp {
+    z-index: 10; 
+    position: fixed; 
+    left: 50px; 
+    top: 150px; 
+    height: 83px;
+}
+
+.xpcard mat-card-title {
+    font-size: 16px; 
+}
+
+.xpcard mat-card-content {
+    font-size: 14px; 
+}
+
+mat-button-toggle-group {
+    box-shadow: none;
+}
+
+mat-button-toggle {
+    border: 1px rgb(190, 190, 190) solid !important;
+    border-radius: 5px !important;
+    // margin-top: 5px !important;
+    background-color: #FFF !important;
+    padding: 0 5px !important;
+    z-index: 3 !important;
+}
+
+mat-button-toggle:hover {
+    border: 1px #000 solid !important;
+    background-color: rgb(255, 255, 241) !important;
+    // border-radius: 5px !important;
+}
+
+.mat-button-toggle-checked {
+    box-shadow: 0 0 5px #000 !important;
+    border: 1px rgb(58, 58, 58) solid !important;
+    border-radius: 5px !important;
+    background-color: rgb(255, 251, 0) !important;
+}
+
+.mat-button-toggle-input {
+    background-color: none !important;
+    // padding-left: 32px !important;
+}
+
+.hidden {
+    visibility: hidden;
+}

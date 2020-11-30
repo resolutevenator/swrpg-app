@@ -22,6 +22,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSliderModule } from '@angular/material/slider';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 // import { GestureConfig } from '@angular/material/';
 
@@ -131,6 +132,7 @@ import { QueryComponent } from './browse/query/query.component';
     MatSelectModule,
     MatStepperModule,
     MatSlideToggleModule,
+    MatSliderModule,
     HttpClientModule,
     NoopAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
